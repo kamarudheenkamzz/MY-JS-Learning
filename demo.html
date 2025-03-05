@@ -1,0 +1,5564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Learning Documentation</title>
+
+	<!-- Prism.js Theme (Dark Theme like VS Code) -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+	<!-- style css -->
+	<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+	<div class="main_parent">
+		<div class="sidebar">
+			<ul>
+				<li class="active"><a href="#dom">DOM</a></li>
+				<li><a href="#jsTpes">JS Types</a></li>
+				<li><a href="#comments">JS Comments</a></li>
+				<li><a href="#jsOutput">JS Output</a></li>
+				<li><a href="#jsStatement">JS Statement</a></li>
+				<li><a href="#jsVariables">JS Variables</a></li>
+				<li><a href="#diff_variables">Diffrence in JS Variables</a></li>
+				<li><a href="#jsOperators">JS Operators</a></li>
+				<li><a href="#jsDataTypes">JS Data Types</a></li>
+				<li><a href="#jsFunctions">JS Functions<li>
+				<li><a href="#jsObjects">JS Objects</a></li>
+				<li><a href="#js_display_objects">JS Display Objects</a></li>
+				<li><a href="#jsObjectProperties">JS Objects Properties</a></li>
+				<li><a href="#jsObjectMethod">JS Objects Methods</a></li>
+				<li><a href="#jsObjectConcepts">JS Objects Other Concepts</a></li>
+				<li><a href="#js_object_constructors">JS Object Constructors</a></li>
+				<li><a href="#js_events">JS Events</a></li>
+				<li><a href="#js_strings">JS Strings</a></li>
+				<li><a href="#js_string_methods">JS String Methods</a></li>
+				<li><a href="#js_string_search">JS String Search</a></li>
+				<li><a href="#js_number_methods">JS Number Methods</a></li>
+				<li><a href="#js_arrays">JS Arrays</a></li>
+				
+			</ul>
+		</div>
+
+		<div class="body_content">
+
+			<!-- dom section -->
+			<section id="dom">
+				<h1>DOM - Document Object Model</h1>
+				<p>JavaScript considering everything in html as a object, and all the html file it's considering as a "window.document" it's called DOM.</p>
+
+				<pre><code class="language-html code-block">
+					<script>
+						// you will get entire html while checking console using this
+						window.document
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+			</section>
+
+			<!-- js types section -->
+			<section id="jsTpes">
+				<h1>3 Types JS</h1>
+
+				<h2>Inline JS</h2>
+				<p>Directly inside the line</p>
+				<pre><code class="language-html code-block">
+					<button onclick="document.getElementById('idName').style.display = 'none'">Button</button>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>Internal JS</h2>
+				<p>Within the script tag and we can place inside "head" tag or body tag.  </p>
+				<pre><code class="language-html code-block">
+					<script>
+						// document.getElementById('idName').style.display = 'none';
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>External JS</h2>
+				<p>it a seperate document end with ".js" extension and the document must link to the html inside head or body tag...</p>
+				<pre><code class="language-html code-block">
+					<!-- url for the external file -->
+					<!-- <script src="./script.js"> </script> -->
+				</code><button class="copy-btn">Copy</button></pre>
+
+			</section>	
+
+			<!-- comments section -->
+			<section id="comments">
+
+				<h1>Comments in JS</h1>
+
+				<h2>Single & Multi line comment</h2>
+				<p> 1 . if we are using for a single line it's called single line comment, it's should decalre using //...</p>
+				<p> 2 . if we are using for the multiple line it's called multi line comment, it's should start with /* and end with */...</p>
+				<pre><code class="language-html code-block">
+					<script>
+						// 1. single line comment
+
+						/* 2. Multi
+						line 
+						comment */
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+			</section>
+
+			<!-- js output sections -->
+			<section id="jsOutput">
+
+				<h1>JS Output</h1>
+				<p>JavaScript Display Possibilities, Java script can display data in different ways.</p>
+				<ul>
+					<li>Writing into an HTML element, using innerHTML.</li>
+					<li>Writing into the HTML output using document.write()</li>
+					<li>Writing into an alert box, using window.alert().</li>
+					<li>Writing into the browser console, using console.log().</li>
+				</ul>
+
+				<h2> innerHTML</h2>
+
+				<pre><code class="language-html code-block">
+
+					<!-- output -->
+					<p id="j_o_innerHTML">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ipsam, neque nisi voluptas illum porro!</p>
+
+					<script>
+						// document.getElementById('j_o_innerHTML').innerHTML = 5 + 6;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>document.write()</h2>
+
+				<pre><code class="language-html code-block">
+
+					<h1>heading</h1>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores repudiandae, laboriosam dolorum facilis quidem commodi.</p>
+
+					<button onclick="document.write(5+6)">Button Name</button>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<!-- for checking purpose -->
+				<!-- <button onclick="document.write(5+6)">Button Name</button> -->
+
+
+				<div class="note">
+					<strong>Note:</strong> Using document.write() after an HTML document, While clicking the button it will clear all existing html.
+				</div>
+
+
+
+				<h2>window.alert()</h2>
+				<p>We can skip the window. keyword... and we can use directly alert()...</p>
+				<pre><code class="language-html code-block">
+
+					<h1>heading</h1>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores repudiandae, laboriosam dolorum facilis quidem commodi.</p>
+
+					<button onclick="alert(5+6)">Button Name</button>
+
+					<script>
+						// alert(5+6);
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2> console.log().</h2>
+				<p>For debugging purposes, you can call the console.log() method in the browser to display data.</p>
+				<pre><code class="language-html code-block">
+
+					<h1>heading</h1>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores repudiandae, laboriosam dolorum facilis quidem commodi.</p>
+
+					<script>
+						// like this you can write consloe and check in the developer screen
+						// console.log(5 + 6)
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+			</section>
+
+			<!-- Statement section -->
+			<section id="jsStatement">
+
+				<h1>Statement</h1>
+
+				<h2>One Statement, Many Variable</h2>
+				<p>In JavaScript we can write many varibles in a statement.</p>
+				<pre><code class="language-html code-block">
+					<script>
+
+						// let x, y, z;    // Statement 1
+						// x = 5;          // Statement 2
+						// y = 6;          // Statement 3
+						// z = x + y;      // Statement 4
+
+						 
+						// example for many variables :
+						// const a = 1, b = 2, c = 3
+						//
+
+						// you can write like this also :
+						// let a = 1,
+						// 	   b = 2,
+						//     c = 3
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+			</section>
+
+			<!-- Variables section -->
+			<section id="jsVariables">
+
+				<h1>JS Variables</h1>
+
+				<h2>JavaScript Variables can be declared in 4 ways</h2>
+				<ul>
+					<li>Automatically - not a good practice</li>
+					<li>Using var - it's old method in JS.</li>
+					<li>Using let - This one started from ES6 JS.</li>
+					<li>Using const - This one started from ES6 JS.</li>
+				</ul>
+				
+				<h2>Automatically Variable</h2>
+				<p>Without declarining a varible it's automatically taking as a automatically varible.</p>
+				<pre><code class="language-html code-block">
+					<script>
+						// a = 1,
+						// b = 2 
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Variable var</h2>
+				<ul>
+					<li>var is a global scope variable.</li>
+					<li>var you can use without initialized</li>
+					<li>var can re-declare in same and multiple scope.</li>
+					<li>var can re-assign in same and multiple scope.</li>
+					<li>var not a block scope variable.</li>
+				</ul>
+				<pre><code class="language-html code-block">
+					<script>
+						// var you can write like this
+						// var a = 1
+						// var b = 2 
+
+						// var you can write like this it will show un-defined - it's not an error
+						// var a ;
+						// var b ;
+
+						// re-declare in same scope allowing
+						// var a = 1;
+						// var a;
+
+						// re-assigning in same scope allowing
+						// var a = 1;
+						// a = 2;
+
+						// block scope example
+						// if(true)
+						// {
+						// 	var a = 1;
+						// 	var b = 2;
+						// }
+						// console.log(a); 
+						// it will pass the value for outside the scope so it's not a block scope variable...
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>Variable let</h2>
+				<ul>
+					<li>let you can use without initialized</li>
+					<li>let can't re-declare in same scope.</li>
+					<li>let can re-declare in multiple scope</li>
+					<li>let can re-assign in same and multiple scope.</li>
+					<li>let a block scope variable.</li>
+				</ul>
+				<pre><code class="language-html code-block">
+					<script>
+						// let you can write like this
+						// let a = 1,
+						//let b = 2 
+
+						// let you can write like this it will show un-defined - it's not an error
+						// let a ;
+						// let b ;
+
+						// re-declare in same scope not allowing
+						// let a = 1;
+						// let a;
+
+						// re-assigning in same scope allowing
+						// let a = 1;
+						// a = 2;
+
+						// block scope example
+						// if(true)
+						// {
+						// 	let a = 1;
+						// 	let b = 2;
+						// }
+						// console.log(a); 
+						// it will didn't pass the value for outside the scope so it's a block scope variable...
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Variable const</h2>
+				<ul>
+					<li>const you can't use without initialized, must you need to declare before use.</li>
+					<li>const can't re-declare in same scope.</li>
+					<li>const can re-declare in multiple scope</li>
+					<li>const can't re-assign in same scope.</li>
+					<li>const a block scope variable.</li>
+				</ul>
+				<pre><code class="language-html code-block">
+					<script>
+						// const you can write like this
+						// const a = 1
+						// const b = 2 
+
+						// const you can't write like this it will show not - initialized error 
+						// const a ;
+						// const b ;
+
+						// re-declare in same scope not allowed 
+						// const a = 1;
+						// const a;
+
+						// re-assigning in same scope not allowing
+						// const a = 1;
+						// a = 2;
+
+						// block scope exampple
+						// if(true)
+						// {
+						// 	const a = 1;
+						// 	const b = 2;
+						// }
+						// console.log(a); 
+						// it will didn't pass the value for outside the scope so it's a block scope variable...
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<ul>
+						<li>Always declare variables</li>
+						<li>Always use const if the value should not be changed</li>
+						<li>Always use const if the type should not be changed (Arrays and Objects)</li>
+						<li>Only use let if you can't use const</li>
+						<li>Only use var if you MUST support old browsers.</li>
+					</ul>
+				</div>	
+				
+				<div class="note">
+					<h2>Main Benefits use of Let & Const</h2>
+					<h6>Memory Saving :</h6>
+					<p>let and const are block-scoped, ensuring memory is allocated and released per block, reducing unnecessary usage compared to var.</p>
+					<h6>Conflict Fixing:</h6>
+					<p>let and const prevent re-declaration in the same scope (const also prevents reassignment), avoiding variable conflicts and overwrites.</p>
+				</div>
+
+			</section>
+
+			<!-- diffrence in varibles section -->
+			<section id="diff_variables">
+
+				<h1>Diffrence in JS Variables</h1>
+
+
+				<h2>Difference B/W Declaration, Assignment, Initialization</h2>
+
+				<img src="./dec_ass_iniz.png" alt="">
+
+				<pre><code class="language-html code-block">
+					<script>
+
+						// let a;   // Declares a variable 'a' but does not assign it a value
+						// console.log(a);  // Output: undefined
+
+						// let a;   // Declaration
+						// a = 10;  // Assignment
+						// console.log(a);  // Output: 10
+
+						// let a = 10;   // Declaration + Assignment = Initialization
+						// console.log(a);  // Output: 10
+
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>Global Varibles Conditions</h2>
+				<img src="./global_conditions.png" alt="">
+
+				<h2>Global Varibles Diffrence in var, let, const</h2>
+				<img src="./global_variables.png" alt="">
+
+				<h2>Difference B/W var, let, const in block and function scope</h2>
+				<table width="800">
+					<thead>
+						<tr>
+							<th colspan="4">Global Variable</th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>var</th>
+							<th>let</th>
+							<th>const</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Block Scope</th>
+							<td>Yes</td>
+							<td>No</td>
+							<td>No</td>
+						</tr>
+						<tr>
+							<th>Function Scope</th>
+							<td>Undefined</td>
+							<td>No</td>
+							<td>No</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="note">
+					<ul>
+						<li>Block Scope Within Function Scope : If the varible initialization not in the function scope but inside block scope, Like this condition also function scope will work for var not for let & const.</li>
+					</ul>
+					<p>Example :</p>
+					<pre><code class="language-html code-block">
+						<script>
+	
+							// var a =10;
+							// let b = 20;
+							// const c = 30;
+
+							// function abc(){
+
+							// 	console.log(a, b, c);
+
+							// 	a = 200;
+							// 	b = 300;
+
+							// 	if(true)
+							// 	{
+							// 		var a = 60;
+							// 		let b = 70;
+							// 	}
+							// }
+							// abc();
+	
+						</script>
+					</code><button class="copy-btn">Copy</button></pre>
+				</div>
+
+				<h2>Difference B/W var & let & const</h2>
+
+				<div class="note">
+					<h6>1 . Without Declaration :</h6>
+					<ul>
+						<li>var 	: 	You can use before Declaration - output : undefined</li>
+						<li>let		: 	You can't use before Declaration - output : // ReferenceError: Cannot access</li>
+						<li>const	: 	You can't use before Declaration - output : // ReferenceError: Cannot access</li>
+					</ul>
+				</div>
+
+				<pre><code class="language-html code-block">
+					<script>
+
+						// var example
+						// console.log(a);  // Output: undefined --- it's not an error
+						// var a;
+
+						// let example
+						// console.log(b);  // Output: ReferenceError ---- Cannot access "b" before initialization
+						// let b;
+
+						// const example
+						// console.log(c);  // Output: ReferenceError ---- Cannot access "b" before initialization
+						// const c;
+
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<h6>2 . Without Initialization :</h6>
+					<ul>
+						<li>var 	: 	You can use without initialize - output : undefined</li>
+						<li>let		: 	You can use without initialize - output : undefined</li>
+						<li>const	: 	You can't use without initialize - output : not initialized error</li>
+					</ul>
+				</div>
+
+				<pre><code class="language-html code-block">
+					<script>
+
+						// var example
+						// var a;
+						// console.log(a);  // Output: undefined --- it's not an error
+
+						// let example
+						// let b;
+						// console.log(b);  // Output: undefined --- it's not an error
+
+						// const example
+						// const c;
+						// console.log(c);  // Output: it's need to initialize --- showing error
+
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<h6>3 . Re-assignment Same Scope:</h6>
+					<ul>
+						<li>var 	: 	You can re-assign in same scope - output : allowed</li>
+						<li>let		: 	You can re-assign in same scope - output : allowed</li>
+						<li>const	: 	You can't re-assign in same scope - output : not-allowed</li>
+					</ul>
+
+					<h6> Re-assignment Multiple Scope:</h6>
+					<ul>
+						<li>var 	: 	You can re-assign in multiple scope - output : allowed</li>
+						<li>let		: 	You can re-assign in multiple scope - output : allowed</li>
+						<li>const	: 	You can't re-assign in multiple scope - output : not-allowed</li>
+					</ul>
+				</div>
+				
+				
+				<pre><code class="language-html code-block">
+					<script>
+						// var example
+						// var a = 10;
+						// a = 20;
+						// console.log(a);  // Output: 20 
+
+						// var example multiple scope
+						// var a = 10;
+						// console.log(a); // output : 10
+						// a = 30;
+						// console.log(a); // output : 30
+						// if(true)
+						// {
+						// 	a = 20;
+						// 	console.log(a); // output : 20
+						// }
+						// console.log(a); // output : 20
+
+						// ------------------------------------------------------------
+
+						// let example
+						// let b = 10;
+						// b = 20;
+						// console.log(b);  // Output: 20 
+
+						// let example multiple scope
+						// let a = 10;
+						// console.log(a); // output : 10
+						// a = 30;
+						// console.log(a); // output : 30
+						// if(true)
+						// {
+						// 	a = 20;
+						// 	console.log(a); // output : 20 here act like as only re-assigning
+						// }
+						// console.log(a); // output : 20 already showing re-assigned value not doing like scope
+
+
+						// ------------------------------------------------------------
+
+						// const example
+						// const c = 10;
+						// c = 20;
+						// console.log(c);  // Output: it's not allowed --- showing error
+
+
+						// const example multiple scope
+						// const a = 10;
+						// console.log(a); // output : 10
+						// if(true)
+						// {
+						// 	a = 20;
+						// 	console.log(a); // Output: it's not allowed --- showing error
+						// }
+						// console.log(a); // Output: it's not allowed --- showing error
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<h6>5 . Re-Declaration same scope :</h6>
+					<ul>
+						<li>var 	: 	You can re-declare in same scope - output : allowed</li>
+						<li>let		: 	You can't re-declare in same scope - output : already declared</li>
+						<li>const	: 	You can't re-declare in same scope - output : already declared</li>
+					</ul>
+
+					<h6> Re-Declaration / Initialization in multiple scope :</h6>
+					<ul>
+						<li>var 	: 	You can re-declare in multiple scope - output : allowed</li>
+						<li>let		: 	You can re-declare in multiple scope - output : allowed</li>
+						<li>const	: 	You can re-declare in multiple scope - output : allowed</li>
+					</ul>
+				</div>
+
+
+				<pre><code class="language-html code-block">
+					<script>
+
+						// var example same scope
+						// var a = 10;
+						// var a = 20;
+						// console.log(a);  // Output: 20
+
+						// var example multiple scope
+						// var a = 10;
+						// console.log(a); // output : 10
+						// if(true)
+						// {
+						// 	var a = 20;
+						// 	console.log(a); // output : 20
+						// }
+						// console.log(a); // output : 20
+
+						// ------------------------------------------------------------
+
+						// let example
+						// let b = 10;
+						// let b = 20;
+						// console.log(b);  // Output: already hasn't declared 
+
+						// let example multiple scope
+						// let a = 10;
+						// console.log(a); // output : 10
+						// if(true)
+						// {
+						// 	let a = 20;
+						// 	console.log(a); // output : 20
+						// }
+						// console.log(a); // output : 10
+
+						// ------------------------------------------------------------
+
+						// const example
+						// const c = 10;
+						// const c = 20;
+						// console.log(c); // Output: already hasn't declared 
+
+						// const example multiple scope
+						// const a = 10;
+						// console.log(a); // output : 10
+						// if(true)
+						// {
+						// 	const a = 20;
+						// 	console.log(a); // output : 20
+						// }
+						// console.log(a); // output : 10
+
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<!-- Combination of diff scope & Re-Assignment and Re-Declaration / Initialization -->
+				<div class="note">
+
+					<ul>
+						<li>Within a function scope, let and const have block scope. If a variable declared with let or const is initialized within a block, it cannot pass its value outside that block. However, if a let variable is not initialized but is only re-assigned within the block, it can retain the value from an outer scope and pass it outside the block. </li>
+					</ul>
+
+					<p>Example :</p>
+
+					<pre><code class="language-html code-block">
+						<script>
+	
+							// var a =10;
+							// let b = 20;
+							// const c = 30;
+
+							// function abc(){
+
+							// 	a = 200;
+							// 	b = 300;
+
+							// 	if(true)
+							// 	{
+
+							// 		let a ; // let declared with a
+							// 		a = 60; // 60 assigned to a
+							// 		b = 70; // b value re-assigning
+
+							// 		a = 100; // a value re-assigning
+
+							// 		console.log(a, b, c);
+							// 	}
+							// 	console.log(a, b, c);
+							// }
+							// abc();
+							// console.log(a, b, c);
+	
+	
+						</script>
+					</code><button class="copy-btn">Copy</button></pre>
+
+				</div>
+
+				<!-- table diffrence bw var let const -->
+				<div class="note">
+					<table style="width:100%">
+						<thead>
+							<tr>
+								<th>Variables</th>
+								<th>Without Declaration</th>
+								<th>Wothout Initialization</th>
+								<th>Re-Declaration - SS</th>
+								<th>Re-Declaration - MS</th>
+								<th>Re-Assigning - SS</th>
+								<th>Re-Assigning - MS</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>var</th>
+								<td>Yes</td>
+								<td>Yes</td>
+								<td>Yes</td>
+								<td>Yes</td>
+								<td>Yes</td>
+								<td>Yes</td>
+							</tr>
+							<tr>
+								<th>let</th>
+								<td>No</td>
+								<td>Yes</td>
+								<td>No</td>
+								<td>Yes</td>
+								<td>Yes</td>
+								<td>Yes</td>
+							</tr>
+							<tr>
+								<th>const</th>
+								<td>No</td>
+								<td>No</td>
+								<td>No</td>
+								<td>Yes</td>
+								<td>No</td>
+								<td>No</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- Operators section -->
+			<section id="jsOperators">
+
+				<h1>Operators</h1>
+
+				<p>Javascript operators are used to perform different types of mathematical and logical computations.</p>
+
+				<h2>Types of JavaScript Operators</h2>
+				<ul>
+					<li>Arithmetic Operators</li>
+					<li>Assignment Operators</li>
+					<li>Comparison Operators</li>
+					<li>String Operators</li>
+					<li>Logical Operators</li>
+					<li>Bitwise Operators</li>
+					<li>Ternary Operators</li>
+					<li>Type Operators</li>
+				</ul>
+
+				<div class="note">
+					<ul>
+						<li>typeof :	Returns the type of a variable</li>
+						<li>instanceof :	Returns true if an object is an instance of an object type</li>
+					</ul>
+				</div>
+
+				<img src="./typeof.png" alt="">
+				<img src="./instanceof.png" alt="">
+
+				<h2>JavaScript String Comparison ( lexicographical )</h2>
+				<div class="note">
+					<h6>Note :</h6>
+					<ul>
+						<li>String Comparison checking through the difference of first letter of ASCII Values.</li>
+					</ul>
+					<h6>String Comparison ASCII Values:</h6>
+					<ul>
+						<li>Uppercase letters (A-Z) have ASCII values ranging from 65 (A) to 90 (Z).</li>
+						<li>Lowercase letters (a-z) have ASCII values ranging from 97 (a) to 122 (z).</li>
+						<li>String Numbers (0-9) have ASCII values ranging from 48 (0) to 57 (9).</li>
+					</ul>
+				</div>
+
+				<pre><code class="language-html code-block">
+					<script>
+					
+						// console.log("123" < "45");  // (lexicographical comparison)
+						// console.log("123" > "12");  // (longer string wins)
+						// console.log("0123" < "123"); // (leading zero makes it smaller)
+						// console.log("9" > "100");   // (first character comparison)
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<h6>Note :</h6>
+					<ul>
+						<li>To convert a character to its ASCII value, use functions like charCodeAt in JavaScript.</li>
+						<li>Conversely, to convert an ASCII value to a character, use String.fromCharCode in JavaScript</li>
+					</ul>
+					<h6>The difference between uppercase and lowercase letters is 32 :</h6>
+					<ul>
+						<li>'a' ASCII value = 97</li>
+						<li>'A' ASCII value = 65</li>
+						<li>Difference: 97 - 65 = 32</li>
+					</ul>
+					<h6>This difference applies consistently across all letters :</h6>
+					<ul>
+						<li>'b' (98) - 'B' (66) = 32, and so on.</li>
+					</ul>
+				</div>
+
+				<pre><code class="language-html code-block">
+					<script>
+
+						// charCodeAt(0) examples
+						// console.log("ASCII value of '0':", '0'.charCodeAt(0)); 
+						// console.log("ASCII value of '9':", '9'.charCodeAt(0)); 
+
+						// // fromCharCode examples
+						// String.fromCharCode('A'.charCodeAt(0) + 32); 
+						// String.fromCharCode('a'.charCodeAt(0) - 32); 
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				
+
+				
+
+				<h2>BODMAS - in JS</h2>
+				<ul>
+					<li>B - Bracket</li>
+					<li>O - Of</li>
+					<li>D - Division</li>
+					<li>M - Multiplication</li>
+					<li>A - Addition</li>
+					<li>S - Substraction</li>
+				</ul>
+
+				<p>some examples for BODMAS</p>
+
+				<pre><code class="language-html code-block">
+					<script>
+						
+						// without Parentheses
+						// let result = 2 + 3 * 4;
+						// console.log(result); 
+
+						
+						// with Parentheses
+						// let result = (2 + 3) * 4;
+						// console.log(result);  
+
+
+						// without Parentheses
+						// let result = 10 - 2 / 2;
+						// console.log(result);  
+
+						
+						// with Parentheses
+						// let result = (10 - 2) / 2;
+						// console.log(result);  
+
+
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+			</section>
+
+			<!-- Data Types section -->
+			<section id="jsDataTypes">
+
+				<h1>Data Types</h1>
+
+				<h2>Primitive Types</h2>
+				<p>undefined, null, boolean, number, bigint, string, symbol</p>
+
+				<h2>Non-Primitive (Reference) Types</h2>
+
+				<p>object (including arrays, functions, dates, etc.).</p>
+
+				<h2>Quick Reference Table</h2>
+				<img src="./dataTypes.png" alt="">
+
+
+
+				<h2>List of Falsy Values in JavaScript</h2>
+				<p>There are exactly 6 falsy values in JavaScript:</p>
+				<ul>
+					<li>false – The boolean false.</li>
+					<li>0 – The number 0 (both positive and negative).</li>
+					<li>" " or ' ' – Empty strings (both single and double quotes).</li>
+					<li>null – Represents the absence of any value.</li>
+					<li>undefined – Represents a variable that has been declared but not assigned a value.</li>
+					<li>NaN – Represents "Not-a-Number," usually the result of an invalid arithmetic operation.</li>
+				</ul>
+
+				<pre><code class="language-html code-block">
+					<script>
+						
+						// console.log(Boolean(false));      // Output: false
+						// console.log(Boolean(0));          // Output: false
+						// console.log(Boolean(""));         // Output: false
+						// console.log(Boolean(null));       // Output: false
+						// console.log(Boolean(undefined));  // Output: false
+						// console.log(Boolean(NaN));        // Output: false
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Non-Falsy Values (Truthy Values)</h2>
+				<p>All other values that are not falsy are considered truthy. Some common truthy values include:</p>
+
+				<ul>
+					<li>Non-empty strings ("hello", "0", etc.)</li>
+					<li>Non-zero numbers (1, -1, 3.14, etc.)</li>
+					<li>Arrays ([])</li>
+					<li>Objects ({})</li>
+					<li>The boolean true</li>
+				</ul>
+				
+				<p><b>Example with Both Falsy and Truthy Values : </b></p>
+				<pre><code class="language-html code-block">
+					<script>
+						
+						// let value = "";
+						// if (value) {
+						// console.log("Truthy");
+						// } else {
+						// console.log("Falsy");  
+						// }
+
+						// value = "hello";
+						// if (value) {
+						// console.log("Truthy");  
+						// } else {
+						// console.log("Falsy");
+						// }
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<ul>
+						<li>JavaScript evaluates expressions from left to right. Different sequences can produce different results</li>
+						<li>Afte the string it's fully workng concatenation.</li>
+					</ul>
+					<pre><code class="language-html code-block">
+						<script>
+							
+							// let x = 16 + 4 + "Volvo";
+
+							// let y = "Volvo" + 16 + 4;
+
+							// let z = 16 + 4 + "Volvo" + 20 + 20;
+
+							// console.log(x);
+							// console.log(y);
+							// console.log(z);
+
+	
+						</script>
+					</code><button class="copy-btn">Copy</button></pre>
+				</div>
+
+			</section>
+
+			<!-- functions section -->
+			<section id="jsFunctions">
+
+				<h1>JavaScript Functions</h1>
+				<ul>
+					<li>A JavaScript function is a block of code designed to perform a particular task.</li>
+					<li>A JavaScript function is executed when "something" invokes it (calls it).</li>
+				</ul>
+
+				<h2>JavaScript Function Syntax</h2>
+				<pre><code class="language-html code-block">
+					<script>
+						
+						// function name(parameter1, parameter2, parameter3) {
+						// // code to be executed
+						// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<ul>
+					<li>Function parameters are listed inside the parentheses () in the function definition.</li>
+					<li>Function arguments are the values received by the function when it is invoked.</li>
+					<li>Inside the function, the arguments (the parameters) behave as local variables.</li>
+				</ul>
+
+				<h2>Function Invocation</h2>
+				<ul>
+					<li>When an event occurs (when a user clicks a button)</li>
+					<li>When it is invoked (called) from JavaScript code</li>
+					<li>Automatically (self invoked)</li>
+				</ul>
+
+
+				<h2>Function Return</h2>
+				<p>When JavaScript reaches a return statement, the function will stop executing.</p>
+				<p>If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.</p>
+
+				<pre><code class="language-html code-block">
+					<!-- <p>Call a function which performs a calculation and returns the result:</p>
+
+					<p id="demo"></p> -->
+
+					<script>
+						// let x = myFunction(4, 3);
+						// document.getElementById("demo").innerHTML = x;
+
+						// function myFunction(a, b) {
+						// return a * b;
+						// }
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<h2>Why Functions?</h2>
+					<ul>
+						<li>With functions you can reuse code</li>
+						<li>You can write code that can be used many times.</li>
+						<li>You can use the same code with different arguments, to produce different results.</li>
+					</ul>
+				</div>
+
+			</section>
+
+			<!-- Objects section -->
+			<section id="jsObjects">
+				<h1>JavaScript Objects</h1>
+				<p>Objects are variables too. But objects can contain many values.</p>
+
+				<div class="note">
+					<p>It is a common practice to declare objects with the const keyword.</p>
+				</div>
+
+				<pre><code class="language-html code-block">
+					<script>
+						// an objest using const you can write like this...
+						// const car = { type:"Fiat", model:"500", color:"white" };
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>How to Define a JavaScript Object</h2>
+				<ul>
+					<li>Using an Object Literal</li>
+					<li>Using the new Keyword</li>
+					<li>Using an Object Constructor</li>
+				</ul>
+
+				<h2>JavaScript Object Literal</h2>
+				<p>An object literal is a list of name:value pairs inside curly braces {}.</p>
+				<div class="note">
+					<ul>
+						<li>name:value pairs are also called key:value pairs.</li>
+						<li>object literals are also called object initializers.</li>
+					</ul>
+				</div>
+
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 3 Ways you can write like this
+
+						// 1. Create an Object in a single line:
+						// const person = {firstName:"Jhon", lastName:"Doe", age:50, height: 170};
+
+						// 2. Create an Object in a mulyiple line:
+						// const person = {
+						// 	firstName:"Jhon", 
+						// 	lastName:"Doe", 
+						// 	age:50, 
+						// 	height: 170
+						// };
+
+						// 3. Create an empty js Object and adds 4 properties:
+						// const person = {};
+
+						// person.firstName = "Jhon", 
+						// person.lastName = "Doe", 
+						// person.age = 50, 
+						// person.height =  170
+
+						// Display Data from the Object:
+						// document.getElementById("demo").innerHTML = 
+						// person.firstName + " " + person.lastName + " is " + person.age + " years old";
+												
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Using the new Keyword </h2>
+				<p>JavaScript object using new Object(), and then adds 4 properties:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						// Create an Object and adds 4 properties:
+						// const person = new Object();
+
+						// person.firstName = "Jhon", 
+						// person.lastName = "Doe", 
+						// person.age = 50, 
+						// person.height =  170
+
+						// Display Data from the Object:
+						// document.getElementById("demo").innerHTML = 
+						// person.firstName + " " + person.lastName + " is " + person.age + " years old";
+												
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<ul>
+						<li>But, there is no need to use new Object().</li>
+						<li>For readability, simplicity and execution speed, use the object literal method.</li>
+					</ul>
+				</div>
+
+
+				<h2>Object Properties</h2>
+				<p>The named values, in JavaScript objects, are called properties.</p>
+				<img src="./object_properties.png" alt="">
+
+				<p><b>Accessing Object Properties</b></p>
+				<p> You can access object properties in two ways: </p>
+				<ul>
+					<li>1. objectName.propertyName</li>
+					<li>2. objectName["propertyName"]</li>
+				</ul>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>					
+
+					// Create an Object:
+					// const person = {
+					// firstName: "John",
+					// lastName : "Doe",
+					// id     :  5566
+					// };
+
+					//1. Display lastName from the Object:
+					// document.getElementById("demo").innerHTML =
+					// "The last name is " + person.lastName;
+
+					//2. Display lastName from the Object:
+					// document.getElementById("demo").innerHTML =
+					// "The last name is " + person["lastName"];
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<p>Using spaces in object property names is generally not considered good practice in JavaScript or most programming languages.</p>
+					<h2>Key Points</h2>
+					<ul>
+						<h6>1. Quotes Required for Spaces:</h6>
+						<li>Use double quotes (") or single quotes (') to define property names with spaces.</li>
+						<li>You cannot use dot notation for such properties; you must use bracket notation.</li>
+					</ul>
+					<ul>
+						<h6>Avoid Spaces if Possible:</h6>
+						<li>While it is allowed, it is better to avoid spaces in property names for maintainability and readability.</li>
+						<li>Use camelCase or snake_case instead, e.g., firstName or first_name.</li>
+					</ul>
+
+					<pre><code class="language-html code-block">
+
+						<!-- output check here -->
+						<!-- <p id="demo"></p> -->
+	
+						<!-- using space for property name -->
+						<script>
+							// const person = {
+							// "first Name": "John",
+							// "last Name": "Doe",
+							// id: 5566
+							// };
+	
+							// document.getElementById("demo").innerHTML = person["first Name"];
+	
+						</script>
+					</code><button class="copy-btn">Copy</button></pre>
+
+				</div>
+
+
+				<h2>JavaScript Object Methods</h2>
+				<ul>
+					<li>The named values, in JavaScript objects, are called properties.</li>
+					<li>Methods are function definitions stored as property values.</li>
+				</ul>
+				<img src="./object_methods.png" alt="">
+
+
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// const person = {
+						// firstName: "John",
+						// lastName: "Doe",
+						// id: 5566,
+						// fullName: function() {
+						// 	return this.firstName + " " + this.lastName;
+						// }
+						// };
+
+						// document.getElementById("demo").innerHTML = person.fullName();
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<p><b>In the example above, this refers to the person object:</b></p>
+
+				<h2>In JavaScript, Objects are King.</h2>
+				<p>If you Understand Objects, you Understand JavaScript.</p>
+				<div class="note">
+					<ul>
+						<li>Objects are containers for Properties and Methods.</li>
+						<li>Properties are named Values</li>
+						<li>Methods are Functions stored as Properties.</li>
+						<li>Properties can be primitive values, functions, or even other objects.</li>
+					</ul>
+				</div>
+
+
+
+				<h2>JavaScript Objects are Mutable</h2>
+				<p>Objects are mutable: They are addressed by reference, not by value.</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create an Object
+						// const person = {
+						// firstName: "John",
+						// lastName: "Doe",
+						// age:50,
+						// eyeColor: "blue"
+						// };
+
+						// // Create a Copy
+						// const x = person;
+
+						// // Change Age
+						// x.age = 10;
+
+						// document.getElementById("demo").innerHTML =
+						// person.firstName + " is " + person.age + " years old.";
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+			</section>
+
+			<!-- JS Display Objects -->
+			<section id="js_display_objects">
+
+				<h1>JavaScript Display Objects</h1>
+
+				<ul>
+					<li>Displaying the Object Properties by name</li>
+					<li>Displaying the Object Properties in a Loop</li>
+					<li>Displaying the Object using Object.values()</li>
+					<li>Displaying the Object using JSON.stringify()</li>
+				</ul>
+
+				<h2>dot notation and bracket notation</h2>
+				<p>In JavaScript, dot notation and bracket notation are two ways to access properties of objects. Here's a breakdown of the two methods, their syntax, and use cases:</p>
+
+				<h2>Dot Notation</h2>
+
+				<h6>Syntax :</h6>
+				<pre><code class="language-html code-block">
+
+					<script>
+						// object.property
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+				<h6>Example :</h6>
+				<pre><code class="language-html code-block">
+
+					<script>
+						// // display using dot notation
+						// const car = {
+						// 	brand: "Toyota",
+						// 	model: "Corolla",
+						// 	year: 2020
+						// };
+
+						// console.log(car.brand);  // Output: "Toyota"
+						// console.log(car.year);   // Output: 2020
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+				<div class="note">
+					<h6>When to Use:</h6>
+					<ul>
+						<li>When the property name is a valid JavaScript identifier (e.g., no spaces or special characters).</li>
+						<li>When the property name is known at the time of coding (not dynamic).</li>
+					</ul>
+				</div>
+
+
+				<h2>Bracket Notation</h2>
+
+				<h6>Syntax :</h6>
+				<pre><code class="language-html code-block">
+
+					<script>
+						// object["property"]
+						// object[variableContainingPropertyName]
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+				<h6>Example :</h6>
+				<pre><code class="language-html code-block">
+
+					<script>
+						// // display using dot notation
+						// const car = {
+						// 	brand: "Toyota",
+						// 	"fuel type": "Petrol",
+						// 	year: 2020
+						// };
+
+						// console.log(car["brand"]);        // Output: "Toyota"
+						// console.log(car["fuel type"]);    // Output: "Petrol"
+
+						// const key = "year";
+						// console.log(car[key]);            // Output: 2020
+
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+				<div class="note">
+					<h6>When to Use:</h6>
+					<ul>
+						<li>When the property name includes spaces or special characters.</li>
+						<li>When the property name is dynamic (e.g., stored in a variable or generated at runtime).</li>
+					</ul>
+				</div>
+
+				<h2>Comparison of Dot and Bracket Notation</h2>
+				<img src="./dot_bracket_notation.png" alt="">
+
+
+				<h2>Displaying Object Properties by Name</h2>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// Create an Object
+						// const person = {
+						//   name: "John",
+						//   age: 30,
+						//   city: "New York"
+						// };
+						
+						// // Display Properties
+						// document.getElementById("demo").innerHTML = person.name + ", " + person.age + ", " + person.city;
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<h2>Displaying Properties in a Loop</h2>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create an Object
+						// const person = {
+						//   name: "John",
+						//   age: 30,
+						//   city: "New York"
+						// };
+
+						// let text = "";
+						// for(let x in person)
+						// {
+						// 	text += person[x] + " ";
+						// }
+						
+						// // Display Properties
+						// document.getElementById("demo").innerHTML = text;
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<div class="note">
+					<ul>
+						<li>You must use person[x] in the loop.</li>
+						<li>person.x will not work (Because x is the loop variable).</li>
+					</ul>
+				</div>
+
+				<h2>Using Object.values()</h2>
+				<p>Object.values() creates an array from the property values:</p>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p>
+					<p id="demo1"></p> -->
+
+					<script>
+						// // Create an Object
+						// const person = {
+						//   name: "John",
+						//   age: 30,
+						//   city: "New York"
+						// };
+
+						// const myArray = Object.values(person);
+
+						// const myArray1 = Object.entries(person);
+
+						
+						// // Display Properties
+						// document.getElementById("demo").innerHTML = myArray;
+
+						// document.getElementById("demo1").innerHTML = myArray;
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<h2>Using Object.entries()</h2>
+				<p>Object.entries() makes it simple to use objects in loops:</p>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create an Object
+						// const fruits = {
+						//   apple: 200,
+						//   banana: 100,
+						//   grape: 150
+						// };
+
+						// text = "";
+
+						// for(let [fruit , value] of Object.entries(fruits))
+						// {
+						// 	text += fruit + " : " + value + " , ";
+						// }
+						
+						// // Display Properties
+						// document.getElementById("demo").innerHTML = text;
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+
+				<h2>Using JSON.stringify()</h2>
+				<p>JavaScript objects can be converted to a string with JSON method JSON.stringify().</p>
+				<p>JSON.stringify() is included in JavaScript and supported in all major browsers.</p>
+
+				<div class="note">
+					<p>The result will be a string written in JSON notation:</p>
+					<p>{"name":"John","age":50,"city":"New York"}</p>
+				</div>
+
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// Create an Object
+						// const person = {
+						//   name: "Kamaru",
+						//   age: 27,
+						//   location: "kerala"
+						// };
+
+						// const myArray = JSON.stringify(person);
+						
+						// // Display Properties
+						// document.getElementById("demo").innerHTML = myArray;
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+
+			</section>
+
+			<!-- Object Properties section -->
+			<section id="jsObjectProperties">
+				<h1>JavaScript Object Properties</h1>
+
+				<h2>Adding New Properties</h2>
+				<p>You can add new properties to an existing object by simply giving it a value:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						
+						// const person = {
+						// 	firstName : "Jhon",
+						// 	lastName : "Due",
+						// 	age : 50,
+						// 	eyeColor : "blue"
+						// }
+
+						// person.nationality = "indian";
+
+						// document.getElementById("demo").innerHTML = 
+						// person.firstName + " " + person.lastName  + " is a " +  person.nationality + ".";
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>Deleting Properties</h2>
+				<p>The delete keyword deletes a property from an object :</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						
+						// const person = {
+						// 	firstName : "Jhon",
+						// 	lastName : "Due",
+						// 	age : 50,
+						// 	eyeColor : "blue"
+						// }
+
+						// // one way to write
+						// // delete person.age;
+
+						// // another way
+						// // delete person["age"];
+
+						// document.getElementById("demo").innerHTML = 
+						// person.firstName + " " + person.lastName  + " is " +  person.age + " years old.";
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<ul>
+						<li>The delete keyword deletes both the value of the property and the property itself.</li>
+						<li>After deletion, the property cannot be used before it is added back again.</li>
+					</ul>
+				</div>
+
+
+				<h2>Nested Objects</h2>
+				<p>Property values in an object can be other objects:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						
+						// Create nested Objects
+						// const myObj = {
+						// name: "John",
+						// age: 30,
+						// myCars: {
+						// 	car1: "Ford",
+						// 	car2: "BMW",
+						// 	car3: "Fiat"
+						// 	}
+						// }
+
+						// 1. method
+						// document.getElementById("demo").innerHTML = myObj.myCars.car2;
+
+						// 2. method
+						// document.getElementById("demo").innerHTML = myObj.myCars["car2"];
+
+						// 3. method
+						// document.getElementById("demo").innerHTML = myObj["myCars"]["car2"];
+
+						// 4. method
+						// let p1 = "myCars";
+						// let p2 = "car2";
+						// document.getElementById("demo").innerHTML = myObj[p1][p2];
+
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+				
+
+			</section>	
+
+			<!-- Objects Methods section -->
+			<section id="jsObjectMethod">
+				<h1>JavaScript Object Methods</h1>
+
+				<h2>Accessing Object Methods</h2>
+				<p>You access an object method with the following syntax:</p>
+				<p><b>objectName.methodName()</b></p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						
+						// Create a Objects
+						// const person = {
+						// 	fName : "Jhon",
+						// 	lName : "Doe",
+						// 	age : 50,
+						// 	eyeColor : "red",
+						// 	fullname : function(){
+						// 		return this.fName + " " + this.lName  // function stored in a property
+						// 	}
+						// }
+
+						// 1 . If you invoke the fullName property with (), it will execute as a function:
+						// document.getElementById("demo").innerHTML = person.fullname();
+
+						// 2 . If you invoke the fullName property without (), it will not execute as a function:... it will show what inizialized in that property.
+						// document.getElementById("demo").innerHTML = person.fullname;
+
+
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>Adding a Method to an Object</h2>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						
+						// Create a Objects
+						// const person = {
+						// 	fName : "Jhon",
+						// 	lName : "Doe",
+						// 	age : 50,
+						// 	eyeColor : "red",
+						// }
+
+						// person.fullname = function(){
+						// 		return this.fName + " " + this.lName  // function stored in a property
+						// 	}
+
+						// document.getElementById("demo").innerHTML = person.fullname();
+
+
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Using JavaScript Methods</h2>
+				<p>This example uses the JavaScript toUpperCase() method to convert a text to uppercase:</p>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						
+						// Create a Objects
+						// const person = {
+						// 	fName : "Jhon",
+						// 	lName : "Doe",
+						// 	age : 50,
+						// 	eyeColor : "red",
+						// }
+
+						// person.fullname = function(){
+						// 		return ( this.fName + " " + this.lName ).toUpperCase();  // function stored in a property
+						// 	}
+
+						// document.getElementById("demo").innerHTML = person.fullname();
+
+
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>				
+
+			</section>
+
+			<!-- JS Object Other Concepts -->
+			<section id="jsObjectConcepts">
+
+				<h1 class="mt-60">preventExtensions(), seal() & freeze()</h1>
+
+				<!-- Js preventExtensions() starts here -->
+				<h2>JS preventExtensions()</h2>
+
+				<div class="note">
+					<h6>Key Points:</h6>
+					<ul>
+						<li>You cannot add new properties to the object.</li>
+						<li>Existing properties can still be modified or deleted.</li>
+						<li>It does not make the object immutable; it only restricts the addition of new properties.</li>
+					</ul>
+				</div>
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// // Define an object
+						// let person = {
+						// 	name: "Alice",
+						// 	age: 30
+						// };
+
+						// // Prevent extensions on the object
+						// Object.preventExtensions(person);
+
+						// // Try to add a new property
+						// person.city = "New York"; // This will fail 
+
+						// // Modify an existing property
+						// person.name = "Bob"; // Works fine
+
+						// // Delete an existing property
+						// delete person.age; // Works fine
+
+						// console.log(person); 
+
+						// // Check if the object is extensible
+						// console.log(Object.isExtensible(person)); // Output: false
+
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h6 class="mt-30">Strict Mode Example:</h6>
+				<p>In strict mode, attempting to add new properties to a non-extensible object throws a TypeError.  </p>
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// "use strict";
+
+						// let car = {
+						// brand: "Toyota"
+						// };
+
+						// Object.preventExtensions(car);
+
+						// car.model = "Corolla"; // Throws TypeError: Cannot add property model, object is not extensible
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<h6>Checking Extensibility:</h6>
+					<p>To check if an object is extensible, use:</p>
+
+					<pre><code class="language-html code-block">
+
+						<script>
+							
+							// Object.isExtensible(obj); // Returns true or false
+	
+						</script>
+	
+					</code><button class="copy-btn">Copy</button></pre>
+
+				</div>
+				<!-- Js preventExtensions() ends here -->
+
+
+				<!-- Js seal() starts here -->
+				<h2>JS seal()</h2>
+
+				<div class="note">
+					<h6>Key Points:</h6>
+					<ul>
+						<li>Prevents Adding New Properties: You cannot add new properties to the object.</li>
+						<li>Prevents Deleting Properties: Existing properties cannot be removed.</li>
+						<li>Allows Modifying Existing Properties: The values of existing properties can still be changed.</li>
+					</ul>
+				</div>
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// // Define an object
+						// let user = {
+						// name: "Alice",
+						// age: 25
+						// };
+
+						// // Seal the object
+						// Object.seal(user);
+
+						// // Try to add a new property
+						// user.city = "New York"; // This will fail silently in non-strict mode or throw an error in strict mode
+
+						// // Try to delete an existing property
+						// delete user.age; // This will fail silently or throw an error in strict mode
+
+						// // Modify an existing property
+						// user.name = "Bob"; // Works fine
+
+						// console.log(user); // Output: { name: "Bob", age: 25 }
+
+						// // Check if the object is sealed
+						// console.log(Object.isSealed(user)); // Output: true
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<h6>Checking seal():</h6>
+					<p>To check if an object is sealed, use:</p>
+
+					<pre><code class="language-html code-block">
+
+						<script>
+							
+							// Object.isSealed(obj); // Returns true or false
+	
+						</script>
+	
+					</code><button class="copy-btn">Copy</button></pre>
+
+				</div>
+				<!-- Js seal() Ends here -->
+
+
+
+				<!-- Js freeze() starts here -->
+				<h2>JS freeze()</h2>
+
+				<div class="note">
+					<h6>Key Points:</h6>
+					<ul>
+						<li>Prevents Adding New Properties: You cannot add new properties to the object.</li>
+						<li>Prevents Deleting Properties: Existing properties cannot be removed.</li>
+						<li>Prevents Modifying Existing Properties: The values of existing properties cannot be changed.</li>
+					</ul>
+				</div>
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// // Define an object
+						// let car = {
+						// brand: "Toyota",
+						// model: "Corolla"
+						// };
+
+						// // Freeze the object
+						// Object.freeze(car);
+
+						// // Try to add a new property
+						// car.year = 2023; // This will fail silently in non-strict mode or throw an error in strict mode
+
+						// // Try to delete an existing property
+						// delete car.model; // This will fail silently or throw an error in strict mode
+
+						// // Try to modify an existing property
+						// car.brand = "Honda"; // This will fail silently or throw an error in strict mode
+
+						// console.log(car); // Output: { brand: "Toyota", model: "Corolla" }
+
+						// // Check if the object is frozen
+						// console.log(Object.isFrozen(car)); // Output: true
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<h6>Checking freeze():</h6>
+					<p>To check if an object is freezed, use:</p>
+
+					<pre><code class="language-html code-block">
+
+						<script>
+							
+							// Object.isFrozen(obj); // Returns true or false
+	
+						</script>
+	
+					</code><button class="copy-btn">Copy</button></pre>
+
+				</div>
+				<!-- Js freeze() Ends here -->
+
+
+				<h2>Difference B/W preventExtensions(), seal() & freeze()</h2>
+				<img src="./diff_objects.png" alt="">
+
+
+				<!-- ================================================================================================= -->
+
+
+				<h1 class="mt-60">spread operator and rest operator </h1>
+
+				<div class="note">
+					<ul>
+						<li>The spread operator and rest operator are features of JavaScript introduced in ES6</li>
+						<li>While they look similar (...), they serve different purposes depending on their context.</li>
+					</ul>
+				</div>
+
+				<!-- spread operator starts here -->
+				<h2>Spread Operator (...)</h2>
+				<p>The spread operator is used to expand or spread elements from an array, object, or iterable into individual elements. It is commonly used for:</p>
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// const obj1 = { a: 1, b: 2 };
+						// const obj2 = { c: 3 };
+
+						// // Combine objects
+						// const combined = { ...obj1, ...obj2 };
+						// console.log(combined); // { a: 1, b: 2, c: 3 }
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+				<!-- spread operator ends here -->
+
+
+				<!-- Rest operator starts here -->
+				<h2>Rest Operator (...)</h2>
+				<p>The rest operator collects multiple elements into a single array or object. It is used in function parameters or destructuring assignments to "gather" the remaining items. </p>
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// const person = { name: 'Alice', age: 25, city: 'New York' };
+						// const { name, ...rest } = person;
+						// console.log(name); // Alice
+						// console.log(rest); // { age: 25, city: 'New York' }
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+				<!-- Rest operator ends here -->
+
+
+				<!-- Destructuring in JavaScript starts here -->
+				<h1 class="mt-60">Destructuring in JavaScript</h1>
+				<div class="note">
+					<p>Destructuring in JavaScript allows you to extract values from objects (or arrays) and assign them to variables in a concise manner. It was introduced in ES6 and is commonly used to simplify code.</p>
+				</div>
+
+				<h2>Basic Syntax</h2>
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// const person = { name: 'Alice', age: 25, city: 'New York' };
+
+						// const { name, age, city } = person;
+
+						// console.log(name); // 'Alice'
+						// console.log(age);  // 25
+						// console.log(city); // 'New York'
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>Rename Variables</h2>
+				<p>You can assign the property value to a new variable name using :</p>
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// const obj = { a: 1, b: 2 };
+						// const { a: alpha, b: beta } = obj;
+
+						// console.log(alpha); // 1
+						// console.log(beta);  // 2
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				
+				<h2>Default Values</h2>
+				<p>Provide default values if the property doesn't exist in the object.</p>
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// const obj = { a: 1 };
+						// const { a, b = 10 } = obj;
+
+						// console.log(a); // 1
+						// console.log(b); // 10
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Nested Destructuring</h2>
+				<p>Destructure properties of nested objects.</p>
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// const obj = { 
+						// 	a: 1, 
+						// 	nested: { 
+						// 		b: 2, 
+						// 		c: 3 
+						// 	} 
+						// };
+						// const { nested: { b, c } } = obj;
+
+						// console.log(b); // 2
+						// console.log(c); // 3
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Rest Operator</h2>
+				<p> Extract some properties and group the rest into another object.</p>
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// const obj = { a: 1, b: 2, c: 3 };
+						// const { a, ...rest } = obj;
+
+						// console.log(a);   // 1
+						// console.log(rest); // { b: 2, c: 3 }
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Function Parameter Destructuring</h2>
+				<p> Destructure an object directly in function parameters.</p>
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// const printDetails = ({ name, age }) => {
+						// 	console.log(`Name: ${name}, Age: ${age}`);
+						// };
+
+						// const person = { name: 'Alice', age: 25 };
+						// printDetails(person); // Name: Alice, Age: 25
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+				<!-- Destructuring in JavaScript ends here -->
+
+
+				<!-- optional Chaining Starts here -->
+				<h1 class="mt-60">Optional chaining (?.)</h1>
+				<div class="note">
+					<ul>
+						<li>If any property in the chain is null or undefined, the entire expression will evaluate to undefined instead of throwing an error.</li>
+						<li>Optional chaining becomes useful when you deal with nested properties or methods that might not exist. For flat objects (non-nested), it doesn’t add much value because JavaScript naturally returns undefined when a property is missing.</li>
+						<li>In normal (non-nested) situations, optional chaining doesn't add extra benefits because accessing a missing property already returns undefined. However, it shines when you deal with deeply nested properties or optional method calls, ensuring your code avoids runtime errors.</li>
+					</ul>
+				</div>
+
+				<h2>Basic Syntax</h2>
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// const value = obj?.property;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>How It Works</h2>
+				<ul>
+					<li>If obj exists (not null or undefined), it tries to access property.</li>
+					<li>If obj is null or undefined, it immediately stops and returns undefined.</li>
+					<li>Without Optional Chaining: Accessing a property when the parent object doesn’t exist throws an error.</li>
+					<li>With Optional Chaining: Safely returns undefined if any part of the chain is null or undefined.</li>
+				</ul>
+
+				<h2>Usage with Objects</h2>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// 1. Use for non - nested object
+						// const user = { name: "Alice" };
+
+						// // Accessing a property that doesn't exist
+						// console.log(user.age);       // Output: undefined
+						// console.log(user?.age);      // Output: undefined
+						
+
+						// 2. Use for nested object
+						// const user = {
+						// 	name: "Alice",
+						// 	address: {
+						// 		city: "Wonderland",
+						// 	},
+						// };
+
+						// // Without optional chaining
+						// console.log(user.name); 
+						// console.log(user.abc.city); 
+						// console.log(user.address.city); 
+
+
+						// // With optional chaining
+						// // console.log(user?.name); 
+						// // console.log(user?.abc?.city);  
+						// // console.log(user?.address?.city);
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+				<!-- optional Chaining Ends here -->
+
+
+				<!-- ================================================================================================= -->
+
+
+				<!-- Object Assign & Create starts here -->
+				<h1 class="mt-60">Object.assign() and Object.create() in JavaScript</h1>
+
+				<h2> Object.assign()</h2>
+				<ul>
+					<li>The Object.assign() method is used to copy properties from one or more source objects to a target object.</li>
+				</ul>
+				<h6 class="mt-30">Example</h6>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// const target = { a: 1 };
+						// const source1 = { b: 2 };
+						// const source2 = { c: 3 };
+
+						// const result = Object.assign(target, source1, source2);
+						// console.log(result); // Output: { a: 1, b: 2, c: 3 }
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>Uses of Object.assign()</h2>
+
+				<h6>Cloning Objects :</h6>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// const original = { x: 10, y: 20 };
+						// const clone = Object.assign({}, original);
+						// console.log(clone); // Output: { x: 10, y: 20 }
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h6 class="mt-30">Merging Objects</h6>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// const obj1 = { a: 1 };
+						// const obj2 = { b: 2 };
+						// const merged = Object.assign({}, obj1, obj2);
+						// console.log(merged); // Output: { a: 1, b: 2 }
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Object.create()</h2>
+				<ul>
+					<li>The Object.create() method is used to create a new object and set its prototype to an existing object.</li>
+				</ul>
+				<h6 class="mt-30">Example</h6>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// const prototypeObject = {
+						// greet: function() {
+						// 	return "Hello, " + this.name;
+						// }
+						// };
+
+						// const newObject = Object.create(prototypeObject);
+						// newObject.name = "Alice";
+
+						// console.log(newObject.greet()); // Output: Hello, Alice
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<!-- Object Assign & Create ends here -->
+
+
+				<!-- call(), apply() & bind() starts here -->
+
+				<h1 class="mt-60">call(), apply() & bind()</h1>
+
+				<h2>call()</h2>
+				<ul>
+					<li>The call() method invokes a function and allows you to pass arguments individually while setting the this value.</li>
+				</ul>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// const person = {
+						// fullName: function(city, country) {
+						// 	return `${this.firstName} ${this.lastName} from ${city}, ${country}`;
+						// }
+						// };
+
+						// const personDetails = { firstName: "Alice", lastName: "Smith" };
+
+						// console.log(person.fullName.call(personDetails, "New York", "USA"));
+						// Output: Alice Smith from New York, USA
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>apply()</h2>
+				<ul>
+					<li>The apply() method is similar to call() but takes arguments as an array (or array-like object).</li>
+				</ul>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// const person = {
+						// fullName: function(city, country) {
+						// 	return `${this.firstName} ${this.lastName} from ${city}, ${country}`;
+						// }
+						// };
+
+						// const personDetails = { firstName: "Alice", lastName: "Smith" };
+
+						// console.log(person.fullName.apply(personDetails, ["New York", "USA"]));
+						// // Output: Alice Smith from New York, USA
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>bind()</h2>
+				<ul>
+					<li>The bind() method creates a new function with this permanently set to a specified object. Unlike call() and apply(), bind() does not immediately invoke the function.</li>
+				</ul>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// const person = {
+						// fullName: function(city, country) {
+						// 	return `${this.firstName} ${this.lastName} from ${city}, ${country}`;
+						// }
+						// };
+
+						// const personDetails = { firstName: "Emma", lastName: "Brown" };
+
+						// const boundFullName = person.fullName.bind(personDetails, "Paris");
+						// console.log(boundFullName("France")); 
+						// // Output: Emma Brown from Paris, France
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6>Explanation</h6>
+				<ul>
+					<li>bind() creates a new function boundFullName with this set to personDetails.</li>
+					<li>"Paris" is pre-filled as the first argument, and "France" is passed when the function is invoked.</li>
+				</ul>
+
+
+				<h2>Combined Example</h2>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// const person = {
+						// 	fullName: function(city, country) {
+						// 		return `${this.firstName} ${this.lastName} from ${city}, ${country}`;
+						// 	}
+						// };
+
+						// const personDetails = { firstName: "Alice", lastName: "Smith" };
+
+						// // Using call()
+						// console.log(person.fullName.call(personDetails, "New York", "USA"));
+						// // Output: Alice Smith from New York, USA
+
+						// // Using apply()
+						// console.log(person.fullName.apply(personDetails, ["London", "UK"]));
+						// // Output: Alice Smith from London, UK
+
+						// // Using bind()
+						// const boundFullName = person.fullName.bind(personDetails, "Paris");
+						// console.log(boundFullName("France"));
+						// // Output: Alice Smith from Paris, France
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<h6>Key Points</h6>
+					<ul>
+						<li>1. Use call() for immediate invocation with arguments passed individually.</li>
+						<li>2. Use apply() for immediate invocation with arguments passed as an array.</li>
+						<li>3. Use bind() to create a new function with a pre-set this value, which you can invoke later.</li>
+					</ul>
+				</div>
+
+				<!-- call(), apply() & bind() ends here -->
+			
+
+			</section>
+
+			<!-- JS Object Constructors -->
+			<section id="js_object_constructors">
+
+				<h1>JavaScript Object Constructors </h1>
+
+				<h2>What is an Object Constructor in JavaScript?</h2>
+				<p>In JavaScript, an object constructor is a function or class that is used to create and initialize objects. It provides a blueprint for creating multiple objects with the same structure and behavior.</p>
+
+				<div class="note">
+					<ul>
+						<li>Sometimes we need to create many objects of the same type.</li>
+						<li>To create an object type we use an object constructor function or class.</li>
+						<li>It is considered good practice to name constructor functions with an upper-case first letter.</li>
+					</ul>
+				</div>
+
+				<h2>2 Types of Constructors</h2>
+				<ul>
+					<li>Constructor Functions</li>
+					<li>ES6 Classes</li>
+				</ul>
+
+				<h1>Constructor Functions</h1>
+				<ul>
+					<li>this Keyword: Refers to the object being created.</li>
+					<li>new Keyword: Creates a new object and links it to the constructor function.</li>
+					<li>Reusable Blueprint: The constructor function allows you to create multiple objects with the same structure.</li>
+				</ul>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create a constructor function
+						// function Person( fname, lname, age, eyeColor)
+						// {
+						// 	this.firstName = fname,
+						// 	this.lastName = lname,
+						// 	this.age = age,
+						// 	this.eyeColor = eyeColor
+						// }
+
+						// // create a person object
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+
+						// // display
+						// document.getElementById("demo").innerHTML = 
+						// "My Self is " + mySelf.age;
+
+
+						// // create multiple person object
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+						// // display multiple
+						// document.getElementById("demo").innerHTML = 
+						// "My self is " + mySelf.age + ", Sister is " + mySister.age;
+
+						
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+
+				<h2>Property Default Values</h2>
+				<p>A value given to a property will be a default value for all objects created by the constructor:</p>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // 1.  Create a constructor function
+						// function Person( fname, lname, age, eyeColor)
+						// {
+						// 	this.firstName = fname || "default value",
+						// 	this.lastName = lname,
+						// 	this.age = age,
+						// 	this.eyeColor = eyeColor,
+						// 	this.nationality = "indian"
+						// }
+
+
+						// // 2.  Create a constructor function
+						// function Person(fname = "John", lname = "Doe", age = 30, eyeColor = "brown") {
+						// 	this.firstName = fname;
+						// 	this.lastName = lname;
+						// 	this.age = age;
+						// 	this.eyeColor = eyeColor;
+						// 	this.nationality = "indian"; // Additional default value
+						// }
+
+
+						// // 1.  Create a constructor function
+						// function Person( fname, lname, age, eyeColor)
+						// {
+						// 	this.firstName = fname || "default value",
+						// 	this.lastName = lname,
+						// 	this.age = age,
+						// 	this.eyeColor = eyeColor,
+						// 	this.nationality = "indian" 
+						// }
+
+
+						// // create multiple person objects
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+						// // display nationality
+						// document.getElementById("demo").innerHTML = 
+						// "I am a " + mySelf.nationality + " and my Sister also " + mySister.nationality;
+
+
+						// // display given default value
+						// document.getElementById("demo").innerHTML = 
+						// "I am a " + mySelf.firstName + " and my Sister also " + mySister.nationality;
+
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<h2>Adding a Property to an Object</h2>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create a constructor function
+						// function Person( fname, lname, age, eyeColor)
+						// {
+						// 	this.firstName = fname,
+						// 	this.lastName = lname,
+						// 	this.age = age,
+						// 	this.eyeColor = eyeColor
+						// }
+
+
+						// // create multiple person objects
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+						// // add nationality to first object
+						// mySelf.nationality = "indian";
+
+
+						// // display 
+						// document.getElementById("demo").innerHTML = 
+						// "I am a " + mySelf.nationality + " and my Sister also " + mySister.nationality;
+
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<h2>Adding a Property to an Constructor</h2>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create a constructor function
+						// function Person( fname, lname, age, eyeColor)
+						// {
+						// 	this.firstName = fname,
+						// 	this.lastName = lname,
+						// 	this.age = age,
+						// 	this.eyeColor = eyeColor
+						// }
+
+
+						// // create multiple person objects
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+						// // add nationality to constructor
+						// Person.prototype.nationality = "indian";
+
+
+						// // display 
+						// document.getElementById("demo").innerHTML = 
+						// "I am a " + mySelf.nationality + " and my Sister also " + mySister.nationality;
+
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+
+				<h2>Constructor Function Methods</h2>
+				<p>A constructor function can also have methods:</p>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create a constructor function
+						// function Person( fname, lname, age, eyeColor)
+						// {
+						// 	this.firstName = fname,
+						// 	this.lastName = lname,
+						// 	this.age = age,
+						// 	this.eyeColor = eyeColor
+						// 	// add object here
+						// 	this.fullName = function() {
+						// 		return this.firstName + " " + this.lastName
+						// 	}
+						// }
+
+
+						// // create multiple person objects
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+
+						// // display 
+						// document.getElementById("demo").innerHTML = 
+						// "My self is " + mySelf.fullName() + " and my Sister is " + mySister.fullName();
+
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+
+				<h2>Adding a Method to an Object</h2>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create a constructor function
+						// function Person( fname, lname, age, eyeColor)
+						// {
+						// 	this.firstName = fname,
+						// 	this.lastName = lname,
+						// 	this.age = age,
+						// 	this.eyeColor = eyeColor
+						// }
+
+
+						// // create multiple person objects
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+						// // add object here
+						// mySelf.changeName = function (name) {
+						// 		this.lastName = name;
+						// 	}
+
+						// // change name
+						// mySelf.changeName('dheen');
+
+
+						// // display 
+						// document.getElementById("demo").innerHTML = 
+						// "My last name is " + mySelf.lastName + " and my Sister's " + mySister.lastName;
+
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<h2>Adding a Method to a Constructor</h2>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create a constructor function
+						// function Person( fname, lname, age, eyeColor)
+						// {
+						// 	this.firstName = fname,
+						// 	this.lastName = lname,
+						// 	this.age = age,
+						// 	this.eyeColor = eyeColor
+						// }
+
+
+						// // create multiple person objects
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+						// // add object here
+						// Person.prototype.changeName = function (name) {
+						// 		this.lastName = name;
+						// 	}
+
+						// // change name
+						// mySelf.changeName('dheen');
+
+						// mySister.changeName('binth ali');
+
+
+						// // display 
+						// document.getElementById("demo").innerHTML = 
+						// "My last name is " + mySelf.lastName + " and my Sister's " + mySister.lastName;
+
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<h1 class="mt-60">ES6 classes</h1>
+
+				<h2>Defining a Class</h2>
+				<h6>Syntax :</h6>
+				<pre><code class="language-html code-block">
+
+					<script>
+						
+						// class ClassName {
+						// 	constructor(parameters) {
+						// 	// Initialize properties
+						// 	}
+
+						// 	// Instance methods
+						// 	methodName() {
+						// 	// Method logic
+						// 	}
+						// }
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>	
+
+				<h6>Example :</h6>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create a constructor using class
+						// class Person
+						// {
+						// 	constructor( fname, lname, age, eyeColor)
+						// 	{
+						// 		this.firstName = fname,
+						// 		this.lastName = lname,
+						// 		this.age = age,
+						// 		this.eyeColor = eyeColor
+						// 	}
+						// }
+
+						// // create a person object
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+
+						// // display
+						// document.getElementById("demo").innerHTML =  mySelf.age;
+
+
+						// // create multiple person object
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+						// // display multiple
+						// document.getElementById("demo").innerHTML =   mySelf.age + ", " + mySister.age;
+
+						
+					</script>
+										
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<h2>Property Default Values</h2>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create a constructor using class
+						// // 1. one method for add default values
+						// class Person
+						// {
+						// 	constructor( fname , lname, age, eyeColor, nationality = "indian"  )
+						// 	{
+						// 		this.firstName = fname,
+						// 		this.lastName = lname,
+						// 		this.age = age,
+						// 		this.eyeColor = eyeColor,
+						// 		this.nationality = nationality
+						// 	}
+						// }
+
+
+						// // create multiple person objects
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+						// // display 
+						// document.getElementById("demo").innerHTML = 
+						// "I am a " + mySelf.nationality + " and my Sister also " + mySister.nationality;
+
+
+					</script>
+										
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<h2>Adding A Property To An Object</h2>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create a constructor using class
+						// class Person
+						// {
+						// 	constructor( fname, lname, age, eyeColor)
+						// 	{
+						// 		this.firstName = fname,
+						// 		this.lastName = lname,
+						// 		this.age = age,
+						// 		this.eyeColor = eyeColor
+						// 	}
+						// }
+
+
+						// // create multiple person objects
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+						// // add nationality to first object
+						// mySelf.nationality = "indian";
+
+
+						// // display 
+						// document.getElementById("demo").innerHTML = 
+						// "I am a " + mySelf.nationality + " and my Sister also " + mySister.nationality;
+
+
+					</script>
+															
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<h2>Adding A Property To An Constructor</h2>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create a constructor using class
+						// class Person
+						// {
+						// 	constructor( fname, lname, age, eyeColor)
+						// 	{
+						// 		this.firstName = fname,
+						// 		this.lastName = lname,
+						// 		this.age = age,
+						// 		this.eyeColor = eyeColor
+						// 	}
+						// }
+
+
+						// // create multiple person objects
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+						// // add nationality default value to the constructor
+						// Person.prototype.nationality = "indian";
+
+						// // we can modify once it's added
+						// mySister.nationality = " foreign citizenship"
+
+						// // display 
+						// document.getElementById("demo").innerHTML = 
+						// "I am a " + mySelf.nationality + " and my Sister " + mySister.nationality;
+
+
+					</script>
+															
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<h2>Constructor Function Methods</h2>
+				<h6>Instance Methods :</h6>
+				<p>Instance methods are defined inside the class and operate on individual instances of the class. These methods are accessible through the instances.</p>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create a constructor class
+						// class Person
+						// {
+						// 	constructor( fname, lname, age, eyeColor)
+						// 	{
+						// 		this.firstName = fname,
+						// 		this.lastName = lname,
+						// 		this.age = age,
+						// 		this.eyeColor = eyeColor
+						// 	}
+							
+						// 	// add object method here /  Instance method
+						// 	fullName = function() {
+						// 		return this.firstName + " " + this.lastName
+						// 	}
+						// }
+
+
+						// // create multiple person objects
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+
+						// // display 
+						// document.getElementById("demo").innerHTML = 
+						// "My self is " + mySelf.fullName() + " and my Sister is " + mySister.fullName();
+
+
+					</script>
+																				
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<h2>Adding A Method To An Object</h2>
+				<pre><code class="language-html code-block">					
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create a constructor class
+						// class Person
+						// {
+						// 	constructor( fname, lname, age, eyeColor)
+						// 	{
+						// 		this.firstName = fname,
+						// 		this.lastName = lname,
+						// 		this.age = age,
+						// 		this.eyeColor = eyeColor
+						// 	}
+						// }
+
+
+						// // create multiple person objects
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+						// // // rename object property here
+						// // mySelf.changeName = function (name) {
+						// // 		this.lastName = name;
+						// // 	}
+						// // // changing name
+						// // mySelf.changeName('dheen');
+
+
+						// // add method to object
+						// mySelf.fullName = function(){
+						// 	return this.firstName + " " + this.lastName;
+						// }
+
+
+
+						// // // display changeName
+						// // document.getElementById("demo").innerHTML = 
+						// // "My last name is " + mySelf.lastName + " and my Sister's " + mySister.lastName;
+
+
+						// // display fullName
+						// document.getElementById("demo").innerHTML =  "My self is " + mySelf.fullName() ;
+
+						// // document.getElementById("demo").innerHTML =  "My Sister is " + mySister.fullName() ;
+
+
+					</script>
+																									
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<h2>Adding A Method To A Constructor</h2>
+				<pre><code class="language-html code-block">
+
+					<!-- output check here -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // Create a constructor class
+						// class Person
+						// {
+						// 	constructor( fname, lname, age, eyeColor)
+						// 	{
+						// 		this.firstName = fname,
+						// 		this.lastName = lname,
+						// 		this.age = age,
+						// 		this.eyeColor = eyeColor
+						// 	}
+							
+						// }
+
+
+						// // create multiple person objects
+						// const mySelf = new Person("kamaru", "ca", 27, "black");
+						// const mySister = new Person("Thabseera", "ca", 21, "black");
+
+
+						
+
+
+						// // rename property using method
+						// // Person.prototype.changeName = function(name){
+						// // 	this.lastName = name;
+						// // }
+
+						// // // name changing object mySelf
+						// // mySelf.name = "dheen";
+
+						// // // name changing object mySister
+						// // mySister.name = "binth ali";
+						
+						
+						// // add object method here /  Instance method
+						// Person.prototype.fullName = function() {
+						// 	return this.firstName + " " + this.lastName
+						// }
+						
+						// // full name with changed last name
+						// // Person.prototype.fullName = function() {
+						// // 	return this.firstName + " " + this.name
+						// // }
+
+
+						// // display full name
+						// document.getElementById("demo").innerHTML = 
+						// "My self is " + mySelf.fullName() + " and my Sister is " + mySister.fullName();
+
+
+						// // display changed last name
+						// // document.getElementById("demo").innerHTML = 
+						// // "My changed last name " + mySelf.name + " and my Sister is " + mySister.name;
+
+
+						// // display full name with changed last name
+						// // document.getElementById("demo").innerHTML = 
+						// // "My self is " + mySelf.fullName() + " and my Sister is " + mySister.fullName();
+
+
+
+					</script>
+																				
+				</code><button class="copy-btn">Copy</button></pre>	
+
+
+				<div class="note">
+					<h2>Main usages and why you might use it</h2>
+					<ul>
+						<li>1. Creating Multiple Similar Objects</li>
+						<li>2. Reusability</li>
+						<li>3. Adding Methods via Prototypes</li>
+						<li>4. Dynamic Object Creation</li>
+						<li>5. Encapsulating Logic</li>
+					</ul>
+				</div>
+
+				<h2>When to Use Object Constructors</h2>
+				<ul>
+					<li>Reusable Blueprints: When you need multiple similar objects.</li>
+					<li>Dynamic Initialization: To initialize objects with different values dynamically.</li>
+					<li>Memory Efficiency: To share methods using prototypes.</li>
+				</ul>
+
+
+
+				<h1 class="mt-60">Static & Extend method in Constructor</h1>
+
+				<h2>Static Methods</h2>
+				<ul>
+					<li>Definition: Static methods are functions that belong to the class itself, not to any instance.</li>
+					<li>Access to Instance Data: Static methods cannot access instance properties or methods via this. They are often used for utility functions or class-level operations.</li>
+					<li>How to Use: You can call static methods directly on the class without creating an instance.</li>
+				</ul>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// class MathUtils {
+						// 	static add(a, b) {
+						// 		return a + b;
+						// 	}
+
+						// 	static multiply(a, b) {
+						// 		return a * b;
+						// 	}
+						// }
+
+						// // Calling static methods directly on the class
+						// console.log(MathUtils.add(5, 3));       // Output: 8
+						// console.log(MathUtils.multiply(4, 7)); // Output: 28
+
+					</script>
+																				
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6>Why Use Static Methods?</h6>
+				<ul>
+					<li>For utility functions like calculations, validation, or conversions.</li>
+					<li>They avoid polluting instance methods when the functionality is class-level.</li>
+				</ul>
+
+
+				<h2>Extending Classes with extends</h2>
+				<p>The extends keyword is used to create a new class that inherits properties and methods from another class. This is a core feature of object-oriented programming in JavaScript.</p>
+
+				<ul>
+					<li>Parent Class (Base Class): The class being extended.</li>
+					<li>Child Class (Derived Class): The class that inherits from the parent.</li>
+					<li>Reusability: The child class can inherit and override methods or add new ones.</li>
+				</ul>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// class Animal {
+						// 	constructor(name) {
+						// 		this.name = name;
+						// 	}
+
+						// 	speak() {
+						// 		return `${this.name} makes a sound.`;
+						// 	}
+						// }
+
+						// // Extending the Animal class
+						// class Dog extends Animal {
+						// 	constructor(name, breed) {
+						// 		super(name); // Call the parent class constructor
+						// 		this.breed = breed;
+						// 	}
+
+						// 	speak() {
+						// 		return `${this.name}, the ${this.breed}, barks!`;
+						// 	}
+						// }
+
+						// const animal = new Animal("Generic Animal");
+						// console.log(animal.speak()); // Output: Generic Animal makes a sound.
+
+						// const dog = new Dog("Buddy", "Golden Retriever");
+						// console.log(dog.speak()); // Output: Buddy, the Golden Retriever, barks!
+
+
+					</script>
+																				
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6>1. Parent Class (Animal) :</h6>
+				<ul>
+					<li>Has a name property and a speak() method.</li>
+				</ul>
+				<h6>2. Child Class (Dog) :</h6>
+				<ul>
+					<li>Inherits from Animal using extends.</li>
+					<li>Adds a new breed property.</li>
+					<li>Overrides the speak() method to provide specific behavior for Dog.</li>
+				</ul>
+				<h6>3. super Keyword :</h6>
+				<ul>
+					<li>Used to call the parent class's constructor or methods.</li>
+				</ul>
+
+				<div class="note">
+					<h6>1. Static Methods:</h6>
+					<ul>
+						<li>Utility functions (e.g., Math.max or JSON.parse).</li>
+						<li>Class-level operations like maintaining counters or logs.</li>
+					</ul>
+
+					<h6>2. Extending Classes:</h6>
+					<ul>
+						<li>Sharing common logic across multiple classes.</li>
+						<li>Building hierarchical object-oriented designs.</li>
+					</ul>
+				</div>
+
+
+				<h1>Getters and Setters</h1>
+
+				<h2>1. What Are Getters?</h2>
+				<ul>
+					<li>Purpose: A getter allows you to retrieve the value of a property.</li>
+					<li>Key Feature: It looks like you're accessing a property, but you're actually calling a function.</li>
+				</ul>
+
+				<h2>2. What Are Setters?</h2>
+				<ul>
+					<li>Purpose: A setter allows you to set the value of a property.</li>
+					<li>Key Feature: It looks like you're assigning a value to a property, but you're actually calling a function.</li>
+				</ul>
+
+				<h6 class="mt-30">Syntax :</h6>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// class Example {
+						// 	get propertyName() {
+						// 		// Getter logic
+						// 	}
+						// 	set propertyName(value) {
+						// 		// Setter logic
+						// 	}
+						// }
+
+					</script>
+																				
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">Example :</h6>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// class Person {
+						// constructor(firstName, lastName) {
+						// 	this.firstName = firstName; // Regular property
+						// 	this.lastName = lastName;   // Regular property
+						// }
+
+						// // Getter for fullName
+						// get fullName() {
+						// 	return `${this.firstName} ${this.lastName}`;
+						// }
+
+						// // Setter for fullName
+						// set fullName(name) {
+						// 	const parts = name.split(" ");
+						// 	this.firstName = parts[0];
+						// 	this.lastName = parts[1];
+						// }
+						// }
+
+						// // Create an instance of Person
+						// const person = new Person("Alice", "Smith");
+
+						// // Using the getter
+						// console.log(person.fullName); // Output: Alice Smith
+
+						// // Using the setter
+						// person.fullName = "John Doe";
+						// console.log(person.firstName); // Output: John
+						// console.log(person.lastName);  // Output: Doe
+
+
+					</script>
+																				
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6>1. Getter (get fullName): </h6>
+				<ul>
+					<li>Combines firstName and lastName into a single fullName.</li>
+					<li>Used like a property: person.fullName.</li>
+				</ul>
+				<h6>2. Setter (set fullName):</h6>
+				<ul>
+					<li>Splits a fullName string into firstName and lastName.</li>
+					<li>Used like assigning a property: person.fullName = "John Doe".</li>
+				</ul>
+				<h6>3. Encapsulation:</h6>
+				<ul>
+					<li>Logic for how fullName is constructed or split is hidden inside the getter and setter.</li>
+				</ul>
+
+				<h6 class="mt-60">Example with Validation</h6>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// class Account {
+						// 	constructor(balance) {
+						// 		this._balance = balance; // Use underscore for private-like property
+						// 	}
+
+						// 	// Getter for balance
+						// 	get balance() {
+						// 		return this._balance;
+						// 	}
+
+						// 	// Setter for balance with validation
+						// 	set balance(amount) {
+						// 		if (amount < 0) {
+						// 		console.log("Balance cannot be negative!");
+						// 		} else {
+						// 		this._balance = amount;
+						// 		}
+						// 	}
+						// }
+
+						// const account = new Account(100);
+						// console.log(account.balance); // Output: 100
+
+						// account.balance = 50;         // Set a new balance
+						// console.log(account.balance); // Output: 50
+
+						// account.balance = -20;        // Invalid balance
+						// // Output: Balance cannot be negative!
+						// console.log(account.balance); // Output: 50
+
+
+					</script>
+																				
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Using Object.defineProperty</h2>
+				<p>You can also define getters and setters using Object.defineProperty.</p>
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// const person = {
+						// 	firstName: "Alice",
+						// 	lastName: "Smith",
+						// };
+
+						// Object.defineProperty(person, "fullName", {
+						// 	get() {
+						// 		return `${this.firstName} ${this.lastName}`;
+						// 	},
+						// 	set(name) {
+						// 		const parts = name.split(" ");
+						// 		this.firstName = parts[0];
+						// 		this.lastName = parts[1];
+						// 	},
+						// });
+
+						// console.log(person.fullName); // Output: Alice Smith
+						// person.fullName = "John Doe";
+						// console.log(person.firstName); // Output: John
+
+					</script>
+																				
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<h2>Benefits of Getters and Setters</h2>
+
+					<h6>1. Encapsulation:</h6>
+					<ul>
+						<li>Keep internal implementation private while exposing a clean interface.</li>
+					</ul>
+
+					<h6>2. Validation:</h6>
+					<ul>
+						<li>Add checks when setting a value (e.g., ensuring a valid format).</li>
+					</ul>
+
+					<h6>3. Dynamic Computation:</h6>
+					<ul>
+						<li>Compute properties dynamically instead of storing redundant data.</li>
+					</ul>
+
+					<h6>4. Consistency</h6>
+					<ul>
+						<li>Ensure consistency when accessing or modifying object properties.</li>
+					</ul>
+
+				</div>
+
+				
+
+			</section>
+
+			<!-- JS Events -->
+			<section id="js_events">
+
+				<h1>JavaScript Events</h1>
+
+				<h2>1. Mouse Events</h2>
+				<ul>
+					<li>click: Fired when an element is clicked.</li>
+					<li>dblclick: Fired when an element is double-clicked.</li>
+					<li>mouseover: Triggered when the mouse pointer is over an element.</li>
+					<li>mouseout: Triggered when the mouse pointer leaves an element.</li>
+					<li>mousedown: Fired when a mouse button is pressed on an element.</li>
+					<li>mouseup: Fired when a mouse button is released over an element.</li>
+					<li>mousemove: Triggered when the mouse pointer is moving over an element.</li>
+				</ul>
+
+				<!-- <button id="btId">button</button> -->
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo">Paragraph</p> -->
+
+					<script>
+						// // click event
+						// document.getElementById("btId").addEventListener("click", function(){
+						// 	console.log("button clicked")
+						// })
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>2. Keyboard Events</h2>
+				<ul>
+					<li>keydown: Triggered when a key is pressed down.</li>
+					<li>keyup: Fired when a key is released.</li>
+					<li>keypress: Triggered when a key is pressed (but is generally less used now).</li>
+				</ul>
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						// // keydown event
+						// document.addEventListener("keydown", function(event){
+						// 	console.log("Key pressed: ${event.key}")
+						// })
+
+					</script>
+					
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>3. Form Events</h2>
+				<ul>
+					<li>submit: Fired when a form is submitted.</li>
+					<li>focus: Triggered when an element (like an input field) gains focus.</li>
+					<li>blur: Fired when an element loses focus.</li>
+					<li>change: Triggered when the value of an input element changes.</li>
+					<li>input: Fired when an input value is modified.</li>
+				</ul>
+
+				<!-- form for checking purpose -->
+				<form id="myForm">
+					<input type="text">
+					<button type="submit">Submit</button>
+				</form>
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						// // submit event
+						// document.addEventListener('submit', function(event)
+						// {
+						// 	event.preventDefault();
+						// 	console.log('form submitted');
+						// })
+						
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>4. Window Events</h2>
+				<ul>
+					<li>load: Triggered when the page is fully loaded.</li>
+					<li>resize: Fired when the window is resized.</li>
+					<li>scroll: Fired when the page is scrolled.</li>
+					<li>unload: Triggered when the page is about to be unloaded or closed.</li>
+				</ul>
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						// // load event
+						// window.addEventListener('load', function()
+						// {
+						// 	console.log('window loaded');
+						// })
+						
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>5. Touch Events (For mobile devices)</h2>
+				<ul>
+					<li>touchstart: Triggered when a touch is detected.</li>
+					<li>touchmove: Fired when a touch point is moved across the screen.</li>
+					<li>touchend: Fired when a touch is removed from the screen.</li>
+				</ul>
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						// // touch event
+						// document.addEventListener('touchstart', function() {
+						// 	console.log('Screen touched');
+						// });
+						
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>6. Drag Events</h2>
+				<ul>
+					<li>dragstart: Fired when the user starts dragging an element.</li>
+					<li>dragover: Fired when a dragged element is being dragged over a target.</li>
+					<li>drop: Fired when a dragged element is dropped on a target.</li>
+				</ul>
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						// // drag event
+						// document.addEventListener('dragstart', function(event) {
+						// 	console.log('Drag started');
+						// });
+						
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+			</section>
+
+			<!-- JS Strings -->
+			<section id="js_strings">
+				
+				<h1>JavaScript Strings</h1>
+
+				<div class="note">
+					<ul>
+						<li>Strings are for storing text</li>
+						<li>Strings are written with quotes</li>
+					</ul>
+				</div>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let carName1 = "Volvo XC60"; // Double quotes
+						// let carName2 = 'Volvo XC60'; // Single quotes
+
+						// document.getElementById("demo").innerHTML =
+						// carName1 + " " + carName2; 
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<ul>
+						<li>Strings created with single or double quotes works the same.</li>
+						<li>There is no difference between the two.</li>
+					</ul>
+				</div>
+
+				<h2>Quotes Inside Quotes</h2>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let answer1 = "It's alright";
+						// let answer2 = "He is called 'Johnny'";
+						// let answer3 = 'He is called "Johnny"'; 
+
+						// document.getElementById("demo").innerHTML =
+						// answer1 + "<br>" + answer2 + "<br>" + answer3; 
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Template Strings</h2>
+
+				<div class="note">
+					<ul>
+						<li>Templates were introduced with ES6 (JavaScript 2016).</li>
+						<li>Templates are strings enclosed in backticks (`This is a template string`).</li>
+						<li>Templates allow single and double quotes inside a string:</li>
+						<li>Templates allow multiline strings:</li>
+						<li>Templates allow embedding variables</li>
+					</ul>
+				</div>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						// multiple quotes support
+						// let text = `He's often called "Johnny"`;
+						// document.getElementById("demo").innerHTML = text;
+
+						// Multi Line support
+						// let text =
+
+						// `The quick
+						// brown fox
+						// jumps over
+						// the lazy dog`;
+
+						// document.getElementById("demo").innerHTML = text;
+
+						// embedding variables
+						// let text = `He's often called ${value} !`;
+						// document.getElementById("demo").innerHTML = text;
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<p>Templates are not supported in Internet Explorer.</p>
+				</div>
+
+
+				<h2>String Length</h2>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p>The length of the string is:</p>
+					<p id="demo"></p> -->
+
+					<script>
+						// let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+						// document.getElementById("demo").innerHTML = text.length;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Escape Characters</h2>
+
+				<img src="./js_strings_1.png" alt="">
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						//1. double quotes
+						// let text = "We are the so-called \"Vikings\" from the north.";
+						// document.getElementById("demo").innerHTML = text; 
+
+						// 2. single quotes
+						// let text = 'It\'s alright.';
+						// document.getElementById("demo").innerHTML = text;
+
+						// 3. inserts a backslash in a string
+						// let text = "The character \\ is called backslash.";
+						// document.getElementById("demo").innerHTML = text; 
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<p><b>Six other escape sequences are valid in JavaScript:</b></p>
+				<img src="./js_strings_2.png" alt="">
+
+
+				<h2>JavaScript Strings as Objects</h2>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // x is a string
+						// let x = "John";
+						
+						// // y is an object
+						// let y = new String("John");
+						
+						// document.getElementById("demo").innerHTML =
+						// typeof x + "<br>" + typeof y;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<ul>
+						<li>Do not create Strings objects.</li>
+						<li>The new keyword complicates the code and slows down execution speed.</li>
+						<li>String objects can produce unexpected results:</li>
+					</ul>
+				</div>
+
+				<p><b>When using the == operator, x and y are equal:</b></p>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let x = "John";        // x is a string
+						// let y = new String("John");  // y is an object
+						// document.getElementById("demo").innerHTML = (x==y);
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<p><b>When using the === operator, x and y are not equal:</b></p>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let x = "John";        // x is a string
+						// let y = new String("John");  // y is an object
+						// document.getElementById("demo").innerHTML = (x===y);
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<p><b>(x == y) true or false?</b></p>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let x = new String("John");  // x is an object
+						// let y = new String("John");  // y is an object
+						// document.getElementById("demo").innerHTML = (x==y);
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<p><b>(x === y) true or false?	</b></p>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let x = new String("John");  // x is an object
+						// let y = new String("John");  // y is an object
+						// document.getElementById("demo").innerHTML = (x===y);
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				
+
+			</section>
+
+			<!-- JS String Methods -->
+			<section id="js_string_methods">
+				<h1>JavaScript Strings Methods</h1>
+
+				<h2>Extracting String Characters</h2>
+				<ul>
+					<li>The at(position) Method</li>
+					<li>The charAt(position) Method</li>
+					<li>The charCodeAt(position) Method</li>
+					<li>Using property access [] like in arrays</li>
+				</ul>
+
+
+				<h2>JavaScript String charAt()</h2>
+				<p>The charAt() method returns the character at a specified index (position) in a string:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let text = "HELLO WORLD"
+						// let charAt = text.charAt(0)
+
+						// document.getElementById('demo').innerHTML = charAt;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>JavaScript String charCodeAt()</h2>
+				<p>The charCodeAt() method returns the code of the character at a specified index in a string:</p>
+				<p>The method returns a UTF-16 code (an integer between 0 and 65535).</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let text = "HELLO WORLD"
+						// let charCodeAt = text.charCodeAt(0)
+
+						// document.getElementById('demo').innerHTML = charCodeAt;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>JavaScript String at()</h2>
+				<p>The at() method returns the character at a specified index (position) in a string.</p>
+				<p>The at() method is supported in all modern browsers since March 2022:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let text = "HELLO WORLD"
+						// let at = text.at(0)
+
+						// document.getElementById('demo').innerHTML = at;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<ul>
+						<li>The at() method is a new addition to JavaScript.</li>
+						<li>It allows the use of negative indexes while charAt() do not.</li>
+						<li>Now you can use myString.at(-2) instead of charAt(myString.length-2).</li>
+					</ul>
+				</div>
+
+				<h2>Property Access [ ]</h2>
+				<div class="note">Property access might be a little unpredictable:
+
+					<ul>
+						<li>It makes strings look like arrays (but they are not)</li>
+						<li>If no character is found, [ ] returns undefined, while charAt() returns an empty string.</li>
+						<li>It is read only. str[0] = "A" gives no error (but does not work!)</li>
+					</ul>
+
+				</div>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let text = "HELLO WORLD"
+						// let letter = text[0]
+
+						// document.getElementById('demo').innerHTML = letter;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>Extract the Last Character Using string.length - 1</h2>
+				<p>If you only want the last character, use:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let text = "HELLO WORLD"
+
+						// using property [] access
+						// let letter = text[text.length - 1];
+
+						// using charAt()
+						// let letter = text.charAt(text.length - 1);
+
+						// using at[] property
+						// let letter = text.at(-1);
+
+						// document.getElementById('demo').innerHTML = letter;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Extracting String Parts</h2>
+				<ul>
+					<li>slice(start, end)</li>
+					<li>substring(start, end)</li>
+					<li>substr(start, length)</li>
+				</ul>
+
+				<div class="note">
+					<p>The method takes 2 parameters: start position, and end position (end not included).</p>
+				</div>
+
+				<h2>JavaScript String slice()</h2>
+				<p>slice() extracts a part of a string and returns the extracted part in a new string.</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example for slice
+						// let text = "Apple, Banana, Kiwi";
+						// let letter = text.slice(6, 13)
+
+						// document.getElementById('demo').innerHTML = letter;
+
+
+						// 2. If you omit the second parameter, the method will slice out the rest of the string:
+						// let text = "Apple, Banana, Kiwi";
+						// let letter = text.slice(6)
+
+						// document.getElementById('demo').innerHTML = letter;
+
+
+						// 3. If a parameter is negative, the position is counted from the end of the string:
+						// let text = "Apple, Banana, Kiwi";
+						// let letter = text.slice(-12)
+
+						// document.getElementById('demo').innerHTML = letter;
+
+
+
+						// 4. This example slices out a portion of a string from position -12 to position -6:
+						// let text = "Apple, Banana, Kiwi";
+						// let letter = text.slice(-12, -6)
+
+						// document.getElementById('demo').innerHTML = letter;
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>JavaScript String substring()</h2>
+				<p>substring() is similar to slice(). </p>
+				<div class="note">
+					<ul>
+						<li>The difference is that start and end values less than 0 are treated as 0 in substring().</li>
+						<li>If you're giving pair value (4,1) it will automatically swapping and it will work like (1,4). It wont work in slice().</li>
+					</ul>
+				</div>
+
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example for substring
+						// let text = "Apple, Banana, Kiwi"
+						// let letter = text.substring(7, 13)
+
+						// document.getElementById('demo').innerHTML = letter;
+
+
+						// 2. If you omit the second parameter, substring() will slice out the rest of the string.
+						// let text = "Apple, Banana, Kiwi"
+						// let letter = text.substring(7)
+
+						// document.getElementById('demo').innerHTML = letter;
+
+
+						// 3. minus value considered as zero
+						// let text = "Apple, Banana, Kiwi"
+						// let letter = text.substring(-7)
+
+						// document.getElementById('demo').innerHTML = letter;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>JavaScript String substr()</h2>
+				<p>substr() is similar to slice().</p>
+				<p>The difference is that the second parameter specifies the length of the extracted part.</p>
+
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example for substr
+						// let text = "Apple, Banana, Kiwi"
+						// let letter = text.substr(7, 6)
+
+						// document.getElementById('demo').innerHTML = letter;
+
+
+						// 2. If you omit the second parameter, substr() will slice out the rest of the string.
+						// let text = "Apple, Banana, Kiwi"
+						// let letter = text.substr(7)
+
+						// document.getElementById('demo').innerHTML = letter;
+
+
+						// 3. If the first parameter is negative, the position counts from the end of the string.
+						// let text = "Apple, Banana, Kiwi"
+						// let letter = text.substr(-4)
+
+						// document.getElementById('demo').innerHTML = letter;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Difference B/W slice(), substring(), substr()</h2>
+				<img src="./slice_substring_substr.png" alt="">
+
+
+				<h2>JavaScript String concat()</h2>
+				<p>concat() joins two or more strings:</p>
+
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// example for plus operator
+						// let text1 = "Hello"
+						// let text2 = "World"
+						// let text3 = text1 + " " + text2
+
+						// document.getElementById('demo').innerHTML = text3;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<p class="mt-30">The concat() method can be used instead of the plus operator. These two lines do the same:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+							// example for concat 
+							// let text1 = "Hello"
+							// let text2 = "World"
+							// let text3 = text1.concat(" ", text2)
+
+							// document.getElementById('demo').innerHTML = text3;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					All string methods return a new string. They don't modify the original string.
+				</div>
+
+
+				<p class="mt-30 bold">String using =+ operator method :</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+							// // example for concat 
+							// let message = "Hello"; 
+							// message += " World!"; 
+
+							// document.getElementById('demo').innerHTML = message;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>JavaScript String trim()</h2>
+
+				<ul>
+					<li> trim() --- The trim() method removes whitespace from both sides of a string:</li>
+					<li> trimStart() --- The trimStart() method works like trim(), but removes whitespace only from the start of a string.</li>
+					<li> trimEnd() --- The trimEnd() method works like trim(), but removes whitespace only from the end of a string.</li>
+				</ul>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. Example for trim() both side
+						// let text1 = "      Hello         "
+						// let text2 = text1.trim()
+
+						// document.getElementById('demo').innerHTML = text2;
+
+
+						// 2. Example for trimStart()
+						// let text1 = "      Hello         "
+						// let text2 = text1.trimStart()
+
+						// document.getElementById('demo').innerHTML = text2;
+
+						// 3. Example for trimEnd()
+						// let text1 = "      Hello         "
+						// let text2 = text1.trimEnd()
+
+						// document.getElementById('demo').innerHTML = text2;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>JavaScript String padStart()</h2>
+				<p>The padStart() method pads a string from the start.</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. Example for padStrat() with string 5
+						// let text1 = "5"
+						// let text2 = text1.padStart(4, "0")
+
+						// document.getElementById('demo').innerHTML = text2;
+
+
+						// 2. Example for padStrat() with string x
+						// let text1 = "x"
+						// let text2 = text1.padStart(4, "0")
+
+						// document.getElementById('demo').innerHTML = text2;
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>JavaScript String padEnd()</h2>
+				<p>The padEnd() method pads a string from the end.</p>
+				<p>It pads a string with another string (multiple times) until it reaches a given length.</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. Example for padEnd() with string 5
+						// let text1 = "5"
+						// let text2 = text1.padEnd(4, "0")
+
+						// document.getElementById('demo').innerHTML = text2;
+
+
+						// 2. Example for padEnd() with string x
+						// let text1 = "x"
+						// let text2 = text1.padEnd(4, "0")
+
+						// document.getElementById('demo').innerHTML = text2;
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<ul>
+						<li>The padStart(), padEnd() method is a string method.</li>
+						<li>To pad a number, convert the number to a string first.</li>
+						<li>See the example below.</li>
+					</ul>
+				</div>
+
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. Example for padStart() with convert string
+						// let text1 = 5
+						// let text2 = text1.toString();
+						// let text3 = text2.padStart(4, "0")
+
+						// document.getElementById('demo').innerHTML = text3;
+
+
+						// 2. Example for padEnd() with convert string
+						// let text1 = 5
+						// let text2 = text1.toString();
+						// let text3 = text2.padEnd(4, "0")
+
+						// document.getElementById('demo').innerHTML = text3;
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>JavaScript String repeat()</h2>
+				<div class="note">
+					<ul>
+						<li>The repeat() method returns a string with a number of copies of a string.</li>
+						<li>The repeat() method returns a new string.</li>
+						<li>The repeat() method does not change the original string.</li>
+						<li>The repeat() method not allowing -ve values, It will show error.</li>
+						<li>The repeat() method does not take 0, It will show what we given first in the string.</li>
+					</ul>
+				</div>
+				
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // 1. Example for repeat()
+						// let text1 = "Hello World ";
+						// let text2 = text1.repeat(2);
+
+						// document.getElementById('demo').innerHTML = text2;
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Replacing String Content</h2>
+				<p>The replace() method replaces a specified value with another value in a string:</p>
+
+				<div class="note">
+					<ul>
+						<li>The replace() method does not change the string it is called on.</li>
+						<li>The replace() method returns a new string.</li>
+						<li>The replace() method replaces only the first match</li>
+						<li>If you want to replace all matches, use a regular expression with the /g flag set.</li>
+						<li>If you want to replace case-insensitive, use a regular expression with the /i flag set.</li>
+						<li>Both regular expression also use in a single call.</li>
+					</ul>
+				</div>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. Example for replace()
+						// let text1 = "Hello World, We can make our World is more better ";
+						// let text2 = text1.replace("World", "Home");
+
+						// document.getElementById('demo').innerHTML = text2;
+
+						// 2. replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work:
+						// let text1 = "Hello world, We can make our World is more better ";
+						// let text2 = text1.replace("World", "Home");
+
+						// document.getElementById('demo').innerHTML = text2;
+
+
+						// 3. To replace case insensitive, use a regular expression with an /i flag (insensitive):
+						// let text1 = "Hello world, We can make our World is more better ";
+						// let text2 = text1.replace(/World/i, "Home");
+
+						// document.getElementById('demo').innerHTML = text2;
+
+
+						// 4. To replace all matches, use a regular expression with a /g flag (global match):
+						// let text1 = "Hello World, We can make our World is more better ";
+						// let text2 = text1.replace(/World/g, "Home");
+
+						// document.getElementById('demo').innerHTML = text2;
+
+
+						// 5. To replace all matches, use a regular expression with a /g and /i flag (global match):
+						// let text1 = "Hello World, We can make our world is more better WORLD ";
+						// let text2 = text1.replace(/World/gi, "Home");
+
+						// document.getElementById('demo').innerHTML = text2;
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>JavaScript String ReplaceAll()</h2>
+				<p>In 2021, JavaScript introduced the string method replaceAll():</p>
+				
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// // 1. Example for replaceAll()
+						// let text1 = "Hello World, We can make our World is more better";
+						// let text2 = text1.replaceAll("World", "Home");
+
+						// document.getElementById('demo').innerHTML = text2;
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>JavaScript String split()</h2>
+				<p>If you want to work with a string as an array, you can convert it to an array.</p>
+				<p>A string can be converted to an array with the split() method:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let text = "a,b,c,d,e,f";
+						// const myArray = text.split(",");
+						// document.getElementById("demo").innerHTML = myArray[1];
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<p class="mt-30 bold">Replacing Characters in a String Using split() and join() :</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let text = "apple, banana, apple"; 
+						// let newText = text.split("apple").join("orange"); 
+
+						// document.getElementById("demo").innerHTML = newText;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+			</section>
+
+			<!-- JS String Search -->
+			<section id="js_string_search">
+
+				<h1>JavaScript String Search</h1>
+
+
+				<h2>JavaScript String indexOf()</h2>
+				<p>The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found: </p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let text = "Please locate where 'locate' occurs!";
+						// let index = text.indexOf("locate");
+
+						// document.getElementById('demo').innerHTML = index;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>JavaScript String lastIndexOf()</h2>
+				<p>The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. find the last index of the word
+						// let text = "Please locate where 'locate' occurs!";
+						// let index = text.lastIndexOf("locate");
+
+						// document.getElementById('demo').innerHTML = index;
+
+
+						// 2. Both indexOf(), and lastIndexOf() return -1 if the text is not found:
+						// let text = "Please locate where 'locate' occurs!";
+						// let index = text.lastIndexOf("Jhon");
+
+						// document.getElementById('demo').innerHTML = index;
+
+
+						// 3. Both methods accept a second parameter as the starting position for the search:
+						// let text = "Please locate where 'locate' occurs!";
+						// let index = text.indexOf("locate", 15);
+
+						// document.getElementById('demo').innerHTML = index;
+
+
+						// 4. The lastIndexOf() methods searches backwards (from the end to the beginning), meaning: if the second parameter is 15, 
+						//    the search starts at position 15, and searches to the beginning of the string.
+						// let text = "Please locate where 'locate' occurs!";
+						// let index = text.lastIndexOf("locate", 15);
+
+						// document.getElementById('demo').innerHTML = index;
+						
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>JavaScript String search()</h2>
+				<p>The search() method searches a string for a string (or a regular expression) and returns the position of the match:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<p id="demo"></p>
+
+					<script>
+						// 1. one method
+						// let text = "Please locate where 'locate' occurs!";
+						// let search = text.search("locate");
+
+						// document.getElementById('demo').innerHTML = search;
+
+						// 2. second method
+						let text = "Please locate where 'locate' occurs!";
+						let search = text.search(/locate/);
+
+						document.getElementById('demo').innerHTML = search;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+
+					<h2>Did You Notice?</h2>
+					<p>The two methods, indexOf() and search(), are equal?</p>
+					<p>The two methods are NOT equal. These are the differences:</p>
+					<ul>
+						<li>The search() method cannot take a second start position argument.</li>
+						<li>The indexOf() method cannot take powerful search values (regular expressions).</li>
+					</ul>
+
+				</div>
+
+
+				<h2>JavaScript String match()</h2>
+				<p>The match() method returns an array containing the results of matching a string against a string (or a regular expression).</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. first method
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let match = text.match("ain");
+
+						// document.getElementById('demo').innerHTML = match.length + " " + match;
+
+
+						// 2. second method
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let match = text.match(/ain/);
+
+						// document.getElementById('demo').innerHTML = match.length + " " + match;
+
+
+						// 3. Perform a global search for "ain":
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let match = text.match(/ain/g);
+
+						// document.getElementById('demo').innerHTML = match.length + " " + match;
+
+
+						// 4. Perform a global, case-insensitive search for "ain":
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let match = text.match(/ain/gi);
+
+						// document.getElementById('demo').innerHTML = match.length + " " + match;
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<p>If a regular expression does not include the g modifier (global search), match() will return only the first match in the string.</p>
+				</div>
+
+
+				<h2>JavaScript String matchAll()</h2>
+				<p>The matchAll() method returns an iterator containing the results of matching a string against a string (or a regular expression).</p>
+
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let match = text.matchAll("ain");
+
+						// document.getElementById('demo').innerHTML = Array.from(match)
+
+
+						// 2. If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let match = text.matchAll(/ain/g);
+
+						// document.getElementById('demo').innerHTML = Array.from(match)
+
+
+						// 3. If you want to search case insensitive, the insensitive flag (i) must be set:
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let match = text.matchAll(/ain/gi);
+
+						// document.getElementById('demo').innerHTML = Array.from(match)
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>JavaScript String includes()</h2>
+				<p>The includes() method returns true if a string contains a specified value.</p>
+				<p>Otherwise it returns false.</p>
+
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let includes = text.includes("rain");
+
+						// document.getElementById('demo').innerHTML = includes
+
+
+						// 2. exmple check with position
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let includes = text.includes("rain", 12);
+
+						// document.getElementById('demo').innerHTML = includes
+
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<ul>
+						<li>includes() is case sensitive.</li>
+						<li>includes() is an ES6 feature.</li>
+						<li>includes() is not supported in Internet Explorer.</li>
+					</ul>
+				</div>
+
+
+				<h2>JavaScript String startsWith()</h2>
+				<p>The startsWith() method returns true if a string begins with a specified value.</p>
+				<p>Otherwise it returns false:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example true
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let startWith = text.startsWith("The");
+
+						// document.getElementById('demo').innerHTML = startWith
+
+
+						// 2. example false
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let startWith = text.startsWith("rain");
+
+						// document.getElementById('demo').innerHTML = startWith
+
+
+						// 3. example false with position
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let startWith = text.startsWith("rain", 5);
+
+						// document.getElementById('demo').innerHTML = startWith
+
+
+
+						// 4. example true with position
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let startWith = text.startsWith("rain", 4);
+
+						// document.getElementById('demo').innerHTML = startWith
+
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>JavaScript String endsWith()</h2>
+				<p>The endsWith() method returns true if a string ends with a specified value.</p>
+				<p>Otherwise it returns false:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example true
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let endsWith = text.endsWith("plain");
+
+						// document.getElementById('demo').innerHTML = endsWith
+
+
+
+						// 2. example true with position
+						// let text = "The rain in SPAIN stays mainly in the plain";
+						// let endsWith = text.endsWith("rain", 8);
+
+						// document.getElementById('demo').innerHTML = endsWith
+
+
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<ul>
+						<li>startsWith(), endsWith() are case sensitive.</li>
+						<li>startsWith(), endsWith() are an ES6 feature.</li>
+						<li>startsWith(), endsWith() are not supported in Internet Explorer.</li>
+					</ul>
+				</div>
+
+
+
+				<h2>JavaScript Template Strings</h2>
+				<div class="note">
+					<h3>String Templates</h3>
+					<h3>Template Strings</h3>
+					<h3>Template Literals</h3>
+					<p>Beloved child has many names</p>
+				</div>
+
+
+				<h2>Back-Tics Syntax</h2>
+				<p>Template Strings use back-ticks (``) rather than the quotes ("") to define a string:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example 
+						// let text = `Hello World!`;
+
+						// document.getElementById('demo').innerHTML = text
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>Quotes Inside Strings</h2>
+				<p>Template Strings allow both single and double quotes inside a string:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example 
+						// let text = `He's often called "Johnny"`;
+
+						// document.getElementById('demo').innerHTML = text
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Multiline Strings</h2>
+				<p>Template Strings allow multiline strings:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example 
+						// let text = `The quick
+						// 			brown fox
+						// 			jumps over
+						// 			the lazy dog`;
+
+						// document.getElementById('demo').innerHTML = text
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Interpolation</h2>
+				<p>Template String provide an easy way to interpolate variables and expressions into strings.</p>
+				<p>The method is called string interpolation.</p>
+				<p>The syntax is:</p>
+
+				<pre><code class="language-html code-block">
+
+					${...}
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+			
+
+
+				<h2>Variable Substitutions</h2>
+				<p>Template Strings allow variables in strings:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example 
+						// let firstName = "John";
+						// let lastName = "Doe";
+
+						// let fullName = `${firstName}, ${lastName}!`
+
+						// document.getElementById('demo').innerHTML = fullName
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+			</section>
+
+
+			<!-- JS Number Methods -->
+			<section id="js_number_methods">
+				<h1>JS Number Methods</h1>
+
+				<h2>JavaScript Number Methods</h2>
+				<p>These number methods can be used on all JavaScript numbers:</p>
+
+				<img src="./js_number_methods.png" alt="">
+
+
+
+
+				<h2>The toString() Method</h2>
+				<p>The toString() method returns a number as a string.</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example 
+						// let x = 123;
+
+						// document.getElementById('demo').innerHTML =
+						// x.toString() + "<br>" +
+						// (123).toString() + "<br>" +
+						// (100 + 23).toString(); 
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>The toExponential() Method</h2>
+				<p>toExponential() returns a string, with a number rounded and written using exponential notation.</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example 
+						// let x = 9.678;
+
+						// document.getElementById('demo').innerHTML =
+						// x.toExponential() + "<br>" +
+						// x.toExponential(2) + "<br>" +
+						// x.toExponential(4); 
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>The toFixed() Method</h2>
+				<p>toFixed() returns a string, with the number written with a specified number of decimals:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example 
+						// let x = 9.678;
+
+						// document.getElementById('demo').innerHTML =
+						// x.toFixed() + "<br>" +
+						// x.toFixed(0) + "<br>" +
+						// x.toFixed(2) + "<br>" +
+						// x.toFixed(4); 
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>The valueOf() Method</h2>
+				<p>valueOf() returns a number as a number.</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example 
+						// let x = 123;
+
+						// document.getElementById('demo').innerHTML =
+						// x.valueOf() + "<br>" +
+						// (123).valueOf() + "<br>" +
+						// (100 + 23).valueOf(); 
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>Converting Variables to Numbers</h2>
+				<p>There are 3 JavaScript methods that can be used to convert a variable to a number:</p>
+				<img src="./converting_varibles_to_numbers.png" alt="">
+
+				<div class="note">
+					<p>The methods above are not number methods. They are global JavaScript methods.</p>
+				</div>
+
+
+				<h2>The Number() Method</h2>
+				<p>The Number() method can be used to convert JavaScript variables to numbers:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example 
+						// document.getElementById('demo').innerHTML =
+						// Number(true) + "<br>" +
+						// Number(false) + "<br>" +
+						// Number("10") + "<br>" + 
+						// Number("  10") + "<br>" +
+						// Number("10  ") + "<br>" +
+						// Number(" 10  ") + "<br>" +
+						// Number("10.33") + "<br>" + 
+						// Number("10,33") + "<br>" +
+						// Number("10 33") + "<br>" +
+						// Number("John");
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>The parseInt() Method</h2>
+				<p>parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example 
+						// document.getElementById("demo").innerHTML = 
+						// parseInt("-10") + "<br>" +
+						// parseInt("-10.33") + "<br>" +
+						// parseInt("10") + "<br>" +
+						// parseInt("10.33") + "<br>" +
+						// parseInt("10 6") + "<br>" +  
+						// parseInt("10 years") + "<br>" +  
+						// parseInt("years 10"); 
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>The parseFloat() Method</h2>
+				<p>parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example 
+						// document.getElementById("demo").innerHTML = 
+						// parseFloat("10") + "<br>" +
+						// parseFloat("10.33") + "<br>" +
+						// parseFloat("10 6") + "<br>" +  
+						// parseFloat("10 years") + "<br>" +
+						// parseFloat("years 10");    
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+			</section>
+
+
+			<!-- JS Arrays -->
+			<section id="js_arrays">
+				<h1>JavaScript Arrays</h1>
+
+				<h2>Creating an Array</h2>
+				<pre><code class="language-html code-block">
+
+					Syntax:
+
+					const array_name = [item1, item2, ...];   
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<p>It is a common practice to declare arrays with the const keyword.</p>
+				</div>
+
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example normal 
+						// const MyCar = ["Swift", "Alto", "Creta"];
+
+						// 2. Using Multiple line
+						// const MyCar = [
+						// 	"Swift",
+						// 	"Alto",
+						// 	"Creta"
+						// ];
+
+						// 3. You can also create an array, and then provide the elements:
+						// const MyCar = [];
+						// MyCar[0] = "Swift";
+						// MyCar[1] = "Alto";
+						// MyCar[2] = "Creta";
+
+						// document.getElementById("demo").innerHTML = MyCar
+						  
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>Using the JavaScript Keyword new</h2>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example  
+						// const MyCar = new Array("Swift", "Alto", "Creta");
+
+						// document.getElementById("demo").innerHTML = MyCar;
+						  
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<div class="note">
+					<p>The two examples above do exactly the same.</p>
+					<p>There is no need to use new Array().</p>
+					<p>For simplicity, readability and execution speed, use the array literal method.</p>
+				</div>
+
+
+				<h2>Accessing Array Elements</h2>
+				<p>You access an array element by referring to the index number:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example  
+						// const MyCar = ["Swift", "Alto", "Creta"];
+
+						// document.getElementById("demo").innerHTML = MyCar[0];
+						  
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Changing an Array Element</h2>
+				<p>This statement changes the value of the first element in cars:</p>
+
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example  
+						// const MyCar = ["Swift", "Alto", "Creta"];
+
+						// MyCar[0] = "Innova";
+
+						// document.getElementById("demo").innerHTML = MyCar[0];
+						  
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>Converting an Array to a String</h2>
+				<p>The JavaScript method toString() converts an array to a string of (comma separated) array values.</p>
+
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example  
+						// const MyCar = ["Swift", "Alto", "Creta"];
+
+						// document.getElementById("demo").innerHTML = MyCar.toString();
+						  
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>Access the Full Array</h2>
+				<p>With JavaScript, the full array can be accessed by referring to the array name:</p>
+
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example  
+						// const MyCar = ["Swift", "Alto", "Creta"];
+
+						// document.getElementById("demo").innerHTML = MyCar.toString();
+						  
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>Access the Full Array</h2>
+				<p>With JavaScript, the full array can be accessed by referring to the array name:</p>
+
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. example  
+						// const MyCar = ["Swift", "Alto", "Creta"];
+
+						// document.getElementById("demo").innerHTML = MyCar.toString();
+						  
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>Arrays are Objects</h2>
+				<p>Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.</p>
+				<p>But, JavaScript arrays are best described as arrays.</p>
+
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// 1. Arrays use numbers to access its "elements". In this example, person[0] returns John:
+						// const person = ["Jhon", "duo", "paul"];
+
+						// document.getElementById("demo").innerHTML = Person[0];
+
+
+						// 2. Objects use names to access its "members". In this example, person.firstName returns John:
+						// const person = {firstNmae:"Jhon", lastName:"Doe", fatherName:"Paul"}
+
+						// document.getElementById("demo").innerHTML = person.firstNmae;
+						  
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>Array Elements Can Be Objects</h2>
+				<p>JavaScript variables can be objects. Arrays are special kinds of objects.</p>
+				<p>Because of this, you can have variables of different types in the same Array.</p>
+				<p>You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:</p>
+
+
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// myArray[0] = Date.now; // object in array
+						// myArray[1] = myFunction; // function in array
+						// myArray[2] = myCars; // array in array
+						  
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>Array Properties and Methods</h2>
+				<p>The real strength of JavaScript arrays are the built-in array properties and methods:</p>
+
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// cars.length   // Returns the number of elements
+						// cars.sort()   // Sorts the array
+						  
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>The length Property</h2>
+				<p>The length property of an array returns the length of an array (the number of array elements).</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+						// let length = fruits.length;
+
+						// document.getElementById('demo').innerHTML = length;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<p>The length property is always one more than the highest array index.</p>
+				</div>
+
+
+				<h2>Accessing the First Array Element</h2>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+						// document.getElementById('demo').innerHTML = fruits[0];
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Accessing the Last Array Element</h2>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+						// document.getElementById('demo').innerHTML = fruits[fruits.length -1];
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>Adding Array Elements</h2>
+				<p>The easiest way to add a new element to an array is using the push() method:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						// 1. Example for push method
+						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+						// fruits.push("Grape")
+
+						// document.getElementById('demo').innerHTML = fruits;
+
+
+						// 2. Example for length method
+						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+						// fruits[fruits.length] = "Grape";
+
+						// document.getElementById('demo').innerHTML = fruits;
+
+
+						// 3. Example for length mentioned method
+						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+						// fruits[4] = "Grape";
+
+						// document.getElementById('demo').innerHTML = fruits;
+
+
+						// 4. Adding elements with high indexes can create undefined "holes" in an array:
+						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+						// fruits[5] = "Grape";
+
+						// document.getElementById('demo').innerHTML = fruits[4];
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<p>Adding elements with high indexes can create undefined "holes" in an array:</p>
+				</div>
+
+
+
+				<h2>Associative Arrays</h2>
+				<ul>
+					<li>Many programming languages support arrays with named indexes.</li>
+					<li>Arrays with named indexes are called associative arrays (or hashes).</li>
+					<li>JavaScript does not support arrays with named indexes.</li>
+					<li>In JavaScript, arrays always use numbered indexes. </li>
+				</ul>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						// 1. Example with numbered indexes
+						// const fruits = [];
+						// fruits[0] = "Apple";
+						// fruits[1] = "Banana";
+						// fruits[2] = "Orange";
+
+						// document.getElementById('demo').innerHTML = "Total Fruits " + fruits.length + ", They are : " + fruits;
+
+
+						// 2. Example with named indexes
+						// const fruits = [];
+						// fruits["firstFruit"] = "Apple";
+						// fruits["secondFruit"] = "Banana";
+						// fruits["thirdFruit"] = "Orange";
+
+						// document.getElementById('demo').innerHTML = "Total Fruits " + fruits.length + ", They are : " + fruits;
+
+
+						
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+				<h2>The Difference Between Arrays and Objects</h2>
+				<ul>
+					<li>In JavaScript, arrays use numbered indexes.  </li>
+					<li>In JavaScript, objects use named indexes.</li>
+				</ul>
+
+				<div class="note">
+					<p>Arrays are a special kind of objects, with numbered indexes.</p>
+				</div>
+
+				<h2>When to Use Arrays. When to use Objects.</h2>
+				<ul>
+					<li>JavaScript does not support associative arrays.</li>
+					<li>You should use objects when you want the element names to be strings (text).</li>
+					<li>You should use arrays when you want the element names to be numbers.</li>
+				</ul>
+
+
+				<h2>JavaScript new Array()</h2>
+				<p>JavaScript has a built-in array constructor new Array().</p>
+				<p>But you can safely use [ ] instead.</p>
+				<p>These two different statements both create a new empty array named points:</p>
+
+				<pre><code class="language-html code-block">
+
+					<script>
+
+						// const points = new Array();
+						// const points = [];
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<p>Examples and diffrence B/W both methods</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						// 1. Example for both method
+						// const fruitOne = new Array("Apple", "Banana", "Orange");
+						// const fruitTwo = ["Apple", "Banana", "Orange"];
+
+						// document.getElementById("demo").innerHTML = "fruitsOne : " + fruitOne + " fruitsTwo : " + fruitTwo;
+
+
+						// 2. Create an array with numbers you will face like this issue...:
+						// const numbersThree = new Array("40", "100", "200");
+						// const numbersTwo = new Array("40", "100");
+						// const numbersOne = new Array(40);
+
+
+						// document.getElementById("demo").innerHTML = 
+						// "numbersThree : " + numbersThree + " numbersTwo : " + numbersTwo + " numbersOne : " + numbersOne;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				
+
+				
+
+			</section>
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- <section id="">
+		<h1>My Learning Documentation</h1>
+
+		<p>This documentation contains my learning progress and code snippets to practice and understand new concepts.</p>
+
+		<h2>Sub Heading</h2>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, consequuntur quo. Sint saepe ducimus voluptatibus.</p>
+
+		<pre><code class="language-html code-block">
+			<button onclick="document.getElementById('idName').style.display = 'none'">Button</button>
+		</code><button class="copy-btn">Copy</button></pre>
+
+
+		<div class="note">
+			<strong>Note:</strong> Always test your code in different environments to ensure compatibility.
+		</div>
+	</section> -->
+
+
+
+	<!-- Prism.js Library for Syntax Highlighting -->
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+
+	<!-- JavaScript to Escape Multiple Code Blocks -->
+	<script src="./app.js"></script>
+
+
+	
+</body>
+
+</html>

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Documentation</title>
+
+    <!-- Prism.js Theme (Dark Theme like VS Code) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <!-- style css -->
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <div class="main_parent">
+        <div class="sidebar">
+            <ul>
+                <li class="active"><a href="#variables_1">ToDo Variables 1</a></li>
+                <li><a href="#variables_2">ToDo Variables 2</a></li>
+                <li><a href="#variables_3">ToDo Variables 3</a></li>
+                <li><a href="#variables_4">ToDo Variables 4</a></li>
+                <li><a href="#variables_5">ToDo Variables 5</a></li>
+            </ul>
+        </div>
+
+        <div class="body_content">
+
+            <!-- dom section -->
+            <section id="variables_1">
+                <h1>ToDo for Variables 1</h1>
+
+                <h2>1 . Question</h2>
+                <pre><code class="language-html code-block">
+					<script>
+						
+                        // var x = 10;
+                        // let y = 20;
+                        // const z = 30;
+
+                        // console.log(x, y, z);
+
+                        // Try reassigning
+                        // x = 40;
+                        // y = 50;
+                        // z = 60;
+
+                        // console.log(x, y, z);
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+                <h2>2. Question</h2>
+                <pre><code class="language-html code-block">
+					<script>
+						// var a = "10";
+                        // let b = "20";
+
+                        // if (true) {
+                        // var a = "30";
+                        // let b = "40";
+                        // console.log("Inside block:", a, b);
+                        // }
+
+                        // console.log("Outside block:", a, b); 
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+                <h2>3. Question</h2>
+                <pre><code class="language-html code-block">
+					<script>
+
+						// Re-declaration
+
+                        // var x = 1;
+                        // var x = 2;
+                        // console.log(x);
+
+                        // let y = 3;
+                        // let y = 4;
+                        // console.log(y);
+
+                        // const z = 5;
+                        // const z = 6;
+                        // console.log(z);
+
+                        // Re-assignment
+                        // x = 10;
+                        // y = 20;
+                        // z = 30;
+
+                        // console.log(x, y, z);
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+                <h2>4. Global Scope</h2>
+                <pre><code class="language-html code-block">
+					<script>
+
+						// Re-declaration
+
+                        // var globalVar = 10;
+                        // let globalLet = 20;
+                        // const globalConst = 30;
+
+                        // console.log(globalVar);
+                        // console.log(globalLet);
+                        // console.log(globalConst);
+
+                        // if (true) {
+                        // console.log(globalVar);
+                        // console.log(globalLet);
+                        // console.log(globalConst);
+                        // }
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+                <h2>5. Block Scope</h2>
+                <pre><code class="language-html code-block">
+					<script>
+
+
+                        // if (true) {
+
+                        //     var globalVar = 10;
+                        //     let globalLet = 20;
+                        //     const globalConst = 30;
+
+                        //     console.log(globalVar);
+                        //     console.log(globalLet);
+                        //     console.log(globalConst);
+                        // }
+
+                        // console.log(globalVar);
+                        // console.log(globalLet);
+                        // console.log(globalConst); 
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+                <h2>6. Function Scope</h2>
+                <pre><code class="language-html code-block">
+					<script>
+
+                        // function testScope() {
+                        //     var funcVar = "10";
+                        //     let funcLet = "20";
+                        //     const funcConst = "30";
+
+                        //     console.log(funcVar);  // "var in function"
+                        //     console.log(funcLet);  // "let in function"
+                        //     console.log(funcConst); // "const in function"
+                        // }
+
+                        // testScope();
+
+                        // console.log(funcVar);  // Error: funcVar is not defined
+                        // console.log(funcLet);  // Error: funcLet is not defined
+                        // console.log(funcConst); // Error: funcConst is not defined 
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+                <h2>7. Question</h2>
+                <pre><code class="language-html code-block">
+					<script>
+
+                        // var a = 10;
+                        // let b = 20;
+                        // const c = 30;
+
+                        // console.log(a);
+                        // console.log(b);
+                        // console.log(c);
+
+                        // if (true) {
+
+                        //     // console.log(a);
+                        //     // console.log(b);
+                        //     // console.log(c);
+
+                        //     var a = 10 + 10;
+                        //     let b = 20 + 10;
+                        //     const c = 30 + 10;
+
+                        //     console.log(a);
+                        //     console.log(b);
+                        //     console.log(c);
+                        // }
+
+                        // console.log(a);
+                        // console.log(b);
+                        // console.log(c);
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+            </section>
+
+            <section id="variables_2">
+
+                <h2>1 . Re-Assignment</h2>
+                <pre><code class="language-html code-block">
+					<script>
+						
+                        // var x = 10;
+                        // let y = 20;
+                        // const z = 30;
+
+                        // if(x < y)
+                        // {
+                        //     x = 40;
+                        //     y = 50;
+                        //     // z = 60;
+
+                        //     console.log(x, y, z);
+                        // }
+                        // console.log(x, y, z);
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+                <br><br><br><br><br>
+
+                <h1>Block & Function Scope in Re-Assignement</h1>
+
+
+                <h2>2 . Without Declaration & Globally Varibles inside block scope and for re-assignement</h2>
+                <pre><code class="language-html code-block">
+					<script>
+
+                        // var x = 10;
+                        // let y = 20;
+                        // const z = 30;
+
+                        // if(true)
+                        // {
+
+                        //     // console.log(x, y, z);
+
+                        //     // console.log(x);
+                        //     // console.log(y);
+                        //     // console.log(z);
+
+                        //      x = 40;
+                        //      y = 50;
+                        //     // z = 60;
+
+                        //     console.log(x, y, z);
+                        // }
+                        // console.log(x, y, z);
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+                <h2>3 . Without Declaration & Globally Varibles inside function scope and for re-assignement</h2>
+                <pre><code class="language-html code-block">
+					<script>
+						
+                        // var x = 10;
+                        // let y = 20;
+                        // const z = 30;
+
+                        // function abc()
+                        // {
+
+                        //     // console.log(x, y, z);
+
+                        //     // console.log(x);
+                        //     // console.log(y);
+                        //     // console.log(z);
+
+                        //      x = 40;
+                        //      y = 50;
+                        //     //  z = 60;
+
+                        //     console.log(x, y, z);
+                        // }
+                        // abc();
+
+                        // console.log(x, y, z);
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+                <br><br><br><br><br>
+
+                <h1>Block & Function Scope in Re-Declaration</h1>
+
+                <h2>4 . Without Declaration & Globally Varibles inside block scope and for re-declaration</h2>
+                <pre><code class="language-html code-block">
+					<script>
+						
+                        // var x = 10;
+                        // let y = 20;
+                        // const z = 30;
+
+                        // if(true)
+                        // {
+
+                        //     // console.log(x, y, z);
+
+                        //     // console.log(x);
+                        //     // console.log(y);
+                        //     // console.log(z);
+
+                        //     var x = 40;
+                        //     let y = 50;
+                        //     const z = 60;
+
+                        //     console.log(x, y, z);
+                        // }
+                        // console.log(x, y, z);
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+                <h2>5 . Without Declaration & Globally Varibles inside function scope and for re-declaration</h2>
+                <pre><code class="language-html code-block">
+					<script>
+						
+                        // var x = 10;
+                        // let y = 20;
+                        // const z = 30;
+
+                        // function abc()
+                        // {
+
+                        //     // console.log(x, y, z);
+
+                        //     // console.log(x);
+                        //     // console.log(y);
+                        //     // console.log(z);
+
+                        //     var x = 40;
+                        //     let y = 50;
+                        //     const z = 60;
+
+                        //     console.log(x, y, z);
+                        // }
+                        // abc();
+
+                        // console.log(x, y, z);
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+            </section>
+
+            <section id="variables_3">
+
+
+                <h1>Block within Function Scope for Re-Assignment and Re-Declaration</h1>
+
+
+                <h2>1 . block scope within function scope using Re-Declaration</h2>
+                <pre><code class="language-html code-block">
+					<script>
+						
+                        // var x = 10;
+                        // let y = 20;
+                        // const z = 30;
+
+                        // function fact()
+                        // {
+
+                        //      // console.log(x, y, z);
+
+                        //      // console.log(x);
+                        //      // console.log(y);
+                        //      // console.log(z);
+
+                        //     // var x = 100;
+                        //     // let y = 200;
+                        //     // const z = 300;
+
+                        //     if(true)
+                        //     {
+
+                        //         // console.log(x, y, z);
+
+                        //         // console.log(x);
+                        //         // console.log(y);
+                        //         // console.log(z);
+
+                        //         var x = 40;
+                        //         let y = 50;
+                        //         const z = 60;
+
+                        //         console.log(x, y, z);
+                        //     }
+
+                        //     console.log(x, y, z);
+
+
+                        // }
+
+                        // fact();
+
+                        // console.log(x, y, z);
+
+
+                       
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+                <h2>2 . block scope within function scope using Re-assignment</h2>
+                <pre><code class="language-html code-block">
+					<script>
+						
+                        // var x = 10;
+                        // let y = 20;
+                        // const z = 30;
+
+                        // function fact()
+                        // {
+
+                        //      // console.log(x, y, z);
+
+                        //     // x = 100;
+                        //     // y = 200;
+                        //     // z = 300;
+
+                        //     if(true)
+                        //     {
+
+                        //         // console.log(x, y, z);
+
+                        //         x = 40;
+                        //         y = 50;
+                        //         z = 60;
+
+                        //         console.log(x, y, z);
+                        //     }
+
+                        //     console.log(x, y, z);
+
+
+                        // }
+
+                        // fact();
+
+                        // console.log(x, y, z);
+
+
+                       
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+            </section>
+
+
+            <section id="variables_4">
+
+                <h1>Within Block Scope & Function Scope Re-Declrataion & Re-Assignment</h1>
+
+                <h2>1 . within block scope Re-Declaration & Re-Assignment</h2>
+                <pre><code class="language-html code-block">
+					<script>
+						
+                        // var x = 10;
+                        // let y = 20;
+                        // const z = 30;
+
+
+
+                        //     if(true)
+                        //     {
+
+                        //         // console.log(x, y, z);
+
+                        //         // console.log(x);
+                        //         // console.log(y);
+                        //         // console.log(z);
+
+                        //         var x = 40;
+                        //         let y = 50;
+                        //         const z = 60;
+
+
+                        //         x = 100;
+                        //         y = 200;
+                        //         z = 300;
+
+
+                        //         console.log(x, y, z);
+                        //     }
+
+                        //     console.log(x, y, z);
+                       
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+            </section>
+
+            <section id="variables_5">
+
+                <h2>1. within function scope Re-Declaration & Re-Assignment</h2>
+                <pre><code class="language-html code-block">
+					<script>
+						
+                        // var x = 10;
+                        // let y = 20;
+                        // const z = 30;
+
+
+
+                        //     function abc()
+                        //     {
+
+                        //         // console.log(x, y, z);
+
+                        //         // console.log(x);
+                        //         // console.log(y);
+                        //         // console.log(z);
+
+                        //         var x = 40;
+                        //         let y = 50;
+                        //         const z = 60;
+
+
+                        //         x = 100;
+                        //         y = 200;
+                        //         z = 300;
+
+
+                        //         console.log(x, y, z);
+                        //     }
+                        //     abc();
+
+                        //     console.log(x, y, z);
+                       
+
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+                <br><br><br><br><br>
+
+                <h2>2. Block within Function Scope for Re-Assignment & Re-Declaration</h2>
+                <pre><code class="language-html code-block">
+					<script>
+						
+                        // var x = 10;
+                        // let y = 20;
+                        // const z = 30;
+
+                        // function fact()
+                        // {
+
+                        // // console.log(x, y, z);
+
+                        // // console.log(x);
+                        // // console.log(y);
+                        // // console.log(z);
+
+                        //     var x = 40;
+                        //     let y = 50;
+                        //     const z = 60;
+
+                        //     x = 100;
+                        //     y = 200;
+                        //     z = 300;
+
+                        //     console.log(x, y, z);
+
+                        //     if(true)
+                        //     {
+
+                        //         // console.log(x, y, z);
+
+                        //         // console.log(x);
+                        //         // console.log(y);
+                        //         // console.log(z);
+
+                        //         var x = 70;
+                        //         let y = 80;
+                        //         const z = 90;
+
+                        //         x = 400;
+                        //         y = 500;
+                        //         z = 600;
+
+                        //         console.log(x, y, z);
+                        //     }
+
+                        //     console.log(x, y, z);
+
+
+                        // }
+
+                        // fact();
+
+                        // console.log(x, y, z);
+                       
+                    </script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+            </section>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <section id="">
+		<h1>My Learning Documentation</h1>
+
+		<p>This documentation contains my learning progress and code snippets to practice and understand new concepts.</p>
+
+		<h2>Sub Heading</h2>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, consequuntur quo. Sint saepe ducimus voluptatibus.</p>
+
+		<pre><code class="language-html code-block">
+			<button onclick="document.getElementById('idName').style.display = 'none'">Button</button>
+		</code><button class="copy-btn">Copy</button></pre>
+
+
+		<div class="note">
+			<strong>Note:</strong> Always test your code in different environments to ensure compatibility.
+		</div>
+	</section> -->
+
+
+
+    <!-- Prism.js Library for Syntax Highlighting -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+
+    <!-- JavaScript to Escape Multiple Code Blocks -->
+    <script src="../app.js"></script>
+
+
+
+</body>
+
+</html>

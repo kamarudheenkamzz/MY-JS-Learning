@@ -1,0 +1,158 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+ul li
+{
+  font-weight: 600;
+  color: #363636;
+}
+.main_parent {
+    display: flex;
+    position: relative;
+}
+.main_parent .sidebar {
+    min-width: 250px;
+    background-color: lightgray;
+    min-height: 100vh;
+}
+.main_parent .sidebar ul {
+    position: sticky;
+    top: 0;
+    padding: 20px 0;
+    margin: 0;
+    list-style: none;
+}
+.main_parent .sidebar ul li {
+    padding: 2px 15px;
+}
+.main_parent .sidebar ul li.active {
+    background-color: #000;
+}
+.main_parent .sidebar ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+}
+.main_parent .sidebar ul li.active a {
+    color: #fff;
+}
+.main_parent .body_content {
+    width: calc(100% - 250px);
+    padding: 20px;
+}
+
+.main_parent .body_content section {
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+}
+
+h1 {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    /* text-transform: capitalize; */
+    color: #333;
+    border-bottom: 3px solid #333;
+    width: fit-content;
+    margin-top: 40px;
+    text-transform: capitalize;
+}
+
+p {
+    color: #363636;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* .code-block {
+    position: relative;
+    white-space: pre-wrap;    
+    word-wrap: break-word;     
+    overflow-x: auto;          
+  } */
+pre {
+    background-color: #2d2d2d;
+    color: #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    position: relative;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.copy-btn:hover {
+    background-color: #0056b3;
+}
+
+.note {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196f3;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.note h2 {
+    margin-top: 16px;
+}
+h6 {
+    font-size: 18px;
+    margin: 0 0 16px 0;
+}
+.note > * {
+    font-weight: 600;
+}
+.note h6 ~ li {
+    margin-left: 30px;
+}
+
+hr {
+    margin: 100px 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+table :is(th, td) {
+    padding: 10px;
+    border: 1px solid lightgray;
+    text-align: center;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+.mt-60 {
+    margin-top: 60px;
+}
+
+
+.bold
+{
+    font-weight: 600;
+}
