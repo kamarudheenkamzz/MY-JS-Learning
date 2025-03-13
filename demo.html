@@ -5381,6 +5381,53 @@
 				</code><button class="copy-btn">Copy</button></pre>
 
 
+				<h2>Looping Array Elements</h2>
+				<p>One way to loop through an array, is using a for loop:</p>
+
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+						// let fLen = fruits.length;
+
+						// let text = "<ul>";
+						// for (let i = 0; i < fLen; i++) {
+						// text += "<li>" + fruits[i] + "</li>";
+						// }
+						// text += "</ul>";
+
+						// document.getElementById("demo").innerHTML = text;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>You can also use the Array.forEach() function:</h2>
+
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+						
+						// let text = "<ul>";
+						// fruits.forEach(myFunction);
+						// text += "</ul>";
+						
+						// document.getElementById("demo").innerHTML = text;
+						
+						// function myFunction(value) {
+						//   text += "<li>" + value + "</li>";
+						// } 
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
 
 				<h2>Adding Array Elements</h2>
 				<p>The easiest way to add a new element to an array is using the push() method:</p>
@@ -5610,6 +5657,39 @@
 						// document.getElementById("demo").innerHTML =
 						// "Array: " + (fruits instanceof Array);
 
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Nested Arrays and Objects</h2>
+				<p>Values in objects can be arrays, and values in arrays can be objects:</p>
+
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
+
+				<pre><code class="language-html code-block">
+
+					<script>
+						// let x = "";
+						// const myObj = {
+						//   name: "John",
+						//   age: 30,
+						//   cars: [
+						// 	{name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+						// 	{name:"BMW", models:["320", "X3", "X5"]},
+						// 	{name:"Fiat", models:["500", "Panda"]}
+						//   ]
+						// }
+						
+						// for (let i in myObj.cars) {
+						//   x += "<h3>" + myObj.cars[i].name + "</h3>";
+						//   for (let j in myObj.cars[i].models) {
+						// 	x += myObj.cars[i].models[j] + "<br>";
+						//   }
+						// }
+						
+						// document.getElementById("demo").innerHTML = x;
 					</script>
 
 				</code><button class="copy-btn">Copy</button></pre>
