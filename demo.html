@@ -4493,22 +4493,22 @@
 					<!-- <p id="demo"></p> -->
 
 					<script>
-						// 1. find the last index of the word
+						// // 1. find the last index of the word
 						// let text = "Please locate where 'locate' occurs!";
 						// let index = text.lastIndexOf("locate");
 
 						// document.getElementById('demo').innerHTML = index;
 
 
-						// 2. The lastIndexOf() methods searches backwards (from the end to the beginning), meaning: if the second parameter is 15, 
-						//    the search starts at position 15, and searches to the beginning of the string.
+						// // 2. The lastIndexOf() methods searches backwards (from the end to the beginning), meaning: if the second parameter is 15, 
+						// //    the search starts at position 15, and searches to the beginning of the string.
 						// let text = "Please locate where 'locate' occurs!";
 						// let index = text.lastIndexOf("locate", 15);
 
 						// document.getElementById('demo').innerHTML = index;
 
 
-						// 3. lastIndexOf() return -1 if the text is not found:
+						// // 3. lastIndexOf() return -1 if the text is not found:
 						// let text = "Please locate where 'locate' occurs!";
 						// let index = text.lastIndexOf("Jhon");
 
@@ -4730,7 +4730,7 @@
 						// document.getElementById('demo').innerHTML = startWith
 
 
-						// // 3. example false with position
+						// 3. example false with position
 						// let text = "The rain in SPAIN stays mainly in the plain";
 						// let startWith = text.startsWith("rain", 5);
 
@@ -4928,7 +4928,7 @@
 					<!-- <p id="demo"></p> -->
 
 					<script>
-						// 1. example 
+						// // 1. example 
 						// let x = 123;
 
 						// document.getElementById('demo').innerHTML =
@@ -4951,8 +4951,8 @@
 					<!-- <p id="demo"></p> -->
 
 					<script>
-						// 1. example 
-						// let x = 9.678;
+						// // 1. example 
+						// let x = 96;
 
 						// document.getElementById('demo').innerHTML =
 						// x.toExponential() + "<br>" +
@@ -5123,17 +5123,19 @@
 					<!-- <p id="demo"></p> -->
 
 					<script>
-						// 1. example normal 
+						// // 1. example normal 
 						// const MyCar = ["Swift", "Alto", "Creta"];
+						// document.getElementById("demo").innerHTML = MyCar
 
-						// 2. Using Multiple line
+						// // 2. Using Multiple line
 						// const MyCar = [
 						// 	"Swift",
 						// 	"Alto",
 						// 	"Creta"
 						// ];
+						// document.getElementById("demo").innerHTML = MyCar
 
-						// 3. You can also create an array, and then provide the elements:
+						// // 3. You can also create an array, and then provide the elements:
 						// const MyCar = [];
 						// MyCar[0] = "Swift";
 						// MyCar[1] = "Alto";
@@ -5141,7 +5143,6 @@
 
 						// document.getElementById("demo").innerHTML = MyCar
 						  
-
 					</script>
 
 				</code><button class="copy-btn">Copy</button></pre>
@@ -5156,12 +5157,11 @@
 					<!-- <p id="demo"></p> -->
 
 					<script>
-						// 1. example  
+						// // 1. example  
 						// const MyCar = new Array("Swift", "Alto", "Creta");
 
 						// document.getElementById("demo").innerHTML = MyCar;
 						  
-
 					</script>
 
 				</code><button class="copy-btn">Copy</button></pre>
@@ -5183,12 +5183,11 @@
 					<!-- <p id="demo"></p> -->
 
 					<script>
-						// 1. example  
+						// // 1. example  
 						// const MyCar = ["Swift", "Alto", "Creta"];
 
 						// document.getElementById("demo").innerHTML = MyCar[0];
 						  
-
 					</script>
 
 				</code><button class="copy-btn">Copy</button></pre>
@@ -5204,14 +5203,13 @@
 					<!-- <p id="demo"></p> -->
 
 					<script>
-						// 1. example  
+						// // 1. example  
 						// const MyCar = ["Swift", "Alto", "Creta"];
 
 						// MyCar[0] = "Innova";
 
 						// document.getElementById("demo").innerHTML = MyCar[0];
 						  
-
 					</script>
 
 				</code><button class="copy-btn">Copy</button></pre>
@@ -5228,7 +5226,7 @@
 					<!-- <p id="demo"></p> -->
 
 					<script>
-						// 1. example  
+						// // 1. example  
 						// const MyCar = ["Swift", "Alto", "Creta"];
 
 						// document.getElementById("demo").innerHTML = MyCar.toString();
@@ -5249,36 +5247,14 @@
 					<!-- <p id="demo"></p> -->
 
 					<script>
-						// 1. example  
+						// // 1. example  
 						// const MyCar = ["Swift", "Alto", "Creta"];
 
-						// document.getElementById("demo").innerHTML = MyCar.toString();
+						// document.getElementById("demo").innerHTML = MyCar;
 						  
 					</script>
 
 				</code><button class="copy-btn">Copy</button></pre>
-
-
-
-				<h2>Access the Full Array</h2>
-				<p>With JavaScript, the full array can be accessed by referring to the array name:</p>
-
-
-				<pre><code class="language-html code-block">
-
-					<!-- paragraph -->
-					<!-- <p id="demo"></p> -->
-
-					<script>
-						// 1. example  
-						// const MyCar = ["Swift", "Alto", "Creta"];
-
-						// document.getElementById("demo").innerHTML = MyCar.toString();
-						  
-					</script>
-
-				</code><button class="copy-btn">Copy</button></pre>
-
 
 
 				<h2>Arrays are Objects</h2>
@@ -5292,13 +5268,13 @@
 					<!-- <p id="demo"></p> -->
 
 					<script>
-						// 1. Arrays use numbers to access its "elements". In this example, person[0] returns John:
+						// // 1. Arrays use numbers to access its "elements". In this example, person[0] returns John:
 						// const person = ["Jhon", "duo", "paul"];
 
-						// document.getElementById("demo").innerHTML = Person[0];
+						// document.getElementById("demo").innerHTML = person[0];
 
 
-						// 2. Objects use names to access its "members". In this example, person.firstName returns John:
+						// // 2. Objects use names to access its "members". In this example, person.firstName returns John:
 						// const person = {firstNmae:"Jhon", lastName:"Doe", fatherName:"Paul"}
 
 						// document.getElementById("demo").innerHTML = person.firstNmae;
@@ -5416,7 +5392,7 @@
 
 					<script>
 
-						// 1. Example for push method
+						// // 1. Example for push method
 						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
 						// fruits.push("Grape")
@@ -5424,7 +5400,7 @@
 						// document.getElementById('demo').innerHTML = fruits;
 
 
-						// 2. Example for length method
+						// // 2. Example for length method
 						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
 						// fruits[fruits.length] = "Grape";
@@ -5432,7 +5408,7 @@
 						// document.getElementById('demo').innerHTML = fruits;
 
 
-						// 3. Example for length mentioned method
+						// // 3. Example for length mentioned method
 						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
 						// fruits[4] = "Grape";
@@ -5440,7 +5416,7 @@
 						// document.getElementById('demo').innerHTML = fruits;
 
 
-						// 4. Adding elements with high indexes can create undefined "holes" in an array:
+						// // 4. Adding elements with high indexes can create undefined "holes" in an array:
 						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
 						// fruits[5] = "Grape";
@@ -5472,7 +5448,7 @@
 
 					<script>
 
-						// 1. Example with numbered indexes
+						// // 1. Example with numbered indexes
 						// const fruits = [];
 						// fruits[0] = "Apple";
 						// fruits[1] = "Banana";
@@ -5481,15 +5457,13 @@
 						// document.getElementById('demo').innerHTML = "Total Fruits " + fruits.length + ", They are : " + fruits;
 
 
-						// 2. Example with named indexes
+						// // 2. Example with named indexes
 						// const fruits = [];
 						// fruits["firstFruit"] = "Apple";
 						// fruits["secondFruit"] = "Banana";
 						// fruits["thirdFruit"] = "Orange";
 
 						// document.getElementById('demo').innerHTML = "Total Fruits " + fruits.length + ", They are : " + fruits;
-
-
 						
 					</script>
 
@@ -5531,7 +5505,7 @@
 
 				</code><button class="copy-btn">Copy</button></pre>
 
-				<p>Examples and diffrence B/W both methods</p>
+				<h6 class="mt-30">Examples and diffrence B/W both methods</h6>
 
 				<pre><code class="language-html code-block">
 
@@ -5540,7 +5514,7 @@
 
 					<script>
 
-						// 1. Example for both method
+						// // 1. Example for both method
 						// const fruitOne = new Array("Apple", "Banana", "Orange");
 						// const fruitTwo = ["Apple", "Banana", "Orange"];
 
@@ -5560,8 +5534,85 @@
 
 				</code><button class="copy-btn">Copy</button></pre>
 
-				
+				<h6 class="mt-30">A Common Error</h6>
 
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						// // 1. Without new Array()
+						// const points = [40];
+
+						// document.getElementById("demo").innerHTML = points;
+
+						// // 2. With new Array()
+						// const points = new Array(40);
+
+						// document.getElementById("demo").innerHTML = points;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>How to Recognize an Array</h2>
+				<p>A common question is: How do I know if a variable is an array?</p>
+				<p>The problem is that the JavaScript operator typeof returns "object":</p>
+
+				
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+						// document.getElementById("demo").innerHTML = typeof fruits;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>Solution 1:</h2>
+				<p>To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method Array.isArray():</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						// const fruits = ["Banana", "Orange", "Apple"];
+						// document.getElementById("demo").innerHTML = Array.isArray(fruits);
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Solution 2:</h2>
+				<p>The instanceof operator returns true if an object is created by a given constructor:</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						// const fruits = ["apples", "bananas", "oranges"];
+
+						// document.getElementById("demo").innerHTML =
+						// "Array: " + (fruits instanceof Array);
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
 				
 
 			</section>
