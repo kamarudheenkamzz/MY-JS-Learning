@@ -41,6 +41,8 @@
 				<li><a href="#js_string_search">JS String Search</a></li>
 				<li><a href="#js_number_methods">JS Number Methods</a></li>
 				<li><a href="#js_arrays">JS Arrays</a></li>
+				<li><a href="#js_array_method">JS Arrays Method</a></li>
+
 				
 			</ul>
 		</div>
@@ -5247,10 +5249,10 @@
 					<!-- <p id="demo"></p> -->
 
 					<script>
-						// // 1. example  
-						// const MyCar = ["Swift", "Alto", "Creta"];
+						// 1. example  
+						//  const MyCar = ["Swift", "Alto", "Creta"];
 
-						// document.getElementById("demo").innerHTML = MyCar;
+						//  document.getElementById("demo").innerHTML = MyCar;
 						  
 					</script>
 
@@ -5468,7 +5470,7 @@
 
 						// fruits[5] = "Grape";
 
-						// document.getElementById('demo').innerHTML = fruits[4];
+						// document.getElementById('demo').innerHTML = fruits[5];
 
 					</script>
 
@@ -5591,12 +5593,12 @@
 					<script>
 
 						// // 1. Without new Array()
-						// const points = [40];
+						// const points = [5];
 
 						// document.getElementById("demo").innerHTML = points;
 
 						// // 2. With new Array()
-						// const points = new Array(40);
+						// const points = new Array(5);
 
 						// document.getElementById("demo").innerHTML = points;
 
@@ -5604,28 +5606,11 @@
 
 				</code><button class="copy-btn">Copy</button></pre>
 
+				<!-- paragraph -->
 
-				<h2>How to Recognize an Array</h2>
-				<p>A common question is: How do I know if a variable is an array?</p>
-				<p>The problem is that the JavaScript operator typeof returns "object":</p>
-
-				
-				<pre><code class="language-html code-block">
-
-					<!-- paragraph -->
-					<!-- <p id="demo"></p> -->
-
-					<script>
-
-						// const fruits = ["Banana", "Orange", "Apple", "Mango"];
-						// document.getElementById("demo").innerHTML = typeof fruits;
-
-					</script>
-
-				</code><button class="copy-btn">Copy</button></pre>
 
 				<h2>Solution 1:</h2>
-				<p>To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method Array.isArray():</p>
+				<p>To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method <b> Array.isArray(): </b></p>
 
 				<pre><code class="language-html code-block">
 
@@ -5693,21 +5678,459 @@
 					</script>
 
 				</code><button class="copy-btn">Copy</button></pre>
+
+				
 				
 
 			</section>
 
+			<!-- JS Array Method -->
+			 <section id="js_array_method">
+				<h1>JavaScript Arrays Method</h1>
+
+				<h2>Important Array Methods in JavaScript</h2>
+	
+				<h2>1. push()</h2>
+				<p>push() adds one or more elements to the end of an array.</p>
+
+				
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+					// let arr = [1, 2, 3];
+					// arr.push(4);
+					// document.getElementById("demo").innerHTML = arr;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>2. pop()</h2>
+				<p>pop() removes the last element from an array.</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+					// let arr = [1, 2, 3];
+					// arr.pop();
+					// document.getElementById("demo").innerHTML = arr;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>3. shift()</h2>
+				<p>shift() removes the first element from an array.</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+					// let arr = [1, 2, 3];
+					// arr.shift();
+					// document.getElementById("demo").innerHTML = arr;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>4. unshift()</h2>
+				<p>unshift() adds one or more elements to the beginning of an array.</p>
+
+
+				<pre><code class="language-html code-block">
+
+		
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
+
+					<script>
+
+					// let arr = [1, 2, 3];
+					// arr.unshift(0);
+					// document.getElementById("demo").innerHTML = arr;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>5. slice()</h2>
+				<p>slice() returns a shallow copy of a portion of an array into a new array.</p>
+				<p>Takes two optional arguments: start and end (non-inclusive).</p>
+				<p>Works with positive or negative indices</p>
+				<p>The original array is not modified.</p>
+					
+				
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+					// array.slice(start, end);
+					// let arr = [1, 2, 3, 4];
+					// let sliced = arr.slice(0, 2);
+					//  document.getElementById("demo").innerHTML = sliced;
+
+					// Slice From Index to End
+					// let numbers = [10, 20, 30, 40, 50];
+					// let slicedNumbers = numbers.slice(2);
+					// document.getElementById("demo").innerHTML = slicedNumbers;
+
+					// Using Negative Indexes
+					// let numbers = [10, 20, 30, 410];
+					// let slicedNumbers = numbers.slice(-2);
+					// document.getElementById("demo").innerHTML = slicedNumbers;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>6. splice()</h2>
+				<p>splice() is used to add, remove, or replace elements inside an array.
+				<p>It modifies the original array, unlike slice() which returns a copy.</p>
+				<p>The index where you want to begin changing the array.</p>
+				<p>How many elements you want to remove from start.</p>
+				<p>Elements to add, starting at start</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+					// array.splice(start, deleteCount, item1, item2, ...);
+					//remove
+					// let colors = ['red', 'green', 'blue', 'yellow'];
+					// colors.splice(1, 2); 
+					// document.getElementById("demo").innerHTML = colors;
+
+					//add
+					// let numbers = [1, 4, 5];
+					// numbers.splice(2, 0, 6, 3, 7); 
+					// document.getElementById("demo").innerHTML = numbers;
+
+					//replace
+					// let arr = [1, 2, 3, 4];
+					// arr.splice(2, 2, 19);
+					// document.getElementById("demo").innerHTML = arr;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>7. toSpliced()</h2>
+				<p>toSpliced() creates a new array by removing/replacing/adding elements.</p>
+				<p>The original array stays the same (it’s immutable).</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+					// const numbers = [10, 20, 30, 40, 50];
+					// const newNumbers = numbers.toSpliced(1, 2);
+					// document.getElementById("demo").innerHTML = newNumbers;
+					// document.getElementById("demo").innerHTML = numbers;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>8. sort()</h2>
+				<p>The sort() method sorts the elements of an array in place (it changes the original array).</p>
+				<p>By default, it sorts elements as strings in alphabetical order.</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+					//Sorting Strings
+					// let fruits = ['banana', 'apple', 'cherry'];
+					// fruits.sort();
+					// document.getElementById("demo").innerHTML = fruits;
+
+					//Sorting Numbers
+					// let numbers = [40, 100, 1, 5];
+					// numbers.sort(function(a, b) {
+					// 	return a - b; // ascending order
+					// });
+					// numbers.sort(function(a, b) {
+					// 	return b - a; // descending order
+					// });
+					// document.getElementById("demo").innerHTML = numbers;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>9. reverse()</h2>
+				<p>The reverse() method reverses the order of the elements in an array.</p>
+				<p>It modifies the original array.</p>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+					//reverse Strings
+					// let fruits = ['banana', 'apple', 'cherry'];
+					// fruits.reverse();
+					// document.getElementById("demo").innerHTML = fruits;
+
+					//reverse Numbers
+					// let numbers = [40, 100, 1, 5];
+					// numbers.reverse();
+					// document.getElementById("demo").innerHTML = numbers;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>10. toString()</h2>
+				<p>It converts an array into a string, where each item is separated by a comma ,</p>
+
+				
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+					// const fruits = ["Apple", "Banana", "Cherry", "Date"];
+					// const newfruits = fruits.toString();
+					// document.getElementById("demo").innerHTML = newfruits;
+					</script>
+
+
+
+				</code><button class="copy-btn">Copy</button></pre>
+				
+				<div class="note">
+					<p>It's similar to join() with no separator argument, but you can't customize the separator. It's always a comma.</p>
+				</div>
+
+				<h2>11. delete()</h2>
+				<p>delete removes a property from an object.</p>
+				<p>With arrays, it removes the element's value, but doesn't change the length of the array.</p>
+				<p>It leaves an empty spot (called empty or undefined), but the index stays there.</p>
+
+				
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+				// const fruits = ["Apple", "Banana", "Cherry", "Date"];
+				// delete fruits[1]; 
+				// document.getElementById("demo").innerHTML = fruits; 
+				// The second item ("Banana") is gone, but there's now an empty slot at index 1.
+				// document.getElementById("demo").innerHTML = fruits.length;
+					</script>
+
+
+
+				</code><button class="copy-btn">Copy</button></pre>
+				
+
+				<h2>12. concat()</h2>
+				<p>It combines two or more arrays into one new array.</p>
+				<p>It doesn't change the original arrays.</p>
+				<p>Returns a new array.</p>
+
+				
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+					// Combine more arrays
+					// const fruits = ["Apple", "Banana"];
+					// const vegetables = ["Carrot", "Tomato"];
+					// const combined = fruits.concat(vegetables);
+
+					// Adding Items Directly:
+					// You can add arrays and single values together!
+					// const fruits = ["Apple", "Banana"];
+					// const combined = fruits.concat("Cherry", "Date");
+					// document.getElementById("demo").innerHTML = combined; 
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+				<div class="note">
+					<p>fruits and vegetables stay the same.</p>
+					<p>combined is the new array.</p>
+				</div>
+
+				<h2>13. join()</h2>
+				<p>It takes all the items in an array and joins them together into a single string. You can choose what separator goes between them.</p>
+				<p>If you don’t give a separator, it uses a comma , by default.</p>
+
+				
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+					// const fruits = ["Apple", "Banana", "Cherry", "Date"];
+					// const newfruits = fruits.join(); 
+					// const newfruits = fruits.join(" ");
+					// const newfruits = fruits.join(" - ");
+					// const newfruits = fruits.join(" + ");
+		
+					// document.getElementById("demo").innerHTML = newfruits;
+					</script> 
+
+
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<p>join() joins array items into one string.</p>
+					<p>You can choose what goes in between (space, dash, anything).</p>
+				</div>
+				
+				<h2>14. at()</h2>
+				<p>The at() method in JavaScript is used to access elements of an array at a specific index. It works with both positive and negative indices.</p>
+				<p>Positive index: Counts from the beginning (0 is the first element).</p>
+				<p>Negative index: Counts backward from the end (-1 is the last element).</p>
+				
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+					//at Strings
+					// const fruits = ["Apple", "Banana", "Cherry", "Date"];
+					// const newfruits = fruits.at(1); 
+					// const newfruits = fruits.at(-1); 
+					// const newfruits = fruits.at(-2); 
+					// document.getElementById("demo").innerHTML = newfruits;
+
+					//Basic Bracket Notation ([]);
+					// Only works with positive integers or 0 to access elements. Negative indices don't work with [].
+				
+					// const arr = [10, 20, 30, 40];
+					// const newarr = arr[1]; 
+					// const newarr = arr[-1]; 
+					// document.getElementById("demo").innerHTML = arr[arr.length - 1]; 
+					// document.getElementById("demo").innerHTML = newarr;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>15. flat()</h2>
+				<p>It removes levels of nesting (arrays inside arrays).</p>
+				<p>By default, it removes one level of nesting.</p>
+				<p>If you have arrays inside arrays (nested arrays), flat() helps you simplify them into a single list.</p>
+				<p>depth (optional): How deep to flatten (default is 1).</p>
+
+				
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+					// One Level Deep
+					// const numbers = [1, 2, [3, 4]];
+					// const flatNumbers = numbers.flat();
+					// document.getElementById("demo").innerHTML = flatNumbers;
+					
+					//More Levels Deep
+					// const numbers = [1, 2, [3, 4, [5, 6]]];
+					// const flatOne = numbers.flat();
+					// document.getElementById("demo").innerHTML = flatOne;
+
+					// const flatTwo = numbers.flat(2);
+					// document.getElementById("demo").innerHTML = flatTwo;
+
+					// empty slot
+					// const messyArray = [1, 2, , 4, [5, 6]];
+					// const cleanedArray = messyArray.flat();
+					// document.getElementById("demo").innerHTML = cleanedArray;
+					</script>
+
+
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>16. copyWithin()</h2>
+				<p>It copies part of an array within the same array.</p>
+				<p>It overwrites existing elements.</p>
+				<p>It does not change the length of the array.</p>
+				<p>If end is not given, it copies till the end of the array.</p>
+
+				
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+					// array.copyWithin(target, start, end)
+					// target = 2 → Start pasting at index 2
+					// start = 0 → Start copying from index 0
+					// end = 2 → Stop before index 2 (copies elements 1 and 2)
+					// const numbers = [9, 8, 7, 1, 2, 3, 4, 2, 4, 2];
+					// numbers.copyWithin(3, 1, 5);
+					// document.getElementById("demo").innerHTML = numbers;
+					</script>
+
+
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>17. map()</h2>
+				<p>map() is an array method that creates a new array by applying a function to each element of an existing array.</p>
+				<p>It loops through every element in the array.</p>
+				<p>Collects the returned values into a new array.</p>
+
+				
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+					// let numbers = [1, 2, 3, 4];
+					// let squared = numbers.map(function(a) {
+					// return a * 2;
+					// });
+					// document.getElementById("demo").innerHTML = squared;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+			 </section>
+
 		</div>
 	</div>
-
-
-
-
-
-
-
-
-
 
 
 
