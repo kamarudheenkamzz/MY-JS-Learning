@@ -43,6 +43,7 @@
 				<li><a href="#js_number_methods">JS Number Methods</a></li>
 				<li><a href="#js_arrays">JS Arrays</a></li>
 				<li><a href="#js_array_method">JS Arrays Method</a></li>
+				<li><a href="#js_array_sort">JS Arrays Sort</a></li>
 
 				
 			</ul>
@@ -5668,7 +5669,7 @@
 
 			</section>
 
-			<!-- JS Array Method -->
+			<!-- JS Array Sort -->
 			 <section id="js_array_method">
 				<h1>JavaScript Arrays Method</h1>
 
@@ -5891,9 +5892,6 @@
 
 				</code><button class="copy-btn">Copy</button></pre>
 
-				<h2>8. sort()</h2>
-				<p>The sort() method sorts the elements of an array in place (it changes the original array).</p>
-				<p>By default, it sorts elements as strings in alphabetical order.</p>
 
 				<pre><code class="language-html code-block">
 
@@ -5901,53 +5899,21 @@
 					<!-- <p id="demo"></p> -->
 
 					<script>
-					//Sorting Strings
-					// let fruits = ['banana', 'apple', 'cherry'];
-					// fruits.sort();
-					// document.getElementById("demo").innerHTML = fruits;
 
-					//Sorting Numbers
-					// let numbers = [40, 100, 1, 5];
-					// numbers.sort(function(a, b) {
-					// 	return a - b; // ascending order
-					// });
-					// numbers.sort(function(a, b) {
-					// 	return b - a; // descending order
-					// });
-					// document.getElementById("demo").innerHTML = numbers;
+					// const fruits = ["Apple", "Banana", "Cherry", "Date"];
+					// const newfruits = fruits.toString();
+					// document.getElementById("demo").innerHTML = newfruits;
 					</script>
 
-				</code><button class="copy-btn">Copy</button></pre>
 
-				<h2>9. reverse()</h2>
-				<p>The reverse() method reverses the order of the elements in an array.</p>
-				<p>It modifies the original array.</p>
-
-				<pre><code class="language-html code-block">
-
-					<!-- paragraph -->
-					<!-- <p id="demo"></p> -->
-
-					<script>
-					//reverse Strings
-					// let fruits = ['banana', 'apple', 'cherry'];
-					// fruits.reverse();
-					// document.getElementById("demo").innerHTML = fruits;
-
-					//reverse Numbers
-					// let numbers = [40, 100, 1, 5];
-					// numbers.reverse();
-					// document.getElementById("demo").innerHTML = numbers;
-					</script>
 
 				</code><button class="copy-btn">Copy</button></pre>
-
 				
 				<div class="note">
 					<p>It's similar to join() with no separator argument, but you can't customize the separator. It's always a comma.</p>
 				</div>
 
-				<h2>11. delete()</h2>
+				<h2>9. delete()</h2>
 				<p>delete removes a property from an object.</p>
 				<p>With arrays, it removes the element's value, but doesn't change the length of the array.</p>
 				<p>It leaves an empty spot (called empty or undefined), but the index stays there.</p>
@@ -5972,7 +5938,7 @@
 				</code><button class="copy-btn">Copy</button></pre>
 				
 
-				<h2>12. concat()</h2>
+				<h2>10. concat()</h2>
 				<p>It combines two or more arrays into one new array.</p>
 				<p>It doesn't change the original arrays.</p>
 				<p>Returns a new array.</p>
@@ -6007,7 +5973,7 @@
 				
 				
 
-				<h2>15. flat()</h2>
+				<h2>13. flat()</h2>
 				<p>It removes levels of nesting (arrays inside arrays).</p>
 				<p>By default, it removes one level of nesting.</p>
 				<p>If you have arrays inside arrays (nested arrays), flat() helps you simplify them into a single list.</p>
@@ -6045,7 +6011,7 @@
 				</code><button class="copy-btn">Copy</button></pre>
 
 
-				<h2>16. copyWithin()</h2>
+				<h2>14. copyWithin()</h2>
 				<p>It copies part of an array within the same array.</p>
 				<p>It overwrites existing elements.</p>
 				<p>It does not change the length of the array.</p>
@@ -6067,35 +6033,236 @@
 					// numbers.copyWithin(3, 1, 5);
 					// document.getElementById("demo").innerHTML = numbers;
 					</script>
-
-
-
 				</code><button class="copy-btn">Copy</button></pre>
 
-
-				<h2>17. map()</h2>
-				<p>map() is an array method that creates a new array by applying a function to each element of an existing array.</p>
-				<p>It loops through every element in the array.</p>
-				<p>Collects the returned values into a new array.</p>
-
-				
-				<pre><code class="language-html code-block">
-
-					<!-- paragraph -->
-					<!-- <p id="demo"></p> -->
-
-					<script>
-
-					// let numbers = [1, 2, 3, 4];
-					// let squared = numbers.map(function(a) {
-					// return a * 2;
-					// });
-					// document.getElementById("demo").innerHTML = squared;
-					</script>
-
-				</code><button class="copy-btn">Copy</button></pre>
 
 			 </section>
+
+			 			<!-- JS Array Sort -->
+						 <section id="js_array_sort">
+							<h1>JavaScript Arrays Sort</h1>
+			
+							<h2>Important Array Sort in JavaScript</h2>
+			
+							<h2>1. sort()</h2>
+							<p>The sort() method sorts the elements of an array in place (it changes the original array).</p>
+							<p>By default, it sorts elements as strings in alphabetical order.</p>
+			
+							<pre><code class="language-html code-block">
+			
+								<!-- paragraph -->
+								<!-- <p id="demo"></p> -->
+			
+								<script>
+								//Sorting Strings
+								// let fruits = ['banana', 'apple', 'cherry'];
+								// fruits.sort();
+								// document.getElementById("demo").innerHTML = fruits;
+			
+								//Sorting Numbers
+								// let numbers = [40, 100, 1, 5];
+								// numbers.sort(function(a, b) {
+								// 	return a - b; // ascending order
+								// });
+								// numbers.sort(function(a, b) {
+								// 	return b - a; // descending order
+								// });
+								// document.getElementById("demo").innerHTML = numbers;
+								</script>
+			
+							</code><button class="copy-btn">Copy</button></pre>
+			
+							<h2>2. toSorted()</h2>
+							<p>Similar to sort(), but does not mutate the original array.</p>
+							<p>Returns a new sorted array.</p>
+			
+							<pre><code class="language-html code-block">
+			
+								<!-- paragraph -->
+								<!-- <p id="demo"></p> -->
+			
+								<script>
+								
+			
+								//Sorting Numbers
+								// let numbers = [40, 100, 1, 5];
+								// let newnumbers = numbers.toSorted();
+								// document.getElementById("demo").innerHTML = newnumbers;
+								// document.getElementById("demo").innerHTML = numbers;
+								</script>
+			
+							</code><button class="copy-btn">Copy</button></pre>
+			
+							<h2>3. reverse()</h2>
+							<p>The reverse() method reverses the order of the elements in an array.</p>
+							<p>It modifies the original array.</p>
+			
+							<pre><code class="language-html code-block">
+			
+								<!-- paragraph -->
+								<!-- <p id="demo"></p> -->
+			
+								<script>
+								//reverse Strings
+								// let fruits = ['banana', 'apple', 'cherry'];
+								// fruits.reverse();
+								// document.getElementById("demo").innerHTML = fruits;
+			
+								//reverse Numbers
+								// let numbers = [40, 100, 1, 5];
+								// numbers.reverse();
+								// document.getElementById("demo").innerHTML = numbers;
+								</script>
+			
+							</code><button class="copy-btn">Copy</button></pre>
+			
+							<h2>4. toReversed()</h2>
+							<p>Returns a reversed copy of the array.</p>
+							<p>Doesn't change the original array.</p>
+			
+							<pre><code class="language-html code-block">
+			
+								<!-- paragraph -->
+								<!-- <p id="demo"></p> -->
+			
+								<script>
+			
+								//reverse Numbers
+								// let numbers = [40, 100, 1, 5];
+								// let newnumber = numbers.toReversed();
+								// document.getElementById("demo").innerHTML = newnumber;
+								// document.getElementById("demo").innerHTML = numbers; // not change
+								</script>
+			
+							</code><button class="copy-btn">Copy</button></pre>
+			
+							<h2>5. Math.min()</h2>
+							<p>Math.min() is a JavaScript method that returns the smallest number from a list of numbers.</p>
+							<p>You can’t pass an array directly to Math.min() or Math.max()—they expect a list of numbers, not an array. But you can use the spread operator (...) to expand an array into individual arguments.</p>
+			
+							<pre><code class="language-html code-block">
+			
+								<!-- paragraph -->
+								<!-- <p id="demo"></p> -->
+			
+								<script>
+			
+								//reverse Numbers
+								// const numbers = [4, 8, 1, 6, -1, 0];
+								// Find the minimum value using Math.min() and the spread operator
+								// const minValue = Math.min(...numbers);
+								// document.getElementById("demo").innerHTML = minValue;
+								</script>
+			
+							</code><button class="copy-btn">Copy</button></pre>
+
+							<h2>6. Math.max()</h2>
+							<p>Math.max() is a JavaScript method that returns the largest number from a list of numbers.</p>
+			
+							<pre><code class="language-html code-block">
+			
+								<!-- paragraph -->
+								<!-- <p id="demo"></p> -->
+			
+								<script>
+			
+								//reverse Numbers
+								// const numbers = [4, 8, 1, 6];
+								// Find the minimum value using Math.min() and the spread operator
+								// const minValue = Math.max(...numbers);
+								// document.getElementById("demo").innerHTML = minValue;
+								</script>
+			
+							</code><button class="copy-btn">Copy</button></pre>
+
+							<div class="note">
+								<p>Math.min(...array) ➡️ Finds the minimum number.</p>
+								<p>Math.max(...array) ➡️ Finds the maximum number.</p>
+							</div>
+
+							<h2>7.Homemade min()</h2>
+							<p>This function finds the smallest number in an array.</p>
+			
+							<pre><code class="language-html code-block">
+			
+								<!-- paragraph -->
+								<!-- <p id="demo"></p> -->
+			
+								<script>
+			
+									// function myMin(arr) {
+									// 	let min = arr[0]; // Start by assuming the first element is the smallest
+
+									// 	for (let i = 1; i < arr.length; i++) {
+									// 		if (arr[i] < min) {
+									// 		min = arr[i]; // Update min if we find a smaller number
+									// 		}
+									// 	}
+
+									// 	return min; // Return the smallest number found
+									// }
+									// const numbers = [4, 7, 1, 9, 3];
+									// const smallest = myMin(numbers);
+									// document.getElementById("demo").innerHTML = smallest;
+
+
+								</script>
+			
+							</code><button class="copy-btn">Copy</button></pre>
+
+							<h2>8.Homemade max()</h2>
+							<p>This function finds the largest number in an array.</p>
+			
+							<pre><code class="language-html code-block">
+			
+								<!-- paragraph -->
+								<!-- <p id="demo"></p> -->
+			
+								<script>
+			
+								// function myMax(arr) {
+								// 	let max = arr[0]; // Start by assuming the first element is the largest
+
+								// 	for (let i = 1; i < arr.length; i++) {
+								// 		if (arr[i] > max) {
+								// 		max = arr[i]; // Update max if we find a bigger number
+								// 		}
+								// 	}
+
+								// 	return max; // Return the largest number found
+								// }
+									// const numbers = [4, 7, 1, 9, 3];
+									// const largest = myMax(numbers);
+									// document.getElementById("demo").innerHTML = largest;
+
+
+								</script>
+			
+							</code><button class="copy-btn">Copy</button></pre>
+
+							<h2>9. Random Sort</h2>
+							<p>Math.random() returns a random number between 0 and 1.</p>
+							<p>Subtracting 0.5 gives a value between -0.5 and 0.5.</p>
+							<p>sort() uses that random number to randomly reorder elements.</p>
+							<pre><code class="language-html code-block">
+			
+								<!-- paragraph -->
+								<!-- <p id="demo"></p> -->
+			
+								<script>
+			
+								// const array = [1, 2, 3, 4, 5];
+								// // Randomly sort the array
+								// array.sort(() => Math.random());
+								// console.log(array);
+								// document.getElementById("demo").innerHTML = array;
+								</script>
+			
+							</code><button class="copy-btn">Copy</button></pre>
+							
+							
+			
+						 </section>
 
 		</div>
 	</div>
