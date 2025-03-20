@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <title>Learning Documentation</title> -->
-	<title>jayganesh</title>
+	<title>JavaScript - My Learning</title>
 
 	<!-- Prism.js Theme (Dark Theme like VS Code) -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
@@ -5107,13 +5107,10 @@
 				<h1>JavaScript Arrays</h1>
 
 				<h2>Creating an Array</h2>
-				<pre><code class="language-html code-block">
-
-					Syntax:
-
-					const array_name = [item1, item2, ...];   
-
-				</code><button class="copy-btn">Copy</button></pre>
+				<div class="syntax">
+					<div>Syntax:</div>
+					<div>const array_name = [item1, item2, ...]; </div>
+				</div>
 
 				<div class="note">
 					<p>It is a common practice to declare arrays with the const keyword.</p>
@@ -5311,17 +5308,10 @@
 				<h2>Array Properties and Methods</h2>
 				<p>The real strength of JavaScript arrays are the built-in array properties and methods:</p>
 
-				<pre><code class="language-html code-block">
-
-					<script>
-
-						// cars.length   // Returns the number of elements
-						// cars.sort()   // Sorts the array
-						  
-					</script>
-
-				</code><button class="copy-btn">Copy</button></pre>
-
+				<div class="syntax">
+					<div> cars.length   // Returns the number of elements </div>
+					<div> cars.sort()   // Sorts the array </div>
+				</div>
 
 
 				<h2>The length Property</h2>
@@ -5544,16 +5534,10 @@
 				<p>But you can safely use [ ] instead.</p>
 				<p>These two different statements both create a new empty array named points:</p>
 
-				<pre><code class="language-html code-block">
-
-					<script>
-
-						// const points = new Array();
-						// const points = [];
-
-					</script>
-
-				</code><button class="copy-btn">Copy</button></pre>
+				<div class="syntax">
+					<div>// const points = new Array();</div> 
+					<div>// const points = [];</div> 
+				</div>
 
 				<h6 class="mt-30">Examples and diffrence B/W both methods</h6>
 
@@ -5681,7 +5665,6 @@
 				</code><button class="copy-btn">Copy</button></pre>
 
 				
-				
 
 			</section>
 
@@ -5689,7 +5672,67 @@
 			 <section id="js_array_method">
 				<h1>JavaScript Arrays Method</h1>
 
-				<h2>Important Array Methods in JavaScript</h2>
+				<h2>at()</h2>
+				<p>The at() method in JavaScript is used to access elements of an array at a specific index. It works with both positive and negative indices.</p>
+				<div class="note">
+					<p>Positive index: Counts from the beginning (0 is the first element).</p>
+					<p>Negative index: Counts backward from the end (-1 is the last element).</p>
+				</div>
+				
+				
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+					//at Strings
+					// const fruits = ["Apple", "Banana", "Cherry", "Date"];
+					// const newfruits = fruits.at(1); 
+					// const newfruits = fruits.at(-1); 
+					// const newfruits = fruits.at(-2); 
+					// document.getElementById("demo").innerHTML = newfruits;
+
+					//Basic Bracket Notation ([]);
+					// Only works with positive integers or 0 to access elements. Negative indices don't work with [].
+				
+					// const arr = [10, 20, 30, 40];
+					// const newarr = arr[1]; 
+					// const newarr = arr[-1]; 
+					// document.getElementById("demo").innerHTML = arr[arr.length - 1]; 
+					// document.getElementById("demo").innerHTML = newarr;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>join()</h2>
+				<p>It takes all the items in an array and joins them together into a single string. You can choose what separator goes between them.</p>
+				<p>If you don’t give a separator, it uses a comma , by default.</p>
+
+				
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+					// const fruits = ["Apple", "Banana", "Cherry", "Date"];
+					// const newfruits = fruits.join(); 
+					// const newfruits = fruits.join(" ");
+					// const newfruits = fruits.join(" - ");
+					// const newfruits = fruits.join(" + ");
+		
+					// document.getElementById("demo").innerHTML = newfruits;
+					</script> 
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<p>join() joins array items into one string.</p>
+					<p>You can choose what goes in between (space, dash, anything).</p>
+				</div>
 	
 				<h2>1. push()</h2>
 				<p>push() adds one or more elements to the end of an array.</p>
@@ -5899,25 +5942,6 @@
 
 				</code><button class="copy-btn">Copy</button></pre>
 
-				<h2>10. toString()</h2>
-				<p>It converts an array into a string, where each item is separated by a comma ,</p>
-
-				
-				<pre><code class="language-html code-block">
-
-					<!-- paragraph -->
-					<!-- <p id="demo"></p> -->
-
-					<script>
-
-					// const fruits = ["Apple", "Banana", "Cherry", "Date"];
-					// const newfruits = fruits.toString();
-					// document.getElementById("demo").innerHTML = newfruits;
-					</script>
-
-
-
-				</code><button class="copy-btn">Copy</button></pre>
 				
 				<div class="note">
 					<p>It's similar to join() with no separator argument, but you can't customize the separator. It's always a comma.</p>
@@ -5979,66 +6003,9 @@
 					<p>combined is the new array.</p>
 				</div>
 
-				<h2>13. join()</h2>
-				<p>It takes all the items in an array and joins them together into a single string. You can choose what separator goes between them.</p>
-				<p>If you don’t give a separator, it uses a comma , by default.</p>
-
 				
-				<pre><code class="language-html code-block">
-
-					<!-- paragraph -->
-					<!-- <p id="demo"></p> -->
-
-					<script>
-
-					// const fruits = ["Apple", "Banana", "Cherry", "Date"];
-					// const newfruits = fruits.join(); 
-					// const newfruits = fruits.join(" ");
-					// const newfruits = fruits.join(" - ");
-					// const newfruits = fruits.join(" + ");
-		
-					// document.getElementById("demo").innerHTML = newfruits;
-					</script> 
-
-
-
-				</code><button class="copy-btn">Copy</button></pre>
-
-				<div class="note">
-					<p>join() joins array items into one string.</p>
-					<p>You can choose what goes in between (space, dash, anything).</p>
-				</div>
 				
-				<h2>14. at()</h2>
-				<p>The at() method in JavaScript is used to access elements of an array at a specific index. It works with both positive and negative indices.</p>
-				<p>Positive index: Counts from the beginning (0 is the first element).</p>
-				<p>Negative index: Counts backward from the end (-1 is the last element).</p>
 				
-				<pre><code class="language-html code-block">
-
-					<!-- paragraph -->
-					<!-- <p id="demo"></p> -->
-
-					<script>
-					//at Strings
-					// const fruits = ["Apple", "Banana", "Cherry", "Date"];
-					// const newfruits = fruits.at(1); 
-					// const newfruits = fruits.at(-1); 
-					// const newfruits = fruits.at(-2); 
-					// document.getElementById("demo").innerHTML = newfruits;
-
-					//Basic Bracket Notation ([]);
-					// Only works with positive integers or 0 to access elements. Negative indices don't work with [].
-				
-					// const arr = [10, 20, 30, 40];
-					// const newarr = arr[1]; 
-					// const newarr = arr[-1]; 
-					// document.getElementById("demo").innerHTML = arr[arr.length - 1]; 
-					// document.getElementById("demo").innerHTML = newarr;
-
-					</script>
-
-				</code><button class="copy-btn">Copy</button></pre>
 
 				<h2>15. flat()</h2>
 				<p>It removes levels of nesting (arrays inside arrays).</p>
