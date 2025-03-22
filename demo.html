@@ -5735,7 +5735,7 @@
 					<p>You can choose what goes in between (space, dash, anything).</p>
 				</div>
 	
-				<h2>1. push()</h2>
+				<h2>push()</h2>
 				<p>push() adds one or more elements to the end of an array.</p>
 
 				
@@ -5746,14 +5746,16 @@
 
 					<script>
 
-					// let arr = [1, 2, 3];
-					// arr.push(4);
-					// document.getElementById("demo").innerHTML = arr;
+						// let arr = [1, 2, 3];
+						// arr.push(4);
+						// document.getElementById("demo").innerHTML = arr;
+
 					</script>
 
 				</code><button class="copy-btn">Copy</button></pre>
 
-				<h2>2. pop()</h2>
+
+				<h2>pop()</h2>
 				<p>pop() removes the last element from an array.</p>
 
 				<pre><code class="language-html code-block">
@@ -5763,15 +5765,16 @@
 
 					<script>
 
-					// let arr = [1, 2, 3];
-					// arr.pop();
-					// document.getElementById("demo").innerHTML = arr;
+						// let arr = [1, 2, 3];
+						// arr.pop();
+						// document.getElementById("demo").innerHTML = arr;
+
 					</script>
 
 				</code><button class="copy-btn">Copy</button></pre>
 
 
-				<h2>3. shift()</h2>
+				<h2>shift()</h2>
 				<p>shift() removes the first element from an array.</p>
 
 				<pre><code class="language-html code-block">
@@ -5781,142 +5784,41 @@
 
 					<script>
 
-					// let arr = [1, 2, 3];
-					// arr.shift();
-					// document.getElementById("demo").innerHTML = arr;
+						// let arr = [1, 2, 3];
+						// arr.shift();
+						// document.getElementById("demo").innerHTML = arr;
+
 					</script>
 
 				</code><button class="copy-btn">Copy</button></pre>
 
 
-				<h2>4. unshift()</h2>
+				<h2>unshift()</h2>
 				<p>unshift() adds one or more elements to the beginning of an array.</p>
 
 
 				<pre><code class="language-html code-block">
-
 		
-				<!-- paragraph -->
-				<!-- <p id="demo"></p> -->
-
-					<script>
-
-					// let arr = [1, 2, 3];
-					// arr.unshift(0);
-					// document.getElementById("demo").innerHTML = arr;
-					</script>
-
-				</code><button class="copy-btn">Copy</button></pre>
-
-				<h2>5. slice()</h2>
-				<p>slice() returns a shallow copy of a portion of an array into a new array.</p>
-				<p>Takes two optional arguments: start and end (non-inclusive).</p>
-				<p>Works with positive or negative indices</p>
-				<p>The original array is not modified.</p>
-					
-				
-
-				<pre><code class="language-html code-block">
-
-					<!-- paragraph -->
-					<!-- <p id="demo"></p> -->
-
-					<script>
-					// array.slice(start, end);
-					// let arr = [1, 2, 3, 4];
-					// let sliced = arr.slice(0, 2);
-					//  document.getElementById("demo").innerHTML = sliced;
-
-					// Slice From Index to End
-					// let numbers = [10, 20, 30, 40, 50];
-					// let slicedNumbers = numbers.slice(2);
-					// document.getElementById("demo").innerHTML = slicedNumbers;
-
-					// Using Negative Indexes
-					// let numbers = [10, 20, 30, 410];
-					// let slicedNumbers = numbers.slice(-2);
-					// document.getElementById("demo").innerHTML = slicedNumbers;
-
-					</script>
-
-				</code><button class="copy-btn">Copy</button></pre>
-
-				<h2>6. splice()</h2>
-				<p>splice() is used to add, remove, or replace elements inside an array.
-				<p>It modifies the original array, unlike slice() which returns a copy.</p>
-				<p>The index where you want to begin changing the array.</p>
-				<p>How many elements you want to remove from start.</p>
-				<p>Elements to add, starting at start</p>
-
-				<pre><code class="language-html code-block">
-
-					<!-- paragraph -->
-					<!-- <p id="demo"></p> -->
-
-					<script>
-					// array.splice(start, deleteCount, item1, item2, ...);
-					//remove
-					// let colors = ['red', 'green', 'blue', 'yellow'];
-					// colors.splice(1, 2); 
-					// document.getElementById("demo").innerHTML = colors;
-
-					//add
-					// let numbers = [1, 4, 5];
-					// numbers.splice(2, 0, 6, 3, 7); 
-					// document.getElementById("demo").innerHTML = numbers;
-
-					//replace
-					// let arr = [1, 2, 3, 4];
-					// arr.splice(2, 2, 19);
-					// document.getElementById("demo").innerHTML = arr;
-					</script>
-
-				</code><button class="copy-btn">Copy</button></pre>
-
-
-				<h2>7. toSpliced()</h2>
-				<p>toSpliced() creates a new array by removing/replacing/adding elements.</p>
-				<p>The original array stays the same (it’s immutable).</p>
-
-				<pre><code class="language-html code-block">
-
-					<!-- paragraph -->
-					<!-- <p id="demo"></p> -->
-
-					<script>
-					// const numbers = [10, 20, 30, 40, 50];
-					// const newNumbers = numbers.toSpliced(1, 2);
-					// document.getElementById("demo").innerHTML = newNumbers;
-					// document.getElementById("demo").innerHTML = numbers;
-					</script>
-
-				</code><button class="copy-btn">Copy</button></pre>
-
-
-				<pre><code class="language-html code-block">
-
 					<!-- paragraph -->
 					<!-- <p id="demo"></p> -->
 
 					<script>
 
-					// const fruits = ["Apple", "Banana", "Cherry", "Date"];
-					// const newfruits = fruits.toString();
-					// document.getElementById("demo").innerHTML = newfruits;
+						// let arr = [1, 2, 3];
+						// arr.unshift(0);
+						// document.getElementById("demo").innerHTML = arr;
+
 					</script>
 
-
-
 				</code><button class="copy-btn">Copy</button></pre>
-				
-				<div class="note">
-					<p>It's similar to join() with no separator argument, but you can't customize the separator. It's always a comma.</p>
-				</div>
 
-				<h2>9. delete()</h2>
-				<p>delete removes a property from an object.</p>
-				<p>With arrays, it removes the element's value, but doesn't change the length of the array.</p>
-				<p>It leaves an empty spot (called empty or undefined), but the index stays there.</p>
+
+				<h2>delete()</h2>
+				<ul>
+					<li>delete removes a property from an object.</li>
+					<li>With arrays, it removes the element's value, but doesn't change the length of the array.</li>
+					<li>It leaves an empty spot (called empty or undefined), but the index stays there.</li>
+				</ul>
 
 				
 				<pre><code class="language-html code-block">
@@ -5926,22 +5828,23 @@
 
 					<script>
 
-				// const fruits = ["Apple", "Banana", "Cherry", "Date"];
-				// delete fruits[1]; 
-				// document.getElementById("demo").innerHTML = fruits; 
-				// The second item ("Banana") is gone, but there's now an empty slot at index 1.
-				// document.getElementById("demo").innerHTML = fruits.length;
+						// const fruits = ["Apple", "Banana", "Cherry", "Date"];
+						// delete fruits[1]; 
+						// document.getElementById("demo").innerHTML = fruits; 
+						// The second item ("Banana") is gone, but there's now an empty slot at index 1.
+						// document.getElementById("demo").innerHTML = fruits.length;
+
 					</script>
 
-
-
 				</code><button class="copy-btn">Copy</button></pre>
-				
 
-				<h2>10. concat()</h2>
-				<p>It combines two or more arrays into one new array.</p>
-				<p>It doesn't change the original arrays.</p>
-				<p>Returns a new array.</p>
+
+				<h2> concat()</h2>
+				<ul>
+					<li>It combines two or more arrays into one new array.</li>
+					<li>It doesn't change the original arrays.</li>
+					<li>Returns a new array.</li>
+				</ul>
 
 				
 				<pre><code class="language-html code-block">
@@ -5950,35 +5853,77 @@
 					<!-- <p id="demo"></p> -->
 
 					<script>
-					// Combine more arrays
-					// const fruits = ["Apple", "Banana"];
-					// const vegetables = ["Carrot", "Tomato"];
-					// const combined = fruits.concat(vegetables);
 
-					// Adding Items Directly:
-					// You can add arrays and single values together!
-					// const fruits = ["Apple", "Banana"];
-					// const combined = fruits.concat("Cherry", "Date");
-					// document.getElementById("demo").innerHTML = combined; 
+						// Combine more arrays
+						// const fruits = ["Apple", "Banana"];
+						// const vegetables = ["Carrot", "Tomato"];
+						// const combined = fruits.concat(vegetables);
+
+						// Adding Items Directly:
+						// You can add arrays and single values together!
+						// const fruits = ["Apple", "Banana"];
+						// const combined = fruits.concat("Cherry", "Date");
+						// document.getElementById("demo").innerHTML = combined; 
 
 					</script>
 
 				</code><button class="copy-btn">Copy</button></pre>
 				<div class="note">
-					<p>fruits and vegetables stay the same.</p>
-					<p>combined is the new array.</p>
+					<p>The concat() method does not change the existing arrays. It always returns a new array.</p>
 				</div>
 
-				
-				
-				
+				<h6>Example (Merging Three Arrays)</h6>
+				<pre><code class="language-html code-block">
 
-				<h2>13. flat()</h2>
-				<p>It removes levels of nesting (arrays inside arrays).</p>
-				<p>By default, it removes one level of nesting.</p>
-				<p>If you have arrays inside arrays (nested arrays), flat() helps you simplify them into a single list.</p>
-				<p>depth (optional): How deep to flatten (default is 1).</p>
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
 
+					<script>
+
+						// const array1 = ["Cecilie", "Lone"];
+						// const array2 = ["Emil", "Tobias", "Linus"];
+						// const array3 = ["Robin", "Morgan"];
+
+						// const myChildren = array1.concat(array2, array3); 
+
+						// document.getElementById("demo").innerHTML = myChildren;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">The concat() method can also take strings as arguments:</h6>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+
+						// const myArray = ["Emil", "Tobias", "Linus"];
+						// const myChildren = myArray.concat("Peter"); 
+						// document.getElementById("demo").innerHTML = myChildren;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>copyWithin()</h2>
+				<ul>
+					<li>It copies part of an array within the same array.</li>
+					<li>It overwrites existing elements.</li>
+					<li>It does not change the length of the array.</li>
+					<li>If end is not given, it copies till the end of the array.</li>
+				</ul>
+				
+				<div class="syntax">
+					array.copyWithin(target, start, end)
+				</div>
+
+				<div class="note">
+					Takes 3 optional arguments: target start and end (non-inclusive)
+				</div>
 				
 				<pre><code class="language-html code-block">
 
@@ -5987,37 +5932,102 @@
 
 					<script>
 
-					// One Level Deep
-					// const numbers = [1, 2, [3, 4]];
-					// const flatNumbers = numbers.flat();
-					// document.getElementById("demo").innerHTML = flatNumbers;
+						// 1. given only target and start not end
+						// const numbers = [9, 8, 7, 1, 2, 3, 4, 2, 4, 2];
+						// numbers.copyWithin(3, 1);
+						// document.getElementById("demo").innerHTML = numbers;
+
+						// // 2. given target , start , end
+						// const numbers = [9, 8, 7, 1, 2, 3, 4, 2, 4, 2];
+						// numbers.copyWithin(3, 1, 5);
+						// document.getElementById("demo").innerHTML = numbers;
+
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>flat()</h2>
+				<ul>
+					<li>It removes levels of nesting (arrays inside arrays).</li>
+					<li>By default, it removes one level of nesting.</li>
+					<li>If you have arrays inside arrays (nested arrays), flat() helps you simplify them into a single list.</li>
+					<li>depth (optional): How deep to flatten (default is 1).</li>
+				</ul>
+
+				
+				<pre><code class="language-html code-block">
+
+
+					<script>
+
+						// // One Level Deep
+						// const numbers = [1, 2, [3, 4]];
+						// const flatNumbers = numbers.flat();
+						// console.log(flatNumbers);
+						
+						// // More Levels Deep
+						// const numbers = [1, 2, [3, 4, [5, 6]]];
+						// const flatOne = numbers.flat();
+						// console.log(flatOne);
+
+						// const flatTwo = numbers.flat(2);
+						// console.log(flatTwo);
+
+						// // empty slot
+						// const messyArray = [1, 2, , 4, [5, 6]];
+						// const cleanedArray = messyArray.flat();
+						// console.log(cleanedArray);
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>splice()</h2>
+				<ul>
+					<li>splice() is used to add, remove, or replace elements inside an array.
+					<li>It modifies the original array, unlike slice() which returns a copy.</li>
+					<li>The index where you want to begin changing the array.</li>
+					<li>How many elements you want to remove from start.</li>
+					<li>Elements to add, starting at start</li>
+				</ul>
+				
+				<div class="syntax">
+					array.splice(start, deleteCount, item1, item2, ...);
+				</div>
+
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
 					
-					//More Levels Deep
-					// const numbers = [1, 2, [3, 4, [5, 6]]];
-					// const flatOne = numbers.flat();
-					// document.getElementById("demo").innerHTML = flatOne;
+						// // 1. remove
+						// let colors = ['red', 'green', 'blue', 'yellow'];
+						// colors.splice(1, 2); 
+						// document.getElementById("demo").innerHTML = colors;
 
-					// const flatTwo = numbers.flat(2);
-					// document.getElementById("demo").innerHTML = flatTwo;
+						// // 2. add
+						// let numbers = [1, 4, 5];
+						// numbers.splice(2, 0, 6, 3, 7); 
+						// document.getElementById("demo").innerHTML = numbers;
 
-					// empty slot
-					// const messyArray = [1, 2, , 4, [5, 6]];
-					// const cleanedArray = messyArray.flat();
-					// document.getElementById("demo").innerHTML = cleanedArray;
+						// //replace
+						// let arr = [1, 2, 3, 4];
+						// arr.splice(2, 2, 19);
+						// document.getElementById("demo").innerHTML = arr;
+
 					</script>
-
-
 
 				</code><button class="copy-btn">Copy</button></pre>
 
+				<h2>toSpliced()</h2>
+				<ul>
+					<li>toSpliced() creates a new array by removing/replacing/adding elements.</li>
+					<li>The original array stays the same (it’s immutable).</li>
+				</ul>
 
-				<h2>14. copyWithin()</h2>
-				<p>It copies part of an array within the same array.</p>
-				<p>It overwrites existing elements.</p>
-				<p>It does not change the length of the array.</p>
-				<p>If end is not given, it copies till the end of the array.</p>
-
-				
 				<pre><code class="language-html code-block">
 
 					<!-- paragraph -->
@@ -6025,15 +6035,78 @@
 
 					<script>
 
-					// array.copyWithin(target, start, end)
-					// target = 2 → Start pasting at index 2
-					// start = 0 → Start copying from index 0
-					// end = 2 → Stop before index 2 (copies elements 1 and 2)
-					// const numbers = [9, 8, 7, 1, 2, 3, 4, 2, 4, 2];
-					// numbers.copyWithin(3, 1, 5);
-					// document.getElementById("demo").innerHTML = numbers;
+						// const numbers = [10, 20, 30, 40, 50];
+						// const newNumbers = numbers.toSpliced(1, 2);
+						// document.getElementById("demo").innerHTML = newNumbers;
+						// // document.getElementById("demo").innerHTML = numbers;
+
 					</script>
+
 				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>slice()</h2>
+				<ul>
+					<li>slice() returns a shallow copy of a portion of an array into a new array.</li>
+					<li>Takes two optional arguments: start and end (non-inclusive).</li>
+					<li>Works with positive or negative indices</li>
+					<li>The original array is not modified.</li>
+				</ul>
+
+				<div class="syntax">
+					array.slice(start, end);
+				</div>
+
+				<div class="note">
+					Takes 2 optional arguments:  start and end (non-inclusive)
+				</div>
+				
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+					
+						// // slice with start and end
+						// let arr = [1, 2, 3, 4];
+						// let sliced = arr.slice(0, 2);
+						//  document.getElementById("demo").innerHTML = sliced;
+
+						// // Slice From Index to End
+						// let numbers = [10, 20, 30, 40, 50];
+						// let slicedNumbers = numbers.slice(2);
+						// document.getElementById("demo").innerHTML = slicedNumbers;
+
+						// // Using Negative Indexes
+						// let numbers = [10, 20, 30, 410];
+						// let slicedNumbers = numbers.slice(-2);
+						// document.getElementById("demo").innerHTML = slicedNumbers;
+
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				
+
+
+				
+
+
+
+				
+				
+
+				
+
+				
+				
+				
+
+				
+
+
+				
 
 
 			 </section>
