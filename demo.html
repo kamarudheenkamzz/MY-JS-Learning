@@ -44,7 +44,7 @@
 				<li><a href="#js_arrays">JS Arrays</a></li>
 				<li><a href="#js_array_method">JS Arrays Method</a></li>
 				<li><a href="#js_array_sort">JS Arrays Sort</a></li>
-
+				<li><a href="#js_date_formats">JS Date Formats</a></li>
 				
 			</ul>
 		</div>
@@ -6087,255 +6087,465 @@
 
 				</code><button class="copy-btn">Copy</button></pre>
 
-				
-
-
-				
-
-
-
-				
-				
-
-				
-
-				
-				
-				
-
-				
-
-
-				
-
-
 			 </section>
 
-			 			<!-- JS Array Sort -->
-						 <section id="js_array_sort">
-							<h1>JavaScript Arrays Sort</h1>
-			
-							<h2>Important Array Sort in JavaScript</h2>
-			
-							<h2>1. sort()</h2>
-							<p>The sort() method sorts the elements of an array in place (it changes the original array).</p>
-							<p>By default, it sorts elements as strings in alphabetical order.</p>
-			
-							<pre><code class="language-html code-block">
-			
-								<!-- paragraph -->
-								<!-- <p id="demo"></p> -->
-			
-								<script>
-								//Sorting Strings
-								// let fruits = ['banana', 'apple', 'cherry'];
-								// fruits.sort();
-								// document.getElementById("demo").innerHTML = fruits;
-			
-								//Sorting Numbers
-								// let numbers = [40, 100, 1, 5];
-								// numbers.sort(function(a, b) {
-								// 	return a - b; // ascending order
-								// });
-								// numbers.sort(function(a, b) {
-								// 	return b - a; // descending order
-								// });
-								// document.getElementById("demo").innerHTML = numbers;
-								</script>
-			
-							</code><button class="copy-btn">Copy</button></pre>
-			
-							<h2>2. toSorted()</h2>
-							<p>Similar to sort(), but does not mutate the original array.</p>
-							<p>Returns a new sorted array.</p>
-			
-							<pre><code class="language-html code-block">
-			
-								<!-- paragraph -->
-								<!-- <p id="demo"></p> -->
-			
-								<script>
-								
-			
-								//Sorting Numbers
-								// let numbers = [40, 100, 1, 5];
-								// let newnumbers = numbers.toSorted();
-								// document.getElementById("demo").innerHTML = newnumbers;
-								// document.getElementById("demo").innerHTML = numbers;
-								</script>
-			
-							</code><button class="copy-btn">Copy</button></pre>
-			
-							<h2>3. reverse()</h2>
-							<p>The reverse() method reverses the order of the elements in an array.</p>
-							<p>It modifies the original array.</p>
-			
-							<pre><code class="language-html code-block">
-			
-								<!-- paragraph -->
-								<!-- <p id="demo"></p> -->
-			
-								<script>
-								//reverse Strings
-								// let fruits = ['banana', 'apple', 'cherry'];
-								// fruits.reverse();
-								// document.getElementById("demo").innerHTML = fruits;
-			
-								//reverse Numbers
-								// let numbers = [40, 100, 1, 5];
-								// numbers.reverse();
-								// document.getElementById("demo").innerHTML = numbers;
-								</script>
-			
-							</code><button class="copy-btn">Copy</button></pre>
-			
-							<h2>4. toReversed()</h2>
-							<p>Returns a reversed copy of the array.</p>
-							<p>Doesn't change the original array.</p>
-			
-							<pre><code class="language-html code-block">
-			
-								<!-- paragraph -->
-								<!-- <p id="demo"></p> -->
-			
-								<script>
-			
-								//reverse Numbers
-								// let numbers = [40, 100, 1, 5];
-								// let newnumber = numbers.toReversed();
-								// document.getElementById("demo").innerHTML = newnumber;
-								// document.getElementById("demo").innerHTML = numbers; // not change
-								</script>
-			
-							</code><button class="copy-btn">Copy</button></pre>
-			
-							<h2>5. Math.min()</h2>
-							<p>Math.min() is a JavaScript method that returns the smallest number from a list of numbers.</p>
-							<p>You can’t pass an array directly to Math.min() or Math.max()—they expect a list of numbers, not an array. But you can use the spread operator (...) to expand an array into individual arguments.</p>
-			
-							<pre><code class="language-html code-block">
-			
-								<!-- paragraph -->
-								<!-- <p id="demo"></p> -->
-			
-								<script>
-			
-								//reverse Numbers
-								// const numbers = [4, 8, 1, 6, -1, 0];
-								// Find the minimum value using Math.min() and the spread operator
-								// const minValue = Math.min(...numbers);
-								// document.getElementById("demo").innerHTML = minValue;
-								</script>
-			
-							</code><button class="copy-btn">Copy</button></pre>
+			<!-- JS Array Sort -->
+			<section id="js_array_sort">
+			<h1>JavaScript Arrays Sort</h1>
 
-							<h2>6. Math.max()</h2>
-							<p>Math.max() is a JavaScript method that returns the largest number from a list of numbers.</p>
-			
-							<pre><code class="language-html code-block">
-			
-								<!-- paragraph -->
-								<!-- <p id="demo"></p> -->
-			
-								<script>
-			
-								//reverse Numbers
-								// const numbers = [4, 8, 1, 6];
-								// Find the minimum value using Math.min() and the spread operator
-								// const minValue = Math.max(...numbers);
-								// document.getElementById("demo").innerHTML = minValue;
-								</script>
-			
-							</code><button class="copy-btn">Copy</button></pre>
+			<h2>Important Array Sort in JavaScript</h2>
 
-							<div class="note">
-								<p>Math.min(...array) ➡️ Finds the minimum number.</p>
-								<p>Math.max(...array) ➡️ Finds the maximum number.</p>
-							</div>
+			<h2>1. sort()</h2>
+			<p>The sort() method sorts the elements of an array in place (it changes the original array).</p>
+			<p>By default, it sorts elements as strings in alphabetical order.</p>
 
-							<h2>7.Homemade min()</h2>
-							<p>This function finds the smallest number in an array.</p>
-			
-							<pre><code class="language-html code-block">
-			
-								<!-- paragraph -->
-								<!-- <p id="demo"></p> -->
-			
-								<script>
-			
-									// function myMin(arr) {
-									// 	let min = arr[0]; // Start by assuming the first element is the smallest
+			<pre><code class="language-html code-block">
 
-									// 	for (let i = 1; i < arr.length; i++) {
-									// 		if (arr[i] < min) {
-									// 		min = arr[i]; // Update min if we find a smaller number
-									// 		}
-									// 	}
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
 
-									// 	return min; // Return the smallest number found
-									// }
-									// const numbers = [4, 7, 1, 9, 3];
-									// const smallest = myMin(numbers);
-									// document.getElementById("demo").innerHTML = smallest;
+				<script>
+				//Sorting Strings
+				// let fruits = ['banana', 'apple', 'cherry'];
+				// fruits.sort();
+				// document.getElementById("demo").innerHTML = fruits;
 
+				//Sorting Numbers
+				// let numbers = [40, 100, 1, 5];
+				// numbers.sort(function(a, b) {
+				// 	return a - b; // ascending order
+				// });
+				// numbers.sort(function(a, b) {
+				// 	return b - a; // descending order
+				// });
+				// document.getElementById("demo").innerHTML = numbers;
+				</script>
 
-								</script>
-			
-							</code><button class="copy-btn">Copy</button></pre>
+			</code><button class="copy-btn">Copy</button></pre>
 
-							<h2>8.Homemade max()</h2>
-							<p>This function finds the largest number in an array.</p>
-			
-							<pre><code class="language-html code-block">
-			
-								<!-- paragraph -->
-								<!-- <p id="demo"></p> -->
-			
-								<script>
-			
-								// function myMax(arr) {
-								// 	let max = arr[0]; // Start by assuming the first element is the largest
+			<h2>2. toSorted()</h2>
+			<p>Similar to sort(), but does not mutate the original array.</p>
+			<p>Returns a new sorted array.</p>
 
-								// 	for (let i = 1; i < arr.length; i++) {
-								// 		if (arr[i] > max) {
-								// 		max = arr[i]; // Update max if we find a bigger number
-								// 		}
-								// 	}
+			<pre><code class="language-html code-block">
 
-								// 	return max; // Return the largest number found
-								// }
-									// const numbers = [4, 7, 1, 9, 3];
-									// const largest = myMax(numbers);
-									// document.getElementById("demo").innerHTML = largest;
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
+
+				<script>
+				
+
+				//Sorting Numbers
+				// let numbers = [40, 100, 1, 5];
+				// let newnumbers = numbers.toSorted();
+				// document.getElementById("demo").innerHTML = newnumbers;
+				// document.getElementById("demo").innerHTML = numbers;
+				</script>
+
+			</code><button class="copy-btn">Copy</button></pre>
+
+			<h2>3. reverse()</h2>
+			<p>The reverse() method reverses the order of the elements in an array.</p>
+			<p>It modifies the original array.</p>
+
+			<pre><code class="language-html code-block">
+
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
+
+				<script>
+				//reverse Strings
+				// let fruits = ['banana', 'apple', 'cherry'];
+				// fruits.reverse();
+				// document.getElementById("demo").innerHTML = fruits;
+
+				//reverse Numbers
+				// let numbers = [40, 100, 1, 5];
+				// numbers.reverse();
+				// document.getElementById("demo").innerHTML = numbers;
+				</script>
+
+			</code><button class="copy-btn">Copy</button></pre>
+
+			<h2>4. toReversed()</h2>
+			<p>Returns a reversed copy of the array.</p>
+			<p>Doesn't change the original array.</p>
+
+			<pre><code class="language-html code-block">
+
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
+
+				<script>
+
+				//reverse Numbers
+				// let numbers = [40, 100, 1, 5];
+				// let newnumber = numbers.toReversed();
+				// document.getElementById("demo").innerHTML = newnumber;
+				// document.getElementById("demo").innerHTML = numbers; // not change
+				</script>
+
+			</code><button class="copy-btn">Copy</button></pre>
+
+			<h2>5. Math.min()</h2>
+			<p>Math.min() is a JavaScript method that returns the smallest number from a list of numbers.</p>
+			<p>You can’t pass an array directly to Math.min() or Math.max()—they expect a list of numbers, not an array. But you can use the spread operator (...) to expand an array into individual arguments.</p>
+
+			<pre><code class="language-html code-block">
+
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
+
+				<script>
+
+				//reverse Numbers
+				// const numbers = [4, 8, 1, 6, -1, 0];
+				// Find the minimum value using Math.min() and the spread operator
+				// const minValue = Math.min(...numbers);
+				// document.getElementById("demo").innerHTML = minValue;
+				</script>
+
+			</code><button class="copy-btn">Copy</button></pre>
+
+			<h2>6. Math.max()</h2>
+			<p>Math.max() is a JavaScript method that returns the largest number from a list of numbers.</p>
+
+			<pre><code class="language-html code-block">
+
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
+
+				<script>
+
+				//reverse Numbers
+				// const numbers = [4, 8, 1, 6];
+				// Find the minimum value using Math.min() and the spread operator
+				// const minValue = Math.max(...numbers);
+				// document.getElementById("demo").innerHTML = minValue;
+				</script>
+
+			</code><button class="copy-btn">Copy</button></pre>
+
+			<div class="note">
+				<p>Math.min(...array) ➡️ Finds the minimum number.</p>
+				<p>Math.max(...array) ➡️ Finds the maximum number.</p>
+			</div>
+
+			<h2>7.Homemade min()</h2>
+			<p>This function finds the smallest number in an array.</p>
+
+			<pre><code class="language-html code-block">
+
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
+
+				<script>
+
+					// function myMin(arr) {
+					// 	let min = arr[0]; // Start by assuming the first element is the smallest
+
+					// 	for (let i = 1; i < arr.length; i++) {
+					// 		if (arr[i] < min) {
+					// 		min = arr[i]; // Update min if we find a smaller number
+					// 		}
+					// 	}
+
+					// 	return min; // Return the smallest number found
+					// }
+					// const numbers = [4, 7, 1, 9, 3];
+					// const smallest = myMin(numbers);
+					// document.getElementById("demo").innerHTML = smallest;
 
 
-								</script>
-			
-							</code><button class="copy-btn">Copy</button></pre>
+				</script>
 
-							<h2>9. Random Sort</h2>
-							<p>Math.random() returns a random number between 0 and 1.</p>
-							<p>Subtracting 0.5 gives a value between -0.5 and 0.5.</p>
-							<p>sort() uses that random number to randomly reorder elements.</p>
-							<pre><code class="language-html code-block">
+			</code><button class="copy-btn">Copy</button></pre>
+
+			<h2>8.Homemade max()</h2>
+			<p>This function finds the largest number in an array.</p>
+
+			<pre><code class="language-html code-block">
+
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
+
+				<script>
+
+				// function myMax(arr) {
+				// 	let max = arr[0]; // Start by assuming the first element is the largest
+
+				// 	for (let i = 1; i < arr.length; i++) {
+				// 		if (arr[i] > max) {
+				// 		max = arr[i]; // Update max if we find a bigger number
+				// 		}
+				// 	}
+
+				// 	return max; // Return the largest number found
+				// }
+					// const numbers = [4, 7, 1, 9, 3];
+					// const largest = myMax(numbers);
+					// document.getElementById("demo").innerHTML = largest;
+
+
+				</script>
+
+			</code><button class="copy-btn">Copy</button></pre>
+
+			<h2>9. Random Sort</h2>
+			<p>Math.random() returns a random number between 0 and 1.</p>
+			<p>Subtracting 0.5 gives a value between -0.5 and 0.5.</p>
+			<p>sort() uses that random number to randomly reorder elements.</p>
+			<pre><code class="language-html code-block">
+
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
+
+				<script>
+
+				// const array = [1, 2, 3, 4, 5];
+				// // Randomly sort the array
+				// array.sort(() => Math.random());
+				// console.log(array);
+				// document.getElementById("demo").innerHTML = array;
+				</script>
+
+			</code><button class="copy-btn">Copy</button></pre>
 			
-								<!-- paragraph -->
-								<!-- <p id="demo"></p> -->
 			
-								<script>
-			
-								// const array = [1, 2, 3, 4, 5];
-								// // Randomly sort the array
-								// array.sort(() => Math.random());
-								// console.log(array);
-								// document.getElementById("demo").innerHTML = array;
-								</script>
-			
-							</code><button class="copy-btn">Copy</button></pre>
-							
-							
-			
-						 </section>
+
+			</section>
+
+			<section id="js_date_formats">
+
+				<h1>JavaScript Date Formats</h1>
+
+				<h2>JavaScript Date Input</h2>
+				<p>There are generally 3 types of JavaScript date input formats:</p>
+				<img src="./date_formats.png" alt="">
+				<div class="note">
+					<ul>
+						<li>The ISO format follows a strict standard in JavaScript.</li>
+						<li>The other formats are not so well defined and might be browser specific.</li>
+					</ul>
+				</div>
+
+				<h2>JavaScript Date Output</h2>
+				<div class="syntax">
+					Wed Apr 09 2025 20:35:14 GMT+0530 (India Standard Time)
+				</div>
+
+
+				<h2>JavaScript ISO Dates</h2>
+				<ul>
+					<li>ISO 8601 is the international standard for the representation of dates and times.</li>
+				</ul>
+				<div class="syntax">
+					The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:
+				</div>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// const d = new Date("2015-03-25");
+						// document.getElementById("demo").innerHTML = d;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>ISO Dates (Year and Month)</h2>
+				<div class="syntax">
+					ISO dates can be written without specifying the day (YYYY-MM):
+				</div>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// const d = new Date("2015-03"); 
+						// document.getElementById("demo").innerHTML = d;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>ISO Dates (Only Year)</h2>
+				<div class="syntax">
+					ISO dates can be written without month and day (YYYY):
+				</div>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// const d = new Date("2015");
+						// document.getElementById("demo").innerHTML = d;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>ISO Dates (Date-Time)</h2>
+				<ul>
+					<li>Date and time is separated with a capital T.</li>
+					<li>UTC time is defined with a capital letter Z.</li>
+				</ul>
+				<div class="syntax">
+					ISO dates can be written with added hours, minutes, and seconds (YYYY-MM-DDTHH:MM:SSZ):
+				</div>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// const d = new Date("2015-03-25T12:00:00Z");
+						// document.getElementById("demo").innerHTML = d;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+				<div class="note">
+					<p>UTC (Universal Time Coordinated) is the same as GMT (Greenwich Mean Time).</p>
+				</div>
+
+				<h2>Time Zones</h2>
+				<ul>
+					<li>When setting a date, without specifying the time zone, JavaScript will use the browser's time zone.</li>
+					<li>When getting a date, without specifying the time zone, the result is converted to the browser's time zone.</li>
+				</ul>
+
+				<h2>JavaScript Short Dates.</h2>
+				<div class="syntax">
+					Short dates are written with an "MM/DD/YYYY" syntax like this:
+				</div>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// const d = new Date("03/25/2015");
+						// document.getElementById("demo").innerHTML = d;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>WARNINGS !</h2>
+				<ul>
+					<li>In some browsers, months or days with no leading zeroes may produce an error:</li>
+				</ul>
+				<div class="syntax">
+					const d = new Date("2015-3-25");
+				</div>
+
+				<ul>
+					<li>The behavior of "YYYY/MM/DD" is undefined.</li>
+					<li>Some browsers will try to guess the format. Some will return NaN.</li>
+				</ul>
+				<div class="syntax">
+					const d = new Date("2015/03/25");
+				</div>
+
+				<ul>
+					<li>The behavior of  "DD-MM-YYYY" is also undefined.</li>
+					<li>Some browsers will try to guess the format. Some will return NaN.</li>
+				</ul>
+				<div class="syntax">
+					const d = new Date("25-03-2015");
+				</div>
+
+				<h2>JavaScript Long Dates.</h2>
+				<div class="syntax">
+					Long dates are most often written with a "MMM DD YYYY" syntax like this:
+				</div>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// const d = new Date("Mar 25 2015");
+						// document.getElementById("demo").innerHTML = d;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">Month and day can be in any order:</h6>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// const d = new Date("25 Mar 2015");
+						// document.getElementById("demo").innerHTML = d;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">And, month can be written in full (January), or abbreviated (Jan):</h6>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// const d = new Date("January 25 2015");
+						// document.getElementById("demo").innerHTML = d;
+
+						// const d = new Date("Jan 25 2015");
+						// document.getElementById("demo").innerHTML = d;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">Commas are ignored. Names are case insensitive:</h6>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// const d = new Date("JANUARY, 25, 2015");
+						// document.getElementById("demo").innerHTML = d;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>Date Input - Parsing Dates</h2>
+				<ul>
+					<li>If you have a valid date string, you can use the Date.parse() method to convert it to milliseconds.</li>
+					<li>Date.parse() returns the number of milliseconds between the date and January 1, 1970:</li>
+				</ul>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// const msec = Date.parse("March 21, 2012");
+						// document.getElementById("demo").innerHTML = msec;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">You can then use the number of milliseconds to convert it to a date object:</h6>
+				<pre><code class="language-html code-block">
+
+					<!-- paragraph -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let msec = Date.parse("March 21, 2012");
+						// const d = new Date(msec);
+						// document.getElementById("demo").innerHTML = msec;
+						// // document.getElementById("demo").innerHTML = d;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+			</section>
 
 		</div>
 	</div>
