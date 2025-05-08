@@ -45,7 +45,9 @@
 				<li><a href="#js_array_method">JS Arrays Method</a></li>
 				<li><a href="#js_array_sort">JS Arrays Sort</a></li>
 				<li><a href="#js_date_formats">JS Date Formats</a></li>
-				
+				<li><a href="#js_for_loop">JS For Loop</a></li>
+				<li><a href="#js_for_in_loop">JS For In Loops</a></li>
+				<li><a href="#js_for_of_loop">JS For Of Loop</a></li>				
 			</ul>
 		</div>
 
@@ -6315,6 +6317,7 @@
 
 			</section>
 
+			<!-- JS Date Formats -->
 			<section id="js_date_formats">
 
 				<h1>JavaScript Date Formats</h1>
@@ -6541,6 +6544,317 @@
 						// const d = new Date(msec);
 						// document.getElementById("demo").innerHTML = msec;
 						// // document.getElementById("demo").innerHTML = d;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+			</section>
+
+			<!-- js for loop -->
+			<section id="js_for_loop">
+				<h1>JavaScript For Loop</h1>
+
+				<h2>JavaScript Loops</h2>
+				<p>Loops are handy, if you want to run the same code over and over again, each time with a different value.</p>
+
+				<h6 class="mt-30">Instead of writing:</h6>
+				<pre><code class="language-html code-block">
+
+					text += cars[0] + "<br>";
+					text += cars[1] + "<br>";
+					text += cars[2] + "<br>";
+					text += cars[3] + "<br>";
+					text += cars[4] + "<br>";
+					text += cars[5] + "<br>";
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">You can write:</h6>
+				<!-- paragraph -->
+				<!-- <p id="demo"></p> -->
+				<pre><code class="language-html code-block">
+					<script>
+						// const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+						// let text = "";
+						// for (let i = 0; i < cars.length; i++) {
+						// text += cars[i] + "<br>";
+						// }
+
+						// document.getElementById("demo").innerHTML = text;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>Different Kinds of Loops</h2>
+				<ul>
+					<li>for - loops through a block of code a number of times</li>
+					<li>for/in - loops through the properties of an object</li>
+					<li>for/of - loops through the values of an iterable object</li>
+					<li>while - loops through a block of code while a specified condition is true</li>
+					<li>do/while - also loops through a block of code while a specified condition is true</li>
+				</ul>
+
+
+				<h2>The For Loop</h2>
+				<p>The for statement creates a loop with 3 optional expressions:</p>
+
+				<div class="syntax">
+					for (expression 1; expression 2; expression 3) <br> {
+						// code block to be executed
+					  }
+				</div>
+
+				<ul>
+					<li>Expression 1 is executed (one time) before the execution of the code block.</li>
+					<li>Expression 2 defines the condition for executing the code block.</li>
+					<li>Expression 3 is executed (every time) after the code block has been executed.</li>
+				</ul>
+
+				<h6 class="mt-60">Example :</h6>
+				<!-- Output -->
+				<!-- <h6 class="mt-30">Output :</h6>
+				<p id="demo"></p> -->
+
+				<pre><code class="language-html code-block">
+					<script>
+						// let text = "";
+
+						// for (let i = 0; i < 5; i++) {
+						// text += "The number is " + i + "<br>";
+						// }
+
+						// document.getElementById("demo").innerHTML = text;
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+				<ul>
+					<li>Expression 1 sets a variable before the loop starts (let i = 0).</li>
+					<li>Expression 2 defines the condition for the loop to run (i must be less than 5).</li>
+					<li>Expression 3 increases a value (i++) each time the code block in the loop has been executed.</li>
+				</ul>
+
+				<h2>Loop Scope</h2>
+				
+				<h6>Using var in a loop:</h6>
+				<pre><code class="language-html code-block">
+					<!-- Output -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// var i = 5;
+						// for (var i = 0; i < 10; i++) {
+						// // some statements
+						// }
+						// document.getElementById("demo").innerHTML = i;
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">Using var in a loop:</h6>
+				<pre><code class="language-html code-block">
+					<!-- Output -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// let i = 5;
+						// for (let i = 0; i < 10; i++) {
+						// // some statements
+						// }
+						// document.getElementById("demo").innerHTML = i;
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					When let is used to declare the i variable in a loop, the i variable will only be visible within the loop.
+				</div>
+
+			</section>
+
+			<!-- js The For In Loop -->
+			<section id="js_for_in_loop">
+				<h1>JS For In Loop</h1>
+
+				<h2>For In Over Object</h2>
+
+				<h6>Syntax :</h6>
+				<div class="syntax">
+					for (key in object) <br> { 
+						// code block to be executed
+					  }
+				</div>
+
+				<h6 class="mt-30">Example :</h6>
+
+				<pre><code class="language-html code-block">
+					<!-- output -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// const person = {fname:"John", lname:"Doe", age:25}; 
+
+						// let txt = "";
+						// for (let x in person) {
+						// txt += person[x] + " ";
+						// }
+
+						// document.getElementById("demo").innerHTML = txt;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>Example Explained </h2>
+				<ul>
+					<li>The for in loop iterates over a person object</li>
+					<li>Each iteration returns a key (x)</li>
+					<li>The key is used to access the value of the key</li>
+					<li>The value of the key is person[x]</li>
+				</ul>
+
+				<h2>For In Over Arrays </h2>
+
+				<h6>Syntax :</h6>
+				<div class="syntax">
+					for (variable in array)<br> {
+						code
+					  }
+				</div>
+
+				<h6 class="mt-30">Example :</h6>
+				
+				<!-- output -->
+				<!-- <h6>Output :</h6>
+				<p id="demo"></p> -->
+
+				<pre><code class="language-html code-block">
+					<script>
+						// const numbers = [45, 4, 9, 16, 25];
+
+						// let txt = "";
+						// for (let x in numbers) {
+						// txt += numbers[x] + "<br>"; 
+						// }
+
+						// document.getElementById("demo").innerHTML = txt;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<div class="note">
+					<ul>
+						<li>Do not use for in over an Array if the index order is important.</li>
+						<li>The index order is implementation-dependent, and array values may not be accessed in the order you expect.</li>
+						<li>It is better to use a for loop, a for of loop, or Array.forEach() when the order is important.</li>
+					</ul>
+				</div>
+
+
+				<h2>Array.forEach()</h2>
+				<p>The forEach() method calls a function (a callback function) once for each array element.</p>
+
+				<!-- output -->
+				<!-- <h6>Output :</h6>
+				<p id="demo"></p> -->
+				<pre><code class="language-html code-block">
+					<script>
+						// const numbers = [45, 4, 9, 16, 25];
+
+						// let txt = "";
+						// numbers.forEach(myFunction);
+						// document.getElementById("demo").innerHTML = txt;
+
+						// function myFunction(value, index, array) {
+						// txt += value + "<br>"; 
+						// }
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<p>Note that the function takes 3 arguments:</p>
+				<ul>
+					<li>The item value</li>
+					<li>The item index</li>
+					<li>The array itself</li>
+				</ul>
+				<p>The example above uses only the value parameter. It can be rewritten to:</p>
+
+				<!-- output -->
+				<!-- <h6>Output :</h6>
+				<p id="demo"></p> -->
+				<pre><code class="language-html code-block">
+					<script>
+						// const numbers = [45, 4, 9, 16, 25];
+						
+						// let txt = "";
+						// numbers.forEach(myFunction);
+						// document.getElementById("demo").innerHTML = txt;
+						
+						// function myFunction(value) {
+						//   txt += value + "<br>"; 
+						// }
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+			</section>
+
+			<!-- JavaScript For Of -->
+			<section id="js_for_of_loop">
+				<h1>JavaScript For Of</h1>
+
+				<h2>The For Of Loop</h2>
+				<ul>
+					<li>The JavaScript for of statement loops through the values of an iterable object.</li>
+					<li>It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:</li>
+				</ul>
+				<h6>Syntax :</h6>
+				<div class="syntax">
+					for (variable of iterable) <br> {
+						// code block to be executed
+					  }
+				</div>
+				<ul>
+					<li>variable - For every iteration the value of the next property is assigned to the variable. Variable can be declared with const, let, or var.</li>
+					<li>iterable - An object that has iterable properties.</li>
+				</ul>
+
+				<h2>Looping over an Array</h2>
+
+				<h6>Example :</h6>
+				<!-- output -->
+				<!-- <h6>Output :</h6>
+				<p id="demo"></p> -->
+
+				<pre><code class="language-html code-block">
+					<script>
+						// const cars = ["BMW", "Volvo", "Mini"];
+						
+						// let text = "";
+						// for (let x of cars) {
+						//   text += x + "<br>";
+						// }
+						
+						// document.getElementById("demo").innerHTML = text;
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h2>Looping over a String</h2>
+
+				<h6>Example :</h6>
+				<!-- output -->
+				<!-- <h6>Output :</h6>
+				<p id="demo"></p> -->
+
+				<pre><code class="language-html code-block">
+					<script>
+						// let language = "JavaScript";
+
+						// let text = "";
+						// for (let x of language) {
+						// text += x + "<br>";
+						// }
+
+						// document.getElementById("demo").innerHTML = text;
 					</script>
 
 				</code><button class="copy-btn">Copy</button></pre>
