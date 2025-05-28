@@ -7,6 +7,13 @@ body {
     margin: 0;
     background-color: #f4f4f4;
 }
+img,
+table,
+.note
+{
+    max-width: 100%;
+    overflow: auto;
+}
 ul li
 {
   font-weight: 600;
@@ -47,6 +54,7 @@ ul li
 .main_parent .body_content {
     width: calc(100% - 250px);
     padding: 20px;
+    overflow-x: auto;
 }
 
 .main_parent .body_content section {

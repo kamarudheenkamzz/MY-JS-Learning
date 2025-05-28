@@ -47,7 +47,8 @@
 				<li><a href="#js_date_formats">JS Date Formats</a></li>
 				<li><a href="#js_for_loop">JS For Loop</a></li>
 				<li><a href="#js_for_in_loop">JS For In Loops</a></li>
-				<li><a href="#js_for_of_loop">JS For Of Loop</a></li>				
+				<li><a href="#js_for_of_loop">JS For Of Loop</a></li>	
+				<li><a href="#js_use_strict">JS Use Strict</a></li>			
 			</ul>
 		</div>
 
@@ -4912,7 +4913,6 @@
 
 			</section>
 
-
 			<!-- JS Number Methods -->
 			<section id="js_number_methods">
 				<h1>JS Number Methods</h1>
@@ -5103,7 +5103,6 @@
 
 
 			</section>
-
 
 			<!-- JS Arrays -->
 			<section id="js_arrays">
@@ -6859,6 +6858,193 @@
 
 				</code><button class="copy-btn">Copy</button></pre>
 
+			</section>
+
+			<section id="js_use_strict">
+				<h1>JavaScript Use Strict</h1>
+		
+				<p>"use strict"; Defines that JavaScript code should be executed in "strict mode".</p>
+		
+				<h2>The "use strict" Directive</h2>
+				<ul>
+					<li>The "use strict" directive was new in ECMAScript version 5.</li>
+					<li>The purpose of "use strict" is to indicate that the code should be executed in "strict mode".</li>
+					<li>With strict mode, you can not, for example, use undeclared variables.</li>
+					<li>All modern browsers support "use strict" except Internet Explorer 9 and lower</li>
+				</ul>
+
+				<h2>Declaring Strict Mode</h2>
+				<p>Strict mode is declared by adding "use strict"; to the beginning of a script or a function.</p>
+				<p>Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode):</p>
+		
+				<h6 class="mt-30">Example :</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// "use strict";
+						// x = 3.14;  // This will cause an error (x is not defined).
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">Example :</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// "use strict";
+						// myFunction();
+
+						// function myFunction() {
+						// 	y = 3.14;   // This will cause an error (y is not defined)
+						// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">Example :</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// x = 3.14;    // This will not cause an error.
+						// myFunction();
+
+						// function myFunction() {
+						// 	"use strict";
+						// 	y = 3.14;  // This will cause an error (y is not defined).
+						// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+		
+				<h2>Why Strict Mode?</h2>
+				<ul>
+					<li>Strict mode makes it easier to write "secure" JavaScript.</li>
+					<li>Strict mode changes previously accepted "bad syntax" into real errors.</li>
+					<li>As an example, in normal JavaScript, mistyping a variable name creates a new global variable. In strict mode, this will throw an error, making it impossible to accidentally create a global variable.</li>
+					<li>In strict mode, any assignment to a non-writable property, a getter-only property, a non-existing property, a non-existing variable, or a non-existing object, will throw an error.</li>
+				</ul>
+
+				<h2>Not Allowed in Strict Mode</h2>
+
+				<h6 class="mt-30">1. Using a variable, without declaring it, is not allowed:</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// "use strict";
+						// x = 3.14;  // This will cause an error (x is not defined).
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">2. Writing to read-only properties or non-writable properties</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// "use strict";
+						// const obj = {};
+						// Object.defineProperty(obj, "a", { value: 1, writable: false });
+						// obj.a = 2; //  Error
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">3. Deleting variables, functions, or function arguments</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// "use strict";
+						// delete someVar; //  Error
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">4. Duplicate parameter names in functions</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// "use strict";
+						// function myFunc(a, a) {} //  Error
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">5. Usage of with statement</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// "use strict";
+						// with (Math) { console.log(cos(2)); } //  Error
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">6. Using eval or arguments as identifiers</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// "use strict";
+						// let eval = 10; //  Error
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">7. Accessing arguments.callee</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// "use strict";
+						// function test() {
+						// console.log(arguments.callee); //  Error
+						// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">8. Modifying arguments object doesn’t affect parameters</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// "use strict";
+						// function test(a) {
+						// 	arguments[0] = 99;
+						// 	console.log(a); // ✅ Still prints original value, not 99
+						// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">9. Octal literals are not allowed</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// "use strict";
+						// let num = 010; //  Error: Octal literals not allowed
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<h6 class="mt-30">10. this is undefined in functions (not bound to global object)</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// "use strict";
+						// function test() {
+						// console.log(this); //  undefined, not window
+						// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h2>🚫 Future Reserved Keywords in Strict Mode</h2>
+				<p>You cannot use these as variable, function, or parameter names:</p>
+
+				<h6 class="mt-30">🔒 Reserved for Future Use</h6>
+				<ul>
+					<li>implements</li>
+					<li>interface</li>
+					<li>let</li>
+					<li>package</li>
+					<li>private</li>
+					<li>protected</li>
+					<li>public</li>
+					<li>static</li>
+					<li>yield</li>
+				</ul>
+
+				<div class="note">
+					<ul>
+						<li>These words might be valid in non-strict mode, but they will throw an error in strict mode.</li>
+						<li>Many of them (like let, static, and yield) are already in use in ES6+.</li>
+						<li>Using any of these as identifiers breaks compatibility and prevents future-proofing your code.</li>
+					</ul>
+				</div>
+
+				<h6>Example :</h6>
+				<pre><code class="language-html code-block">
+					<script>
+						// "use strict";
+
+						// let interface = "UI";    // ❌ SyntaxError
+						// function static() {}     // ❌ SyntaxError
+						// var yield = 10;  
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+				
 			</section>
 
 		</div>
