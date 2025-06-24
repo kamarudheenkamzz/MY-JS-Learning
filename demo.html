@@ -20,7 +20,8 @@
 	<div class="main_parent">                  
 		<div class="sidebar">
 			<ul>
-				<li class="active"><a href="#dom">DOM</a></li>
+				<!-- js tutorial -->
+				<li class="sidebar_head"><a href=tutorial">JS Tutorial</a></li>
 				<li><a href="#jsTpes">JS Types</a></li>
 				<li><a href="#comments">JS Comments</a></li>
 				<li><a href="#jsOutput">JS Output</a></li>
@@ -48,14 +49,24 @@
 				<li><a href="#js_for_loop">JS For Loop</a></li>
 				<li><a href="#js_for_in_loop">JS For In Loops</a></li>
 				<li><a href="#js_for_of_loop">JS For Of Loop</a></li>	
-				<li><a href="#js_use_strict">JS Use Strict</a></li>			
+				<li><a href="#js_use_strict">JS Use Strict</a></li>		
+				
+				<!-- js html dom -->
+				<li class="sidebar_head"><a href="#js_html_dom">JS HTML Dom</a></li>
+				<li><a href="#dom_intro">Dom Intro</a></li>
+				<li><a href="#dom_method">Dom Method</a></li>
+				<li><a href="#dom_document">Dom Document</a></li>
+				<li><a href="#dom_elements">Dom Elements</a></li>
+				
 			</ul>
 		</div>
 
 		<div class="body_content">
 
-			<!-- dom section -->
-			<section id="dom">
+			<!--  ===========================================================================
+									  		JS Tutorial starts here 
+			===========================================================================  -->
+			<section id="js_tutorial">
 				<h1>DOM - Document Object Model</h1>
 				<p>JavaScript considering everything in html as a object, and all the html file it's considering as a "window.document" it's called DOM.</p>
 
@@ -6860,6 +6871,7 @@
 
 			</section>
 
+			<!-- JS Use Strict -->
 			<section id="js_use_strict">
 				<h1>JavaScript Use Strict</h1>
 		
@@ -7046,6 +7058,506 @@
 				</code><button class="copy-btn">Copy</button></pre>
 				
 			</section>
+
+
+			<!--  ===========================================================================
+									  		JS Tutorial starts here 
+			===========================================================================  -->
+
+
+			<!--  ===========================================================================
+									  		JS HTML DOM starts here 
+			===========================================================================  -->
+
+			<!-- JS Dom Intro -->
+			<section id="dom_intro">
+
+				<h1>JavaScript HTML DOM :</h1>
+
+				<h2>The HTML DOM (Document Object Model)</h2>
+				<p>When a web page is loaded, the browser creates a Document Object Model of the page.</p>
+
+				<h6 class="mt-60">The HTML DOM Tree of Objects</h6>
+				<img src="./dom_chart.png" alt="">
+
+				<ul class="mt-30">
+					<li>JavaScript can change all the HTML elements in the page</li>
+					<li>JavaScript can change all the HTML attributes in the page</li>
+					<li>JavaScript can change all the CSS styles in the page</li>
+					<li>JavaScript can remove existing HTML elements and attributes</li>
+					<li>JavaScript can add new HTML elements and attributes</li>
+					<li>JavaScript can react to all existing HTML events in the page</li>
+					<li>JavaScript can create new HTML events in the page</li>
+				</ul>
+
+				<h2>What is the HTML DOM?</h2>
+				<p>The HTML DOM is a standard object model and programming interface for HTML. It defines:</p>
+
+				<ul class="mt-30">
+					<li>The HTML elements as objects</li>
+					<li>The properties of all HTML elements</li>
+					<li>The methods to access all HTML elements</li>
+					<li>The events for all HTML elements</li>
+				</ul>
+
+				<div class="note">
+					The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+				</div>
+
+			</section>
+
+			<!-- dom methods -->
+			<section id="dom_method">
+				<h1>JavaScript - HTML DOM Methods</h1>
+
+				<h2>The DOM Programming Interface</h2>
+				<div class="note">
+					<ul>
+						<li>HTML DOM methods are actions you can perform (on HTML Elements).</li>
+						<li>HTML DOM properties are values (of HTML Elements) that you can set or change.</li>
+					</ul>
+				</div>
+
+				<h6>Example :</h6>
+				<pre><code class="language-html code-block">
+					<!-- Output : -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// document.getElementById("demo").innerHTML = "Hello World!";
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+				<p>In the example above, <b>getElementById</b>  is a method, while <b>innerHTML</b> is a property.</p>
+
+				<h2>The getElementById Method</h2>
+				<ul>
+					<li>The most common way to access an HTML element is to use the id of the element.</li>
+					<li>In the example above the getElementById method used id="demo" to find the element.</li>
+				</ul>
+
+				<h2>The innerHTML Property</h2>
+				<ul>
+					<li>The easiest way to get the content of an element is by using the innerHTML property.</li>
+					<li>The innerHTML property is useful for getting or replacing the content of HTML elements.</li>
+				</ul>
+
+				<pre><code class="language-html code-block">
+					<!-- Output : -->
+					<!-- <p id="demo"></p> -->
+
+					<script>
+						// document.getElementById("demo").innerHTML = "Hello World!";
+					</script>
+
+				</code><button class="copy-btn">Copy</button></pre>
+				<div class="note">
+					The innerHTML property can be used to get or change any HTML element, including <b>< html ></b>  and  <b>< body ></b>.
+				</div>
+
+			</section>
+
+			<!-- dom document -->
+			<section id="dom_document">
+				<h1>JavaScript HTML DOM Document</h1>
+
+				<h2>The HTML DOM Document Object</h2>
+				<p>If you want to access any element in an HTML page, you always start with accessing the document object.</p>
+				<p>Below are some examples of how you can use the document object to access and manipulate HTML.</p>
+
+
+				<h2>Finding HTML Elements</h2>
+				<img src="./dom_html_elements.png" alt="">
+
+				<h2>Changing HTML Elements</h2>
+				<img src="./dom_change_html.png" alt="">
+
+				<h2>Adding and Deleting Elements</h2>
+				<img src="./dom_add_delete.png" alt="">
+
+				<h2>Adding Events Handlers</h2>
+				<img src="./dom_add_event.png" alt="">
+
+				<h2>Finding HTML Objects</h2>
+				<ul>
+					<li>The first HTML DOM Level 1 (1998), defined 11 HTML objects, object collections, and properties. These are still valid in HTML5.</li>
+					<li>Later, in HTML DOM Level 3, more objects, collections, and properties were added.</li>
+				</ul>
+				<img src="./dom_find_html.png" alt="" width="1100">
+
+			</section>
+
+			<!-- dom elements -->
+			<section id="dom_elements">
+				<h1>JavaScript HTML DOM Elements</h1>
+
+				<h2>Finding HTML Elements</h2>
+				<ul>
+					<li>Finding HTML elements by id</li>
+					<li>Finding HTML elements by tag name</li>
+					<li>Finding HTML elements by class name</li>
+					<li>Finding HTML elements by CSS selectors</li>
+					<li>Finding HTML elements by HTML object collections</li>
+				</ul>
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Element by Id</h2>
+
+				<h6 class="mt-30">Syntax :</h6>
+				<div class="syntax">
+					document.getElementById("id")
+				</div>
+
+				<h6 class="mt-30">Example :</h6>
+				<pre><code class="language-html code-block">
+					<!-- <p id="intro">Finding HTML Elements by Id</p>
+					<p id="demo"></p> -->
+
+					<script>
+						// const element = document.getElementById("intro");
+
+						// document.getElementById("demo").innerHTML = 
+						// "The text from the intro paragraph is: " + element.innerHTML;
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements by Tag Name</h2>
+
+				<h6 class="mt-30">Syntax :</h6>
+				<div class="syntax">
+					document.getElementsByTagName("tagName")
+				</div>
+
+				<h6 class="mt-30">Example :</h6>
+				<pre><code class="language-html code-block">
+					<!-- <p>Finding HTML Elements by Tag Name.</p>
+					<p id="demo"></p> -->
+
+					<script>
+						// const element = document.getElementsByTagName("p");
+
+						// document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + element[0].innerHTML;
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements by Class Name</h2>
+
+				<h6 class="mt-30">Syntax :</h6>
+				<div class="syntax">
+					document.getElementsByClassName("className")
+				</div>
+
+				<h6 class="mt-30">Example :</h6>
+				<pre><code class="language-html code-block">
+					<!-- <p class="intro">Hello World!</p>
+					<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+					<p id="demo"></p> -->
+
+					<script>
+						// const x = document.getElementsByClassName("intro");
+						// document.getElementById("demo").innerHTML = 
+						// 'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements by CSS Selectors</h2>
+				<p>If you want to find all HTML elements that match a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the <b>querySelectorAll()</b> method.</p>
+
+				<h6 class="mt-30">Syntax :</h6>
+				<div class="syntax">
+					document.querySelectorAll("css selector")
+				</div>
+
+				<h6 class="mt-30">Example :</h6>
+				<pre><code class="language-html code-block">
+				<!-- <p class="intro">Hello World!.</p>
+				<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+				<p id="demo"></p> -->
+
+				<script>
+					// const x = document.querySelectorAll("p.intro");
+					// document.getElementById("demo").innerHTML = 
+					// 'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+				</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements by HTML Object Collections</h2>
+				<!-- Output -->
+				<!-- <h6 class="mt-30">Output :</h6>
+				<p id="demo"></p> -->
+
+				<pre><code class="language-html code-block">
+					<!-- <form id="frm1" action="/action_page.php">
+						First name: <input type="text" name="fname" value="Donald">
+						Last name: <input type="text" name="lname" value="Duck">
+						<input type="submit" value="Submit">
+					</form> 
+					  
+					<p>These are the values of each element in the form:</p>
+					
+					<script>
+						const x = document.forms["frm1"];
+						let text = "";
+						for (let i = 0; i < x.length ;i++) {
+						text += x.elements[i].value + "<br>";
+						}
+						document.getElementById("demo").innerHTML = text;
+					</script> -->
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<h1 class="mt-60">JavaScript HTML DOM More / Other Elements</h1>
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements Using document.anchors</h2>
+				<ul>
+					<li>It only includes < a name="..." > — not < a href="..." >.</li>
+					<li>It returns an HTMLCollection (like an array of elements).</li>
+					<li>This is mostly outdated: modern HTML uses id instead of name for anchors, and for most purposes document.querySelectorAll() is preferred.</li>
+				</ul>
+
+				<div class="syntax">
+					document.anchors
+				</div>
+
+				<!-- Output -->
+				<!-- <h6 class="mt-30">Output :</h6>
+				<p id="demo"></p> -->
+				
+				<pre><code class="language-html code-block">
+					<!-- <a name="html">HTML Tutorial</a><br>
+					<a name="css">CSS Tutorial</a><br>
+					<a name="xml">XML Tutorial</a><br>
+
+
+					<script>
+						document.getElementById("demo").innerHTML =
+						"Number of anchors are: " + document.anchors.length;
+					</script> -->
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements Using document.body</h2>
+				<ul>
+					<li>Refers to the < body > element of the page.</li>
+					<li>Contains all the visible content of the page: text, images, buttons, etc.</li>
+				</ul>
+
+				<div class="syntax">
+					document.body
+				</div>
+				
+				<pre><code class="language-html code-block">
+					<script>
+						// console.log(document.body.innerHTML);
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements Using document.documentElement</h2>
+				<ul>
+					<li>Refers to the root HTML element, i.e., the < html > tag.</li>
+					<li>It includes both < head > and < body > as children.</li>
+				</ul>
+
+				<div class="syntax">
+					document.documentElement
+				</div>
+				
+				<pre><code class="language-html code-block">
+					<script>
+						// console.log(document.body.innerHTML);
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements Using document.embeds</h2>
+				<ul>
+					<li>The document.embeds property returns a live HTMLCollection of all < embed > elements in the document.</li>
+					<li>The < embed > tag is used to embed external content (like PDFs, videos, or Flash files) into a webpage..</li>
+					<li>Rarely used today, but still valid in legacy or media-heavy apps</li>
+				</ul>
+
+				<div class="syntax">
+					document.embeds
+				</div>
+
+				<!-- Output -->
+				<!-- <h6 class="mt-30">Output :</h6>
+				<p id="demo"></p> -->
+				
+				<pre><code class="language-html code-block">
+
+					<!-- <embed src="file.pdf" type="application/pdf" width="600" height="400">
+
+					<script>
+						document.getElementById("demo").innerHTML =
+						"Number of embeds: " + document.embeds.length;
+					</script> -->
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements Using document.forms</h2>
+				<ul>
+					<li>Only < form > tags are included.</li>
+					<li>name or id should be unique for accurate access. </li>
+					<li>Useful in older codebases and for quick form manipulation.</li>
+				</ul>
+
+				<div class="syntax">
+					document.forms
+				</div>
+
+				<!-- Output -->
+				<!-- <h6 class="mt-30">Output :</h6>
+				<p id="demo"></p> -->
+				
+				<pre><code class="language-html code-block">
+
+					<!-- <form action="" id="form_doc">
+						First name: <input type="text" name="fname" value="Donald">
+						<input type="submit" value="Submit">
+					</form> 
+
+					<script>
+						document.getElementById("demo").innerHTML =
+						"Number of forms: " + document.forms.length;
+					</script> -->
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements Using document.head</h2>
+				<ul>
+					<li>Dynamically inserting script, style, or meta tags.</li>
+					<li>Accessing or modifying the page title.</li>
+					<li>Reading meta tag values (like charset, author, etc.)</li>
+				</ul>
+
+				<div class="syntax">
+					document.head
+				</div>
+				
+				<pre><code class="language-html code-block">
+					<script>
+						// console.log(document.head.innerHTML);
+					</script> 
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements Using  document.images</h2>
+				<ul>
+					<li>Preloading or replacing image sources dynamically</li>
+					<li>Image lazy-loading implementation</li>
+					<li>Validating if all images are loaded</li>
+				</ul>
+
+				<div class="syntax">
+					 document.images
+				</div>
+
+				<!-- Output -->
+				<!-- <h6 class="mt-30">Output :</h6>
+				<p id="demo"></p> -->
+				
+				<pre><code class="language-html code-block">
+
+					<!-- <img src="pic_htmltree.gif" width="486" height="266">
+					<img src="pic_navigate.gif" width="362" height="255"> -->
+
+					<script>
+						// document.getElementById("demo").innerHTML =
+						// "Number of images: " + document.images.length;
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements Using document.links</h2>
+				<ul>
+					<li>Get all clickable links in a page</li>
+					<li>Extract all outbound URLs</li>
+					<li>Filter or style external vs internal links</li>
+					<li>Accessibility checks</li>
+				</ul>
+
+				<div class="syntax">
+					 document.links
+				</div>
+
+				<!-- Output -->
+				<!-- <h6 class="mt-30">Output :</h6>
+				<p id="demo"></p> -->
+				
+				<pre><code class="language-html code-block">
+
+					<!-- <a href="https://example.com">Visit Example</a>
+					<a>Not a link</a>
+					<area href="map.html">
+					<link rel="stylesheet" href="style.css"> -->
+
+					<script>
+						// document.getElementById("demo").innerHTML =
+						// "Number of links: " + document.links.length;
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements Using document.scripts</h2>
+				<ul>
+					<li>Checking how many scripts are loaded on a page</li>
+					<li>Debugging which scripts are present (especially external ones)</li>
+					<li>Modifying or removing scripts dynamically (rare)</li>
+				</ul>
+
+				<div class="syntax">
+					document.scripts
+				</div>
+				
+				<pre><code class="language-html code-block">
+					<script>
+						// console.log(document.scripts.length);
+					</script> 
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<!-- ========================================================== -->
+				<h2>Finding HTML Elements Using document.title</h2>
+				<ul>
+					<li>Dynamically updating the title (e.g., unread messages: (1) New Message)</li>
+					<li>Setting page titles in single-page applications (SPAs)</li>
+					<li>SEO improvements and accessibility enhancements</li>
+				</ul>
+
+				<div class="syntax">
+					document.title
+				</div>
+				
+				<pre><code class="language-html code-block">
+					<script>
+						// console.log(document.title);
+					</script> 
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+
+			</section>
+
+			<!--  ===========================================================================
+									  		JS HTML DOM starts here 
+			===========================================================================  -->
+
 
 		</div>
 	</div>

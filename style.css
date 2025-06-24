@@ -29,17 +29,26 @@ ul li
     min-height: 100vh;
 }
 .main_parent .sidebar ul {
-    position: sticky;
+    position: fixed;
     top: 0;
     padding: 20px 0;
     margin: 0;
     list-style: none;
+    overflow-y: scroll;
+    height: calc(100dvh - 40px);
+
 }
 .main_parent .sidebar ul li {
     padding: 2px 15px;
 }
-.main_parent .sidebar ul li.active {
+.main_parent .sidebar ul li.sidebar_head,
+.main_parent .sidebar ul li.sidebar_head.active
+{
     background-color: #000;
+    padding-block: 10px;
+}
+.main_parent .sidebar ul li.active {
+    background-color: #999;
 }
 .main_parent .sidebar ul li a {
     color: #000;
@@ -47,6 +56,11 @@ ul li
     font-size: 16px;
     font-weight: 600;
     outline: none;
+}
+.main_parent .sidebar ul li.sidebar_head a
+{
+    color: #fff;
+    font-size: 20px;
 }
 .main_parent .sidebar ul li.active a {
     color: #fff;
