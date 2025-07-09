@@ -15,7 +15,7 @@
 
 </head>
 
-<body>
+<body onload="checkCookies()">
 
 	<div class="main_parent">                  
 		<div class="sidebar">
@@ -26,6 +26,7 @@
 				<li><a href="#dom_method">Dom Method</a></li>
 				<li><a href="#dom_document">Dom Document</a></li>
 				<li><a href="#dom_elements">Dom Elements</a></li>
+				<li><a href="#dom_events">Dom Events</a></li>
 				
 
 				<!-- js tutorial -->
@@ -554,6 +555,254 @@
 
 
 			</section>
+
+			<!-- dom events -->
+			<section id="dom_events">
+				<h1>JavaScript HTML DOM Events</h1>
+
+				<h2>Reacting to Events</h2>
+				<ul>
+					<li>When a user clicks the mouse</li>
+					<li>When a web page has loaded</li>
+					<li>When an image has been loaded</li>
+					<li>When the mouse moves over an element</li>
+					<li>When an input field is changed</li>
+					<li>When an HTML form is submitted</li>
+					<li>When a user strokes a key</li>
+				</ul>
+
+				<!-- example -->
+				<h6 class="mt-30">In this example, the content of the element is changed when a user clicks on it :</h6>
+
+				<h6 onclick="this.innerHTML='Ooops!'">Click Here !</h6>
+
+				<pre><code class="language-html code-block">
+					<!-- code -->
+					<h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<!-- example -->
+				<h6 class="mt-60">In this example, a function is called from the event handler:</h6>
+
+				<h6 onclick="changeText(this)">Click Here !</h6>
+
+				<pre><code class="language-html code-block">
+					<!-- code -->
+					<h1 onclick="changeText(this)">Click Here !</h1>
+
+					<script>
+					// 	function changeText(id) {
+					// 	id.innerHTML = "Ooops!";
+					// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<!-- ========================================================== -->
+				<h2>HTML Event Attributes</h2>
+
+				<p>Assign an onclick event to a button element</p>
+
+				<h6 class="mt-30">Example :</h6>
+
+				<button onclick="displayDate()">The time is?</button>
+				<!-- <p id="demo"></p> -->
+
+				<pre><code class="language-html code-block">
+					<!-- HTML -->
+					<button onclick="displayDate()">The time is?</button>
+					<p id="demo"></p>
+
+					<!-- script -->
+					<script>
+						// function displayDate() {
+						// document.getElementById("demo").innerHTML = Date();
+						// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+				<p>In the example above, a function named displayDate will be executed when the button is clicked.</p>
+
+
+
+				<!-- ========================================================== -->
+				<h2>Assign Events Using the HTML DOM</h2>
+
+				<p>Assign an onclick event to a button element:</p>
+
+				<h6 class="mt-30">Example :</h6>
+
+				<button onclick="displayDate()">The time is?</button>
+				<!-- <p id="demo"></p> -->
+
+				<pre><code class="language-html code-block">
+					<!-- HTML -->
+					<button id="myBtn">The time is?</button>
+					<p id="demo"></p>
+
+					<!-- script -->
+					<script>
+						// document.getElementById("myBtn").onclick = displayDate;
+
+						// function displayDate() {
+						// document.getElementById("demo").innerHTML = Date();
+						// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+				<p>In the example above, a function named displayDate is assigned to an HTML element with the id="myBtn". <br>
+
+					The function will be executed when the button is clicked.</p>
+
+
+				<!-- ========================================================== -->
+				<h2>The onload and onunload Events</h2>
+
+				<ul>
+					<li>The onload and onunload events are triggered when the user enters or leaves the page.</li>
+					<li>The onload and onunload events can be used to deal with cookies.</li>
+				</ul>
+
+				<h6 class="mt-30">Example :</h6>
+				
+				<!-- <p id="demo"></p> -->
+
+				<pre><code class="language-html code-block">
+					<!-- HTML -->
+					<!-- <p id="demo"></p> -->
+
+					<!-- script -->
+					<script>
+						// function checkCookies() {
+						// 	let text = "";
+						// 	if (navigator.cookieEnabled == true) {
+						// 		text = "Cookies are enabled.";
+						// 	} else {
+						// 		text = "Cookies are not enabled.";
+						// 	}
+						// 	document.getElementById("demo").innerHTML = text;
+						// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<!-- ========================================================== -->
+				<h2>The oninput Event</h2>
+
+				<p>The oninput event is often to some action while the user input data.</p>
+
+				<h6 class="mt-30">Output :</h6>
+
+				<!-- Enter your name: <input type="text" id="fname" oninput="upperCase()">
+				<p>When you write in the input field, a function is triggered to transform the input to upper case.</p> -->
+				
+				<pre><code class="language-html code-block">
+					<!-- HTML -->
+					Enter your name: <input type="text" id="fname" oninput="upperCase()">
+					<p>When you write in the input field, a function is triggered to transform the input to upper case.</p>
+
+					<!-- script -->
+					<script>
+						// function upperCase() {
+						// 	const x = document.getElementById("fname");
+						// 	x.value = x.value.toUpperCase();
+						// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<!-- ========================================================== -->
+				<h2>The onchange Event</h2>
+
+				<p>The onchange event is often used in combination with validation of input fields.</p>
+				<p>Below is an example of how to use the onchange. The upperCase() function will be called when a user changes the content of an input field.</p>
+
+				<h6 class="mt-30">Output :</h6>
+
+				<!-- Enter your name: <input type="text" id="fname" onchange="upperCase()">
+				<p>When you write in the input field, a function is triggered to transform the input to upper case.</p>
+				 -->
+				<pre><code class="language-html code-block">
+					<!-- HTML -->
+					Enter your name: <input type="text" id="fname" onchange="upperCase()">
+					<p>When you write in the input field, a function is triggered to transform the input to upper case.</p>
+
+					<!-- script -->
+					<script>
+						// function upperCase() {
+						// 	const x = document.getElementById("fname");
+						// 	x.value = x.value.toUpperCase();
+						// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<!-- ========================================================== -->
+				<h2>The onmouseover and onmouseout Events</h2>
+
+				<p>The onmouseover and onmouseout events can be used to trigger a function when the user mouses over, or out of, an HTML element:</p>
+
+				<h6 class="mt-30">Output :</h6>
+
+				<!-- <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+				style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+				Mouse Over Me</div> -->
+				 
+				<pre><code class="language-html code-block">
+					<!-- HTML -->
+					<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+					style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+					Mouse Over Me</div>
+
+					<!-- script -->
+					<script>
+						// function mOver(obj) {
+						// obj.innerHTML = "Thank You"
+						// }
+
+						// function mOut(obj) {
+						// obj.innerHTML = "Mouse Over Me"
+						// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+
+
+				<!-- ========================================================== -->
+				<h2>The onmousedown, onmouseup and onclick Events</h2>
+
+				<p>The onmousedown, onmouseup, and onclick events are all parts of a mouse-click. First when a mouse-button is clicked, the onmousedown event is triggered, then, when the mouse-button is released, the onmouseup event is triggered, finally, when the mouse-click is completed, the onclick event is triggered.</p>
+
+				<h6 class="mt-30">Output :</h6>
+
+				<!-- <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+				style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+				Click Me</div> -->
+				 
+				<pre><code class="language-html code-block">
+					<!-- HTML -->
+					<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+					style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+					Click Me</div>
+
+					<!-- script -->
+					<script>
+						// function mDown(obj) {
+						// obj.style.backgroundColor = "#1ec5e5";
+						// obj.innerHTML = "Release Me";
+						// }
+
+						// function mUp(obj) {
+						// obj.style.backgroundColor="#D94A38";
+						// obj.innerHTML="Thank You";
+						// }
+					</script>
+				</code><button class="copy-btn">Copy</button></pre>
+	
+
+			</section>
+
+
+
+
 
 			<!--  ===========================================================================
 									  		JS HTML DOM starts here 
